@@ -18,8 +18,6 @@ cd 切换到项目之中，即可看到如下的项目结构
 
 - **项目文件说明**
 
-    -  document: apin使用文档
-
     -  casedata: 存放yaml和json格式编写的用例文件
 
     -  testcases:py：存放py编写的用例目录

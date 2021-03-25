@@ -77,8 +77,8 @@
         <entry file="file://$PROJECT_DIR$/docs/doc2_start.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="150">
-                <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+              <first_editor relative-caret-position="-50">
+                <caret line="19" selection-start-line="19" selection-end-line="19" />
               </first_editor>
               <second_editor />
             </state>
@@ -189,11 +189,6 @@
             <path>
               <item name="TestApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="TestApi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TestApi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestApi" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TestApi" type="b2602c69:ProjectViewProjectNode" />
@@ -387,7 +382,7 @@
       <workItem from="1616652243909" duration="6860000" />
       <workItem from="1616661417418" duration="1094000" />
       <workItem from="1616662740939" duration="344000" />
-      <workItem from="1616663165955" duration="65000" />
+      <workItem from="1616663165955" duration="588000" />
     </task>
     <task id="LOCAL-00001" summary="v0.0.1">
       <created>1615634630342</created>
@@ -452,7 +447,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616662494342</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="v0.1.1">
+      <created>1616663248227</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616663248227</updated>
+    </task>
+    <task id="LOCAL-00011" summary="v0.1.1">
+      <created>1616663699862</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616663699862</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -488,11 +497,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204059000" />
+    <option name="totallyTimeSpent" value="204582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="29" y="0" width="1606" height="1038" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21512386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1023,8 +1031,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <first_editor relative-caret-position="-50">
+            <caret line="19" selection-start-line="19" selection-end-line="19" />
           </first_editor>
           <second_editor />
         </state>
