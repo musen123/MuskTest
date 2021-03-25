@@ -99,7 +99,7 @@ class TestStreamV3(HttpCase):
 
 - **方式1：**
 
-     终端项目路径下输入命令: ```python apin run```
+     终端项目路径下输入命令: ```apin run```
      
      
 
