@@ -1,6 +1,5 @@
 site_name: Apin 使用文档
 nav:
-  - Home: Home.md
   - 一、apin安装和介绍: doc1_index1.md
   - 二、快速入门: doc2_start.md
   - 三、用例编写: doc3_cases.md
