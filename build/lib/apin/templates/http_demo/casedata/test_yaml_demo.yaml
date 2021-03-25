@@ -1,0 +1,35 @@
+# 域名
+host: http://httpbin.org
+# 请求头
+headers:
+  X-Lemonban-Media-Type: lemonban.v2
+# 用例前置钩子函数
+setup_hook:
+  timestamp: F{get_timestamp()}
+# 预设运行变量
+env:
+  user_mobile: F{rand_phone()}
+  admin_mobile: F{rand_phone()}
+# 结果校验字段
+verification:
+  - ["eq", 200, 'status_code']
+
+
+# 用例数据
+Cases:
+  # 用例1：普通用户注册
+  - title: yaml-demo-1
+    interface: /post
+    method: post
+    json:
+      mobile_phone: ${{user_mobile}}
+      pwd: lemonban
+
+  # 用例2：管理员注册
+  - title: yaml-demo-2
+    interface: /post
+    method: post
+    json:
+      mobile_phone: ${{admin_mobile}}
+      pwd: lemonban
+      type: 0

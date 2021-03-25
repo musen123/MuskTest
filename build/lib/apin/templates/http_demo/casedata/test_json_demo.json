@@ -1,0 +1,41 @@
+{
+  "host": "http://httpbin.org",
+  "headers": {
+    "X-Lemonban-Media-Type": "lemonban.v2"
+  },
+  "setup_hook": {
+    "timestamp": "F{get_timestamp()}"
+  },
+  "setup_class_hook": {
+  },
+  "env": {
+    "user_mobile": "F{rand_phone()}",
+    "admin_mobile": "F{rand_phone()}"
+  },
+  "extract": {
+  },
+  "verification": [
+    ["eq", 200, "status_code"]
+  ],
+  "Cases": [
+    {
+      "title": "json-demo-1",
+      "interface": "/post",
+      "method": "post",
+      "json": {
+        "mobile_phone": "${{user_mobile}}",
+        "pwd": "lemonban"
+      }
+    },
+    {
+      "title": "json-demo-2",
+      "interface": "/post",
+      "method": "post",
+      "json": {
+        "mobile_phone": "${{admin_mobile}}",
+        "pwd": "lemonban",
+        "type": 0
+      }
+    }
+  ]
+}
