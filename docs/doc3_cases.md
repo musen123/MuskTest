@@ -16,7 +16,7 @@
 **host：**用例接口的host地址(接口的域名) 
 
 ```python
-host = "http://api.lemonban.com/futureloan/"
+host = "http://api.xxx.com/futureloan/"
 ```
 
 **headers：**指定用例使用的请求头
@@ -113,7 +113,7 @@ interface = '/user/login'
 ```python
 from apin.core.httptest import HttpCase
 class TestDomeV3(HttpCase):
-    host = "http://api.lemonban.com/futureloan/"
+    host = "http://api.xxxx.com/futureloan/"
     headers = {"X-Lemonban-Media-Type": "lemonban.v2"}
     # 定义测试前置方法
     setup_hook = {"timestamp": 'F{get_timestamp()}'}
