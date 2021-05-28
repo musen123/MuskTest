@@ -479,84 +479,84 @@
 
 </script>
 
-<!--<script type="text/javascript">-->
-<!--    // 基于准备好的dom，初始化echarts实例-->
-<!--    var myChart = echarts.init(document.getElementById('char'));-->
-<!--    var myChart2 = echarts.init(document.getElementById('char2'));-->
-<!--    // 指定图表的配置项和数据-->
-<!--    option = {-->
-<!--        color: ['#00a10a', '#ddb518', 'rgba(204,46,41,0.73)', '#85898c'],-->
-<!--        tooltip: {-->
-<!--            trigger: 'item',-->
-<!--            formatter: '{a} <br/>{b}: {c} ({d}%)'-->
-<!--        },-->
-<!--        legend: {-->
-<!--            orient: 'vertical',-->
-<!--            left: 10,-->
-<!--            data: ['通过', '失败', '错误', '跳过']-->
-<!--        },-->
-<!--        series: [-->
-<!--            {-->
-<!--                name: '测试结果',-->
-<!--                type: 'pie',-->
-<!--                radius: ['50%', '70%'],-->
-<!--                avoidLabelOverlap: false,-->
-<!--                label: {-->
-<!--                    show: false,-->
-<!--                    position: 'center'-->
-<!--                },-->
-<!--                emphasis: {-->
-<!--                    label: {-->
-<!--                        show: true,-->
-<!--                        fontSize: '30',-->
-<!--                        fontWeight: 'bold'-->
-<!--                    }-->
-<!--                },-->
-<!--                labelLine: {-->
-<!--                    show: false-->
-<!--                },-->
-<!--                data: [-->
-<!--                    {value: {{success}}, name: '通过'},-->
-<!--                    {value: {{fail}}, name: '失败'},-->
-<!--                    {value: {{error}}, name: '错误'},-->
-<!--                    {value: {{skip}}, name: '跳过'}-->
-<!--                ]-->
-<!--            }-->
-<!--        ]-->
-<!--    };-->
-<!--    option2 = {-->
-<!--        tooltip: {-->
-<!--            formatter: '{a} <br/>{b} : {c}%'-->
-<!--        },-->
-<!--        toolbox: {-->
-<!--            feature: {-->
-<!--                restore: {},-->
-<!--                saveAsImage: {}-->
-<!--            }-->
-<!--        },-->
-<!--        series: [-->
-<!--            {-->
-<!--                name: '测试结果',-->
-<!--                type: 'gauge',-->
-<!--                detail: {formatter: '{{pass_rate}}%'},-->
-<!--                data: [{value: '{{pass_rate}}', name: '用例通过率'}],-->
-<!--                axisLine: {-->
-<!--                    lineStyle: {-->
-<!--                        color: [-->
-<!--                            [0.2, '#c20000'],-->
-<!--                            [0.8, '#ddb518'],-->
-<!--                            [1, '#00a10a']]-->
-<!--                    }-->
-<!--                }-->
-<!--            }-->
-<!--        ]-->
-<!--    };-->
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('char'));
+    var myChart2 = echarts.init(document.getElementById('char2'));
+    // 指定图表的配置项和数据
+    option = {
+        color: ['#00a10a', '#ddb518', 'rgba(204,46,41,0.73)', '#85898c'],
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 10,
+            data: ['通过', '失败', '错误', '跳过']
+        },
+        series: [
+            {
+                name: '测试结果',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    {value: {{success}}, name: '通过'},
+                    {value: {{fail}}, name: '失败'},
+                    {value: {{error}}, name: '错误'},
+                    {value: {{skip}}, name: '跳过'}
+                ]
+            }
+        ]
+    };
+    option2 = {
+        tooltip: {
+            formatter: '{a} <br/>{b} : {c}%'
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [
+            {
+                name: '测试结果',
+                type: 'gauge',
+                detail: {formatter: '{{pass_rate}}%'},
+                data: [{value: '{{pass_rate}}', name: '用例通过率'}],
+                axisLine: {
+                    lineStyle: {
+                        color: [
+                            [0.2, '#c20000'],
+                            [0.8, '#ddb518'],
+                            [1, '#00a10a']]
+                    }
+                }
+            }
+        ]
+    };
 
 
-<!--    myChart2.setOption(option2);-->
-<!--    // 使用刚指定的配置项和数据显示图表。-->
-<!--    myChart.setOption(option);-->
-<!--</script>-->
+    myChart2.setOption(option2);
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
 
 
 </body>
