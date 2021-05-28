@@ -17,7 +17,7 @@ except ModuleNotFoundError:
     try:
         func_tools = importlib.import_module('funcTools')
     except ModuleNotFoundError:
-        from apin.templates.http_demo import funcTools
+        from apin.templates.http_demo import funcTools as func_tools
 # 函数的规则
 func_pattern = r'F{(.*?)\((.*?)\)}'
 # 变量的规则

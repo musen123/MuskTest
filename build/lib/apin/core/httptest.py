@@ -133,36 +133,45 @@ class Request:
     def request_api(self):
         # 发送请求
         response = self.test.session.request(**self.request_data.datas)
-        base_info = "[{}]: {}   {}".format(self.request_data.method.upper(), self.request_data.url, response)
+
+        base_info = "[{}]: {} ".format(self.request_data.method.upper(), self.request_data.url)
         log.debug(base_info)
         self.test.url = self.request_data.url
-        self.test.method = self.request_data.method
+        self.test.method = response.request.method
         self.test.status_cede = response.status_code
         self.test.base_info = base_info
-        self.test.requests_log_info, self.test.response_log_info = self.requests_log(response)
-        return response
-
-    def requests_log(self, response):
-        requests_log_info = "\n=======================Requests Info======================="
-        requests_log_info += "\nRequest Headers:\n"
-        for k, v in response.request.headers.items():
-            requests_log_info += "      {}:{}\n".format(k, v)
-
-        requests_log_info += "Request body:\n"
-        request_body = json.loads(response.request.body.decode('utf-8'))
-        requests_log_info += "{}".format(json.dumps(request_body, ensure_ascii=False, indent=2))
-        response_log_info = "\n=======================Response Info======================="
-        response_log_info += "\nResponse Headers:\n"
-        for k, v in response.headers.items():
-            response_log_info += "      {}:{}\n".format(k, v)
-        response_log_info += "Response body:\n"
+        self.test.response_header = response.headers.items()
+        self.test.requests_header = response.request.headers.items()
         try:
             response_body = response.json()
-            response_log_info += "{}".format(json.dumps(response_body, ensure_ascii=False, indent=2))
+            self.test.response_body = json.dumps(response_body, ensure_ascii=False, indent=2)
         except:
-            response_log_info += response.text
-        log.debug(requests_log_info + response_log_info)
-        return requests_log_info, response_log_info
+            body = response.content
+            self.test.response_body = body.decode('utf-8') if body else ''
+        try:
+            request_body = json.loads(response.request.body.decode('utf-8'))
+            self.test.requests_body = json.dumps(request_body, ensure_ascii=False, indent=2)
+        except:
+            body = response.request.body
+            self.test.requests_body = body.decode('utf-8') if body else ''
+        self.requests_log(self.test)
+        return response
+
+    def requests_log(self, test):
+        requests_log_info = "\n=======================Requests Info======================="
+        requests_log_info += "\nRequest Headers:\n"
+        for k, v in test.requests_header:
+            requests_log_info += "      {}:{}\n".format(k, v)
+        requests_log_info += "Request body:\n"
+        requests_log_info += "{}".format(test.requests_body)
+        response_log_info = "\n=======================Response Info======================="
+        response_log_info += "\nResponse Headers:\n"
+        for k, v in test.requests_header:
+            response_log_info += "      {}:{}\n".format(k, v)
+        response_log_info += "Response body:\n"
+        response_log_info += test.response_body
+        log.debug(requests_log_info)
+        log.debug(response_log_info)
 
 
 class Extract:

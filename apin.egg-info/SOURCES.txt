@@ -36,6 +36,7 @@ apin/templates/reports/templates.html
 apin/templates/reports/templates02.html
 apin/templates/reports/templates03.html
 tests/__init__.py
+tests/expand.py
 tests/funcTools.py
 tests/readme.py
 tests/run.py

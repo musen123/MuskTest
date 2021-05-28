@@ -11,7 +11,7 @@ LOG_FILE_PATH = os.path.join(BASEDIR, "./logs")
 
 
 # 是否为debug模式
-DEBUG = False
+DEBUG = True
 
 # 数据库配置
 DB = {

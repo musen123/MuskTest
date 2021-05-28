@@ -1,0 +1,228 @@
+INFO 2021-03-25 15:22:44,590 | 【】 | : 开始执行用例：[普通用户注册]——>test_01_member_register (test_json_demo.TestCeiKai)
+INFO 2021-03-25 15:22:44,775 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:44,775 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:44,776 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:44,776 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:44,777 | 【】 | : test_01_member_register (test_json_demo.TestCeiKai)执行——>【通过】
+
+INFO 2021-03-25 15:22:44,778 | 【】 | : 开始执行用例：[管理员注册]——>test_02_member_register (test_json_demo.TestCeiKai)
+INFO 2021-03-25 15:22:44,902 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:44,902 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:44,912 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:44,912 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:44,912 | 【】 | : test_02_member_register (test_json_demo.TestCeiKai)执行——>【通过】
+
+INFO 2021-03-25 15:22:44,913 | 【】 | : 开始执行用例：[普通用户登录]——>test_03_member_login (test_json_demo.TestCeiKai)
+INFO 2021-03-25 15:22:45,050 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:45,050 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:45,050 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:45,050 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:45,050 | 【】 | : test_03_member_login (test_json_demo.TestCeiKai)执行——>【通过】
+
+INFO 2021-03-25 15:22:45,051 | 【】 | : 开始执行用例：[充值]——>test_04_member_recharge (test_json_demo.TestCeiKai)
+INFO 2021-03-25 15:22:45,115 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:45,115 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:45,115 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:45,116 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:45,116 | 【】 | : test_04_member_recharge (test_json_demo.TestCeiKai)执行——>【通过】
+
+INFO 2021-03-25 15:22:45,116 | 【】 | : 开始执行用例：[管理员用户登录]——>test_05_member_login (test_json_demo.TestCeiKai)
+INFO 2021-03-25 15:22:45,249 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:45,249 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:45,250 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:45,251 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:45,251 | 【】 | : test_05_member_login (test_json_demo.TestCeiKai)执行——>【通过】
+
+INFO 2021-03-25 15:22:45,252 | 【】 | : 开始执行用例：[管理员添加项目]——>test_06_loan_add (test_json_demo.TestCeiKai)
+INFO 2021-03-25 15:22:45,287 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:45,287 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:45,288 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:45,288 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:45,288 | 【】 | : test_06_loan_add (test_json_demo.TestCeiKai)执行——>【通过】
+
+INFO 2021-03-25 15:22:45,288 | 【】 | : 开始执行用例：[管理员审核项目]——>test_07_loan_audit (test_json_demo.TestCeiKai)
+INFO 2021-03-25 15:22:45,323 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:45,324 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:45,324 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:45,324 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:45,324 | 【】 | : test_07_loan_audit (test_json_demo.TestCeiKai)执行——>【通过】
+
+INFO 2021-03-25 15:22:45,324 | 【】 | : 开始执行用例：[普通用户投资]——>test_08_member_recharge (test_json_demo.TestCeiKai)
+INFO 2021-03-25 15:22:45,356 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:45,356 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:45,357 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:45,357 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:45,357 | 【】 | : test_08_member_recharge (test_json_demo.TestCeiKai)执行——>【通过】
+
+INFO 2021-03-25 15:22:45,357 | 【】 | : 开始执行用例：[取现]——>test_09_member_withdraw (test_json_demo.TestCeiKai)
+INFO 2021-03-25 15:22:45,392 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:45,392 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:45,392 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:45,392 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:45,392 | 【】 | : test_09_member_withdraw (test_json_demo.TestCeiKai)执行——>【通过】
+
+INFO 2021-03-25 15:22:45,392 | 【】 | : 开始执行用例：[普通用户注册]——>test_01_member_register (test_stream_V3.TestDomeV3)
+INFO 2021-03-25 15:22:45,550 | 【】 | : 预期结果：200 
+INFO 2021-03-25 15:22:45,550 | 【】 | : 实际结果：200
+INFO 2021-03-25 15:22:45,550 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:45,550 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:45,551 | 【】 | : test_01_member_register (test_stream_V3.TestDomeV3)执行——>【通过】
+
+INFO 2021-03-25 15:22:45,551 | 【】 | : 开始执行用例：[管理员注册]——>test_02_member_register (test_stream_V3.TestDomeV3)
+INFO 2021-03-25 15:22:45,683 | 【】 | : 预期结果：200 
+INFO 2021-03-25 15:22:45,683 | 【】 | : 实际结果：200
+INFO 2021-03-25 15:22:45,684 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:45,684 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:45,684 | 【】 | : test_02_member_register (test_stream_V3.TestDomeV3)执行——>【通过】
+
+INFO 2021-03-25 15:22:45,685 | 【】 | : 开始执行用例：[普通用户登录]——>test_03_member_login (test_stream_V3.TestDomeV3)
+INFO 2021-03-25 15:22:45,834 | 【】 | : 预期结果：200 
+INFO 2021-03-25 15:22:45,834 | 【】 | : 实际结果：200
+INFO 2021-03-25 15:22:45,835 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:45,835 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:45,835 | 【】 | : test_03_member_login (test_stream_V3.TestDomeV3)执行——>【通过】
+
+INFO 2021-03-25 15:22:45,835 | 【】 | : 开始执行用例：[充值]——>test_04_member_recharge (test_stream_V3.TestDomeV3)
+INFO 2021-03-25 15:22:45,867 | 【】 | : 预期结果：200 
+INFO 2021-03-25 15:22:45,868 | 【】 | : 实际结果：200
+INFO 2021-03-25 15:22:45,868 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:45,868 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:45,868 | 【】 | : test_04_member_recharge (test_stream_V3.TestDomeV3)执行——>【通过】
+
+INFO 2021-03-25 15:22:45,868 | 【】 | : 开始执行用例：[管理员用户登录]——>test_05_member_login (test_stream_V3.TestDomeV3)
+INFO 2021-03-25 15:22:46,014 | 【】 | : 预期结果：200 
+INFO 2021-03-25 15:22:46,014 | 【】 | : 实际结果：200
+INFO 2021-03-25 15:22:46,017 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:46,018 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:46,018 | 【】 | : test_05_member_login (test_stream_V3.TestDomeV3)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,019 | 【】 | : 开始执行用例：[管理员添加项目]——>test_06_loan_add (test_stream_V3.TestDomeV3)
+INFO 2021-03-25 15:22:46,055 | 【】 | : 预期结果：200 
+INFO 2021-03-25 15:22:46,055 | 【】 | : 实际结果：200
+INFO 2021-03-25 15:22:46,055 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:46,055 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:46,056 | 【】 | : test_06_loan_add (test_stream_V3.TestDomeV3)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,056 | 【】 | : 开始执行用例：[管理员审核项目]——>test_07_loan_audit (test_stream_V3.TestDomeV3)
+INFO 2021-03-25 15:22:46,089 | 【】 | : 预期结果：200 
+INFO 2021-03-25 15:22:46,090 | 【】 | : 实际结果：200
+INFO 2021-03-25 15:22:46,090 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:46,090 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:46,090 | 【】 | : test_07_loan_audit (test_stream_V3.TestDomeV3)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,091 | 【】 | : 开始执行用例：[普通用户投资]——>test_08_member_recharge (test_stream_V3.TestDomeV3)
+INFO 2021-03-25 15:22:46,123 | 【】 | : 预期结果：200 
+INFO 2021-03-25 15:22:46,124 | 【】 | : 实际结果：200
+INFO 2021-03-25 15:22:46,124 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:46,124 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:46,124 | 【】 | : test_08_member_recharge (test_stream_V3.TestDomeV3)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,124 | 【】 | : 开始执行用例：[取现]——>test_09_member_withdraw (test_stream_V3.TestDomeV3)
+INFO 2021-03-25 15:22:46,157 | 【】 | : 预期结果：200 
+INFO 2021-03-25 15:22:46,157 | 【】 | : 实际结果：200
+INFO 2021-03-25 15:22:46,157 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:46,157 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:46,157 | 【】 | : test_09_member_withdraw (test_stream_V3.TestDomeV3)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,158 | 【】 | : 开始执行用例：[普通用户注册]——>test_01_member_register (test_yaml_demo.TestYamlDemo)
+INFO 2021-03-25 15:22:46,291 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:46,291 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:46,291 | 【】 | : test_01_member_register (test_yaml_demo.TestYamlDemo)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,291 | 【】 | : 开始执行用例：[管理员注册]——>test_02_member_register (test_yaml_demo.TestYamlDemo)
+INFO 2021-03-25 15:22:46,421 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:46,422 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:46,422 | 【】 | : test_02_member_register (test_yaml_demo.TestYamlDemo)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,423 | 【】 | : 开始执行用例：[普通用户登录]——>test_03_member_login (test_yaml_demo.TestYamlDemo)
+INFO 2021-03-25 15:22:46,562 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:46,563 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:46,563 | 【】 | : test_03_member_login (test_yaml_demo.TestYamlDemo)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,563 | 【】 | : 开始执行用例：[充值]——>test_04_member_recharge (test_yaml_demo.TestYamlDemo)
+INFO 2021-03-25 15:22:46,598 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:46,599 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:46,599 | 【】 | : test_04_member_recharge (test_yaml_demo.TestYamlDemo)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,599 | 【】 | : 开始执行用例：[普通用户注册]——>test_01_member_register (apin.core.basecase.TestQcd)
+INFO 2021-03-25 15:22:46,719 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:46,719 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:46,719 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:46,719 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:46,719 | 【】 | : test_01_member_register (apin.core.basecase.TestQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,719 | 【】 | : 开始执行用例：[管理员注册]——>test_02_member_register (apin.core.basecase.TestQcd)
+INFO 2021-03-25 15:22:46,840 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:46,840 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:46,840 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:46,840 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:46,841 | 【】 | : test_02_member_register (apin.core.basecase.TestQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,841 | 【】 | : 开始执行用例：[普通用户登录]——>test_03_member_login (apin.core.basecase.TestQcd)
+INFO 2021-03-25 15:22:46,968 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:46,968 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:46,968 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:46,969 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:46,969 | 【】 | : test_03_member_login (apin.core.basecase.TestQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:46,969 | 【】 | : 开始执行用例：[充值]——>test_04_member_recharge (apin.core.basecase.TestQcd)
+INFO 2021-03-25 15:22:47,001 | 【】 | : 预期结果：0 
+INFO 2021-03-25 15:22:47,001 | 【】 | : 实际结果：0
+INFO 2021-03-25 15:22:47,001 | 【】 | : 预期结果：OK 
+INFO 2021-03-25 15:22:47,002 | 【】 | : 实际结果：OK
+INFO 2021-03-25 15:22:47,002 | 【】 | : test_04_member_recharge (apin.core.basecase.TestQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:47,002 | 【】 | : 开始执行用例：[普通用户注册]——>test_01_member_register (apin.core.basecase.TestJsonQcd)
+INFO 2021-03-25 15:22:47,150 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:47,150 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:47,150 | 【】 | : test_01_member_register (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:47,150 | 【】 | : 开始执行用例：[管理员注册]——>test_02_member_register (apin.core.basecase.TestJsonQcd)
+INFO 2021-03-25 15:22:47,295 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:47,295 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:47,295 | 【】 | : test_02_member_register (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:47,295 | 【】 | : 开始执行用例：[普通用户登录]——>test_03_member_login (apin.core.basecase.TestJsonQcd)
+INFO 2021-03-25 15:22:47,415 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:47,415 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:47,415 | 【】 | : test_03_member_login (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:47,415 | 【】 | : 开始执行用例：[充值]——>test_04_member_recharge (apin.core.basecase.TestJsonQcd)
+INFO 2021-03-25 15:22:47,448 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:47,448 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:47,448 | 【】 | : test_04_member_recharge (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:47,448 | 【】 | : 开始执行用例：[管理员用户登录]——>test_05_member_login (apin.core.basecase.TestJsonQcd)
+INFO 2021-03-25 15:22:47,578 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:47,578 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:47,578 | 【】 | : test_05_member_login (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:47,578 | 【】 | : 开始执行用例：[管理员添加项目]——>test_06_loan_add (apin.core.basecase.TestJsonQcd)
+INFO 2021-03-25 15:22:47,610 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:47,610 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:47,610 | 【】 | : test_06_loan_add (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:47,610 | 【】 | : 开始执行用例：[管理员审核项目]——>test_07_loan_audit (apin.core.basecase.TestJsonQcd)
+INFO 2021-03-25 15:22:47,642 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:47,642 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:47,642 | 【】 | : test_07_loan_audit (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:47,643 | 【】 | : 开始执行用例：[普通用户投资]——>test_08_member_recharge (apin.core.basecase.TestJsonQcd)
+INFO 2021-03-25 15:22:47,686 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:47,686 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:47,686 | 【】 | : test_08_member_recharge (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:47,686 | 【】 | : 开始执行用例：[取现]——>test_09_member_withdraw (apin.core.basecase.TestJsonQcd)
+INFO 2021-03-25 15:22:47,718 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-03-25 15:22:47,719 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-03-25 15:22:47,719 | 【】 | : test_09_member_withdraw (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+INFO 2021-03-25 15:22:47,719 | 【】 | : 用例运行完毕,结果如下：
+共运行：35条 
+通过:35条
+失败:0条
+错误:0条
+运行时间:3.13 S
+INFO 2021-03-25 15:22:47,720 | 【】 | : 正在生成测试报告中......
+INFO 2021-03-25 15:22:47,735 | 【】 | : 测试报告已经生成，报告路径为:C:\project\MSUnitTestReport\TestApi\tests\reports\2021-03-25_15_22_44report.html
+ERROR 2021-03-25 15:22:47,738 | 【】 | : 测试结果邮件推送失败：邮件参数配置有误,setting.py文件中的EMAIL的 host 字段不能为空

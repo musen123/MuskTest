@@ -53,6 +53,10 @@ class Logger:
         self.fontColor('\033[0;31m{}\033[0;41m{}\033[0;31m{}')
         self.log.error(message)
 
+    def exception(self, message):
+        self.fontColor('\033[0;31m{}\033[0;41m{}\033[0;31m{}')
+        self.log.exception(message)
+
     def critical(self, message):
         self.fontColor('\033[0;35m{}\033[0;45m{}\033[0;35m{}')
         self.log.critical(message)
@@ -77,12 +81,12 @@ def print_error(msg):
 
 
 if __name__ == '__main__':
-    # logger = Logger()
-    # logger.debug('debu等级日志')
-    # logger.info('info日志')
-    # logger.warning('warning日志')
-    # logger.error('error日志')
-    # logger.critical('CRITICAL日志')
+    logger = Logger()
+    logger.debug('debu等级日志')
+    logger.info('info日志')
+    logger.warning('warning日志')
+    logger.error('error日志')
+    logger.critical('CRITICAL日志')
     print_info('12323')
     print_waring('12323')
     print_error('12323')

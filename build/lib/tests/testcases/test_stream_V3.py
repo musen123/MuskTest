@@ -9,6 +9,20 @@ Company:湖南零檬信息技术有限公司
 from apin.core.httptest import HttpCase
 
 
+class Testbaidu(HttpCase):
+    host = "http://www.baidu.com"
+
+    Cases = [
+        # 用例1：普通用户注册
+        {
+            'title': "百度",
+            'interface': "/",
+            "method": "get",
+
+        },
+    ]
+
+
 class TestDomeV3(HttpCase):
     host = "http://api.lemonban.com/futureloan/"
     headers = {"X-Lemonban-Media-Type": "lemonban.v2"}
@@ -22,7 +36,6 @@ class TestDomeV3(HttpCase):
     # 结果校验
     verification = [
         ["eq", 200, 'status_code'],
-        # {"method": "eq", "expected": {'code': 0, "msg": "OK"}, "actual": {'code': 'V{{$..code}}', "msg": "V{{$..msg}}"}}
         ["eq", {'code': 0, "msg": "OK"}, {'code': 'V{{$..code}}', "msg": "V{{$..msg}}"}]
     ]
 
@@ -33,7 +46,9 @@ class TestDomeV3(HttpCase):
             'interface': "member/register",
             "method": "post",
             'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
-
+            "verification": [
+                ["eq", 0, "V{{$..msg}}"]
+            ]
         },
         # 用例2：管理员注册
         {

@@ -109,7 +109,7 @@
             height: 30px;
             margin: 0;
             padding-left: 3em;
-            padding-right:3em;
+            padding-right: 3em;
             font: none 18px/24px "Microsoft YaHei UI";
             color: #9e141a;
         }
@@ -162,8 +162,6 @@
                 <button type="button" class="btn btn-success">用例总数</button>
                 <span class="text-dark">{{ all }}</span>
             </li>
-
-
         </ul>
     </div>
     <div class="right">
@@ -221,7 +219,7 @@
                     <select id="testClass">
                         <option>所有</option>
                         {% for foo in testClass %}
-                            <option>{{ foo }}</option>
+                        <option>{{ foo }}</option>
                         {% endfor %}
                     </select>
 
@@ -247,38 +245,141 @@
             </thead>
             <tbody>
             {% for foo in results %}
-                <tr>
-                    <td>{{ loop.index }}</td>
-                    <td class="{{ foo.class_name }}">{{ foo.class_name }}</td>
-                    <td>{{ foo.method_name }}</td>
-                    <td>{{ foo.method_doc }}</td>
-                    <td>{{ foo.run_time }}</td>
-                    {% if foo.state == '成功' %}
-                        <td class="text-success">{{ foo.state }}</td>
-                    {% elif foo.state == '失败' %}
-                        <td class="text-danger">{{ foo.state }}</td>
-                    {% elif foo.state == '错误' %}
-                        <td class="text-warning">{{ foo.state }}</td>
-                    {% else %}
-                        <td class="text-info">{{ foo.state }}</td>
-                    {% endif %}
-                    <td>
-                        <button type="button" class="btn btn-success btn_info">查看详情</button>
-                    </td>
-                </tr>
+            <tr class="case_">
+                <td>{{ loop.index }}</td>
+                <td class="{{ foo.class_name }}">{{ foo.class_name }}</td>
+                <td>{{ foo.method_name }}</td>
+                <td>{{ foo.method_doc }}</td>
+                <td>{{ foo.run_time }}</td>
+                {% if foo.state == '成功' %}
+                <td class="text-success">{{ foo.state }}</td>
+                {% elif foo.state == '失败' %}
+                <td class="text-danger">{{ foo.state }}</td>
+                {% elif foo.state == '错误' %}
+                <td class="text-warning">{{ foo.state }}</td>
+                {% else %}
+                <td class="text-info">{{ foo.state }}</td>
+                {% endif %}
+                <td>
+                    <button type="button" class="btn btn-success btn_info">查看详情</button>
+                </td>
+            </tr>
 
-                <tr class="test_log">
+            <tr class="test_log">
 
-                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
-                        {% for item in foo.run_info %}
+                <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all;padding: 0">
+                    <div class="card">
+                        <div class="card-body">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" data-toggle="tab" role="tab" aria-controls="home"
+                                       aria-selected="true" style="padding: 0 16px">运行信息</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="profile"
+                                       aria-selected="false" style="padding: 0 16px">请求信息</a>
+                                </li>
 
-                            <pre>{{ item }}</pre>
-                        {% endfor %}
-                        {% if foo.run_info == [] %}
-                            <pre>无内容输出！</pre>
-                        {% endif %}
-                    </td>
-                </tr>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
+                                       aria-selected="false" style="padding: 0 16px">响应信息 </a>
+                                </li>
+
+                                {% if foo.count%}
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
+                                       aria-selected="false" style="padding: 0 16px"><span style="color: #ff3c00">重运行{{foo.count}}}</span></a>
+                                </li>
+                                {% endif%}
+
+
+                            </ul>
+                            <div class="tab-content" style="height: 300px;overflow-y: auto;padding: 20px">
+
+                                <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="profile-tab">
+                                    <pre style="line-height: 18px">{{ foo.run_info }}</pre>
+                                </div>
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+                                    <table class="table table-bordered table-sm">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">请求方法:<span style="margin-left: 30px;color: #5ccc88">{{foo.method}}</span>
+                                            </th>
+                                            <th scope="col">请求地址:<span style="margin-left: 30px;color: #5ccc88">{{foo.url}}</span>
+                                            </th>
+                                            <th scope="col">响应状态码:<span style="margin-left: 30px;color: #5ccc88">{{foo.status_cede}}</span>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">请求头
+                                        </div>
+
+                                        <div class="card-body">
+                                            {% for k,v in foo.requests_header%}
+                                            <pre style="line-height: 22px;font-size: 14px">{{ k}}:{{v}}</pre>
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">请求体
+                                        </div>
+                                        <div class="card-body">
+                                            <pre style="line-height: 22px;font-size: 14px">{{ foo.requests_body}}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+                                    <table class="table table-bordered table-sm">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">请求方法:<span style="margin-left: 30px;color: #5ccc88">{{foo.method}}</span>
+                                            </th>
+                                            <th scope="col">请求地址:<span style="margin-left: 30px;color: #5ccc88">{{foo.url}}</span>
+                                            </th>
+                                            <th scope="col">响应状态码:<span style="margin-left: 30px;color:#5ccc88">{{foo.status_cede}}</span>
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">响应头
+                                        </div>
+                                        <div class="card-body">
+
+                                            {% for k,v in foo.response_header%}
+                                            <pre style="line-height: 22px;font-size: 14px">{{ k}}:{{v}}</pre>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">响应体
+                                        </div>
+                                        <div class="card-body">
+
+
+                                            <pre style="line-height: 22px;font-size: 14px">{{ foo.response_body|escape}}</pre>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
             {% endfor %}
 
             </tbody>
@@ -294,7 +395,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
 
 <script>
-    var tbodyTr = $('tbody tr');
+    var tbodyTr = $('tbody .case_');
     var testResult = $("#testResult");
     var testClass = $("#testClass");
     <!--    用例执行详细信息显示切换-->
@@ -304,6 +405,7 @@
     });
     // 当选择用例类之后触发
     testClass.change(function () {
+        $('.test_log').hide();
         var cls = $(this).val();
         var res = testResult.val();
         elementDisplay(cls, res);
@@ -369,87 +471,92 @@
 
     }
 
+    $('.nav-tabs li').click(function () {
+        $(this).find('a').addClass('active');
+        $(this).siblings().find('a').removeClass('active');
+        $(this).parent().next().children('.tab-content div').eq($(this).index()).addClass('active show').siblings().removeClass('active show')
+    });
 
 </script>
 
-<script type="text/javascript">
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('char'));
-    var myChart2 = echarts.init(document.getElementById('char2'));
-    // 指定图表的配置项和数据
-    option = {
-        color: ['#00a10a', '#ddb518', 'rgba(204,46,41,0.73)', '#85898c'],
-        tooltip: {
-            trigger: 'item',
-            formatter: '{a} <br/>{b}: {c} ({d}%)'
-        },
-        legend: {
-            orient: 'vertical',
-            left: 10,
-            data: ['通过', '失败', '错误', '跳过']
-        },
-        series: [
-            {
-                name: '测试结果',
-                type: 'pie',
-                radius: ['50%', '70%'],
-                avoidLabelOverlap: false,
-                label: {
-                    show: false,
-                    position: 'center'
-                },
-                emphasis: {
-                    label: {
-                        show: true,
-                        fontSize: '30',
-                        fontWeight: 'bold'
-                    }
-                },
-                labelLine: {
-                    show: false
-                },
-                data: [
-                    {value: {{success}}, name: '通过'},
-                    {value: {{fail}}, name: '失败'},
-                    {value: {{error}}, name: '错误'},
-                    {value: {{skip}}, name: '跳过'}
-                ]
-            }
-        ]
-    };
-    option2 = {
-        tooltip: {
-            formatter: '{a} <br/>{b} : {c}%'
-        },
-        toolbox: {
-            feature: {
-                restore: {},
-                saveAsImage: {}
-            }
-        },
-        series: [
-            {
-                name: '测试结果',
-                type: 'gauge',
-                detail: {formatter: '{{pass_rate}}%'},
-                data: [{value: '{{pass_rate}}', name: '用例通过率'}],
-                axisLine: {
-                    lineStyle: {
-                        color: [
-                            [0.2, '#c20000'],
-                            [0.8, '#ddb518'],
-                            [1, '#00a10a']]
-                    }
-                }
-            }
-        ]
-    };
+<!--<script type="text/javascript">-->
+<!--    // 基于准备好的dom，初始化echarts实例-->
+<!--    var myChart = echarts.init(document.getElementById('char'));-->
+<!--    var myChart2 = echarts.init(document.getElementById('char2'));-->
+<!--    // 指定图表的配置项和数据-->
+<!--    option = {-->
+<!--        color: ['#00a10a', '#ddb518', 'rgba(204,46,41,0.73)', '#85898c'],-->
+<!--        tooltip: {-->
+<!--            trigger: 'item',-->
+<!--            formatter: '{a} <br/>{b}: {c} ({d}%)'-->
+<!--        },-->
+<!--        legend: {-->
+<!--            orient: 'vertical',-->
+<!--            left: 10,-->
+<!--            data: ['通过', '失败', '错误', '跳过']-->
+<!--        },-->
+<!--        series: [-->
+<!--            {-->
+<!--                name: '测试结果',-->
+<!--                type: 'pie',-->
+<!--                radius: ['50%', '70%'],-->
+<!--                avoidLabelOverlap: false,-->
+<!--                label: {-->
+<!--                    show: false,-->
+<!--                    position: 'center'-->
+<!--                },-->
+<!--                emphasis: {-->
+<!--                    label: {-->
+<!--                        show: true,-->
+<!--                        fontSize: '30',-->
+<!--                        fontWeight: 'bold'-->
+<!--                    }-->
+<!--                },-->
+<!--                labelLine: {-->
+<!--                    show: false-->
+<!--                },-->
+<!--                data: [-->
+<!--                    {value: {{success}}, name: '通过'},-->
+<!--                    {value: {{fail}}, name: '失败'},-->
+<!--                    {value: {{error}}, name: '错误'},-->
+<!--                    {value: {{skip}}, name: '跳过'}-->
+<!--                ]-->
+<!--            }-->
+<!--        ]-->
+<!--    };-->
+<!--    option2 = {-->
+<!--        tooltip: {-->
+<!--            formatter: '{a} <br/>{b} : {c}%'-->
+<!--        },-->
+<!--        toolbox: {-->
+<!--            feature: {-->
+<!--                restore: {},-->
+<!--                saveAsImage: {}-->
+<!--            }-->
+<!--        },-->
+<!--        series: [-->
+<!--            {-->
+<!--                name: '测试结果',-->
+<!--                type: 'gauge',-->
+<!--                detail: {formatter: '{{pass_rate}}%'},-->
+<!--                data: [{value: '{{pass_rate}}', name: '用例通过率'}],-->
+<!--                axisLine: {-->
+<!--                    lineStyle: {-->
+<!--                        color: [-->
+<!--                            [0.2, '#c20000'],-->
+<!--                            [0.8, '#ddb518'],-->
+<!--                            [1, '#00a10a']]-->
+<!--                    }-->
+<!--                }-->
+<!--            }-->
+<!--        ]-->
+<!--    };-->
 
 
-    myChart2.setOption(option2);
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
-</script>
+<!--    myChart2.setOption(option2);-->
+<!--    // 使用刚指定的配置项和数据显示图表。-->
+<!--    myChart.setOption(option);-->
+<!--</script>-->
 
 
 </body>
