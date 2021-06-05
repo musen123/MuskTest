@@ -6,14 +6,12 @@ E-mail:3247119728@qq.com
 import os
 import unittest
 import time
-from concurrent.futures.thread import ThreadPoolExecutor
-from ..core.testResult import TestResult, ReRunResult
-from ..core.resultPush import DingTalk, WeiXin, SendEmail
-from apin.core import log
-from jinja2 import Environment, FileSystemLoader
 import copy
-
-Load = unittest.defaultTestLoader
+from jinja2 import Environment, FileSystemLoader
+from concurrent.futures.thread import ThreadPoolExecutor
+from apin.core.testResult import TestResult, ReRunResult
+from apin.core.resultPush import DingTalk, WeiXin, SendEmail
+from apin.core.initEvn import log
 
 
 class TestRunner():
@@ -25,7 +23,8 @@ class TestRunner():
                  title='测试报告',
                  tester='测试员',
                  desc="XX项目测试生成的报告",
-                 templates=1
+                 templates=1,
+                 no_report=False
                  ):
         """
         初始化用例运行程序
@@ -35,6 +34,7 @@ class TestRunner():
         :param title:测试套件标题
         :param templates: 可以通过参数值1或者2，指定报告的样式模板，目前只有两个模板
         :param tester:测试者
+        :param no_report:不生成测试报告，默认生成，设置True则不生成报告
         """
         if not isinstance(suite, unittest.TestSuite):
             raise TypeError("suites 不是测试套件")
@@ -51,6 +51,7 @@ class TestRunner():
         self.report_dir = report_dir
         self.result = []
         self.starttime = time.time()
+        self.no_report = no_report
 
     def __classification_suite(self):
         """
@@ -104,8 +105,9 @@ class TestRunner():
                  "\n失败:{}条"
                  "\n错误:{}条"
                  "\n运行时间:{}".format(
-            test_result['all'], test_result['success'], test_result['fail'], test_result['fail'],test_result['runtime']
+            test_result['all'], test_result['success'], test_result['fail'], test_result['fail'], test_result['runtime']
         ))
+        if self.no_report: return test_result
         log.info("正在生成测试报告中......")
         # 获取报告模板
         template_path = os.path.join(os.path.dirname(__file__), '../templates/reports')

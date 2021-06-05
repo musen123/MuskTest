@@ -3,11 +3,10 @@ Author:柠檬班-木森
 Time:2020/8/4   21:31
 E-mail:3247119728@qq.com
 """
-import datetime
 import os
+import datetime
 import logging
-from logging.handlers import TimedRotatingFileHandler
-from apin.core.parsersetting import settings
+from logging.handlers import TimedRotatingFileHandler, BaseRotatingHandler
 import colorama
 
 colorama.init()
@@ -17,23 +16,32 @@ class Logger:
     __instance = None
     sh = logging.StreamHandler()
 
-    def __new__(cls, *args, **kwargs):
+    def __new__(cls, path=None, level='DEBUG', RotatingFileHandler: BaseRotatingHandler = None):
+        """
+        :param path: report path
+        :param args:
+        :param kwargs:
+        :return:
+        """
         if not cls.__instance:
             cls.__instance = super().__new__(cls)
-            if not os.path.isdir(settings.LOG_FILE_PATH):
-                os.mkdir(settings.LOG_FILE_PATH)
-            level = 'DEBUG' if getattr(settings, 'DEBUG') else "INFO"
-            log = logging.getLogger('musen')
+            log = logging.getLogger('apin')
             log.setLevel(level)
-            # 创建一个handler,用于写入日志文件
-            fh = TimedRotatingFileHandler(os.path.join(settings.LOG_FILE_PATH, 'logging.log'), when='d',
-                                          interval=1, backupCount=7,
-                                          encoding="utf-8")
-            fh.setLevel(level)
-            # 定义handler的输出格式
-            formatter = logging.Formatter("%(asctime)s | 【%(levelname)s】 | : %(message)s")
-            fh.setFormatter(formatter)
-            log.addHandler(fh)
+            if path:
+                if not os.path.isdir(path):
+                    os.mkdir(path)
+
+                if RotatingFileHandler and isinstance(RotatingFileHandler, BaseRotatingHandler):
+                    fh = RotatingFileHandler
+                else:
+                    fh = TimedRotatingFileHandler(os.path.join(path, 'logging.log'), when='d',
+                                                  interval=1, backupCount=7,
+                                                  encoding="utf-8")
+                fh.setLevel(level)
+                log.addHandler(fh)
+                # 定义handler的输出格式
+                formatter = logging.Formatter("%(asctime)s | 【%(levelname)s】 | : %(message)s")
+                fh.setFormatter(formatter)
             cls.__instance.log = log
 
         return cls.__instance

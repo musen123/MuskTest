@@ -1,22 +1,21 @@
 import argparse
-import os, sys
+import os
 import time
 import unittest
-from apin import TestRunner, Load
 from shutil import copytree
-from apin.core.logger import print_info
-from apin.core.parsersetting import ParserDB, settings
-from apin.core import log
 import apin
+from apin.core.testRunner import TestRunner
+from apin.core.logger import print_info
+from apin.core.initEvn import settings, log
+from apin.core.generateCase import ParserDataToCase
 
-sys.path.append(os.getcwd())
-template_path = os.path.join(os.path.dirname(os.path.abspath(apin.__file__)), 'templates')
-api_templates = os.path.join(template_path, 'http_demo')
 
-
-class ProjectManage(object):
-    @classmethod
-    def create_api(cls, name):
+def create(args):
+    """创建项目"""
+    if hasattr(args, "name"):
+        name = args.name
+        template_path = os.path.join(os.path.dirname(os.path.abspath(apin.__file__)), 'templates')
+        api_templates = os.path.join(template_path, 'http_demo')
         print_info("正在创建api自动化项目:{}".format(name))
         try:
             copytree(api_templates, os.path.join(".", name))
@@ -26,22 +25,6 @@ class ProjectManage(object):
             print_info("项目创建成功！")
 
 
-class GlobalData:
-    if getattr(settings, 'DB', None):
-        db = ParserDB()
-    # debug模式
-    DEBUG = getattr(settings, 'DEBUG', None)
-    # 运行线程
-    thread_count = getattr(settings, 'THREAD_COUNT', 1)
-
-
-def create(args):
-    """创建项目"""
-    if hasattr(args, "name"):
-        # 创建项目
-        ProjectManage.create_api(args.name)
-
-
 def run(args=None):
     """run test"""
     args = args if isinstance(args, argparse.Namespace) else create_parser().parse_args(args)
@@ -49,15 +32,15 @@ def run(args=None):
     if hasattr(args, "test_dir"):
         dir = os.path.abspath(args.test_dir)
     else:
-        # help infp
+        # help info
         dir = os.path.abspath('.')
-    from apin.core import generateCase
+
     # load TestCase
     # load yaml TestCase
     data_dir = os.path.join(dir, 'casedata')
-    suite1 = generateCase.parser_yaml_create_cases(data_dir) or unittest.TestSuite()
+    suite1 = ParserDataToCase.parser_yaml_create_cases(data_dir) or unittest.TestSuite()
     # load json TestCase
-    suite2 = generateCase.parser_json_create_cases(data_dir) or unittest.TestSuite()
+    suite2 = ParserDataToCase.parser_json_create_cases(data_dir) or unittest.TestSuite()
     # load py TestCase
     case_dir = os.path.join(dir, 'testcases')
     suite = unittest.defaultTestLoader.discover(case_dir)
@@ -71,7 +54,8 @@ def run(args=None):
     runner = TestRunner(suite=suite,
                         report_dir=os.path.join(dir, 'reports'),
                         **result)
-    runner.run(thread_count=GlobalData.thread_count)
+    runner.run(thread_count=getattr(settings, 'THREAD_COUNT', 1))
+
     if hasattr(settings, 'EMAIL'):
         try:
             # 邮件通知处理配置
@@ -139,6 +123,46 @@ def main(params: list = None):
         args.func(args)
     else:
         parser.print_help()
+
+
+def run_test(env_config, case_data, func_tools_path=None,
+             no_report=False,
+             filename="reports.html",
+             report_dir=".",
+             title='测试报告',
+             tester='木森',
+             desc="XX项目测试生成的报告",
+             templates=1):
+    """
+    :param env_config: 全局环境变量
+    :param case_data: 测试套件数据
+    :param func_tools: 工具函数模块路径
+    :param filename: 报告文件名
+    :param report_dir:报告文件的路径
+    :param title:测试报告标题
+    :param templates: 可以通过参数值1或者2，指定报告的样式模板，目前只有两个模板
+    :param tester:测试者
+    :return:
+    """
+    ENV = settings.ENV
+    if func_tools_path:
+        with open(func_tools_path, 'rb') as f1, open('funcTools.py', 'wb') as f2:
+            f2.write(f1.read())
+    ENV.update(env_config)
+    suite = ParserDataToCase.parser_data_create_cases([case_data])
+    runner = TestRunner(suite=suite,
+                        filename=filename,
+                        report_dir=report_dir,
+                        title=title,
+                        tester=tester,
+                        desc=desc,
+                        templates=templates,
+                        no_report=no_report
+                        )
+    res = runner.run()
+    if func_tools_path:
+        os.remove('funcTools.py')
+    return res
 
 
 if __name__ == '__main__':

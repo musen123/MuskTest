@@ -9,12 +9,11 @@ apin.egg-info/requires.txt
 apin.egg-info/top_level.txt
 apin/core/__init__.py
 apin/core/basecase.py
-apin/core/create_project.py
 apin/core/dataParser.py
+apin/core/generateCase.py
 apin/core/httptest.py
+apin/core/initEvn.py
 apin/core/logger.py
-apin/core/parserCase.py
-apin/core/parsersetting.py
 apin/core/resultPush.py
 apin/core/testResult.py
 apin/core/testRunner.py
@@ -37,7 +36,9 @@ apin/templates/reports/templates03.html
 tests/__init__.py
 tests/expand.py
 tests/funcTools.py
+tests/musenTools.py
 tests/readme.py
+tests/reports.html
 tests/run.py
 tests/settings.py
 tests/logs/__init__.py

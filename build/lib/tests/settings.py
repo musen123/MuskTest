@@ -5,7 +5,6 @@
 import os
 
 BASEDIR = os.path.dirname(os.path.abspath(__file__))
-
 # 日志文件路径
 LOG_FILE_PATH = os.path.join(BASEDIR, "./logs")
 
@@ -19,11 +18,10 @@ DB = {
 
 # 测试环境配置
 ENV = {
-    "host":"http://api.lemonban.com/futureloan/3",
+    "host": "http://api.lemonban.com/futureloan/3",
 
 }
-
-
+THREAD_COUNT = 1
 
 # 测试结果配置
 TEST_RESULT = {

@@ -15,6 +15,7 @@ class GenerateTest(type):
     """生成用例的类"""
 
     def __new__(cls, name, bases, namespace, *args, **kwargs):
+        
         if name in ('BaseTestCase', 'HttpCase'):
             return super().__new__(cls, name, bases, namespace)
         else:

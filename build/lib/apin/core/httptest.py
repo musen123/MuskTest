@@ -10,9 +10,9 @@ import json
 import requests
 import jsonpath
 from apin.core.dataParser import DataParser
+from apin.core.initEvn import ENV
 from apin.core.basecase import BaseTestCase
 from apin.core.logger import CaseLog
-from apin.core.parsersetting import ENV
 
 
 class CaseData:
@@ -175,10 +175,16 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
             elif len(ext) == 3 and ext[1] == "re":
                 value = self.re_extract(response, ext[2])
             else:
-                self.warning_log("变量{},的提取表达式 :{}格式不对！".format(name, ext))
+                self.error_log("变量{},的提取表达式 :{}格式不对！".format(name, ext))
                 self.extras.append((name, ext, '提取失败！'))
                 break
-            self.env[name] = value
+            if ext[0] == 'ENV':
+                ENV[name] = value
+            elif ext[0] == 'env':
+                self.env[name] = value
+            else:
+                self.error_log("错误的变量级别，变量提取表达式中的变量级别只能为ENV，或者env".format(ext[1]))
+                continue
             self.extras.append((name, ext, value))
             self.info_log("提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}".format(name, ext[1], ext[2], value))
 
