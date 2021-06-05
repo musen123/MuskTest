@@ -78,6 +78,11 @@ class CaseLog:
         info = "【{}】| {} |: {}".format(level, datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'), message)
         getattr(self, 'log_data').append((level, info))
 
+    def save_error(self, message):
+        if not hasattr(self, 'error_info'):
+            setattr(self, 'error_info', [])
+        getattr(self, 'error_info').append("【ERROR】:{} ".format(message))
+
     def debug_log(self, message):
         self.save_log(message, 'DEBUG')
         self.log.debug(message)
@@ -92,14 +97,17 @@ class CaseLog:
 
     def error_log(self, message):
         self.save_log(message, 'ERROR')
+        self.save_error(message)
         self.log.error(message)
 
     def exception_log(self, message):
         self.save_log(message, 'ERROR')
+        self.save_error(message)
         self.log.exception(message)
 
     def critical_log(self, message):
         self.save_log(message, 'CRITICAL')
+        self.save_error(message)
         self.log.critical(message)
 
 

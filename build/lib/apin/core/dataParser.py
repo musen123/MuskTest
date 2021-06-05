@@ -10,14 +10,11 @@ from numbers import Number
 from apin.core import tools
 from apin.core.parsersetting import ENV
 
+sys.path.append(os.path.abspath('..'))
 try:
     func_tools = importlib.import_module('funcTools')
 except ModuleNotFoundError:
-    sys.path.append(os.path.abspath('..'))
-    try:
-        func_tools = importlib.import_module('funcTools')
-    except ModuleNotFoundError:
-        from apin.templates.http_demo import funcTools as func_tools
+    from apin.templates.http_demo import funcTools as func_tools
 # 函数的规则
 func_pattern = r'F{(.*?)\((.*?)\)}'
 # 变量的规则

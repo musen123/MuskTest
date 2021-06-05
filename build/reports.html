@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试报告</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--    页面样式-->
+    <style type="text/css">
+        /*标题样式*/
+        .title {
+            width: auto;
+            height: 60px;
+            text-align: center;
+            font: bolder 38px/60px "Microsoft YaHei UI";
+        }
+
+        /*汇总信息样式*/
+        .summary {
+            width: 90%;
+            position: absolute;
+            top: 120px;
+            margin-left: 5%;
+
+        }
+
+        .text-left {
+            font: bolder 20px/30px "Microsoft YaHei UI";
+        }
+
+        .left {
+            width: 50%;
+            float: left;
+
+        }
+
+        .right {
+            width: 50%;
+            float: right;
+
+        }
+
+        .desc {
+            float: left;
+            width: 100%;
+        }
+
+        .list-group-item span {
+            font: normal 16px/38px "Microsoft YaHei UI";
+            padding: 30px;
+
+        }
+
+        .list-group-item {
+            position: relative;
+            display: block;
+            padding: .4rem 1.25rem;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, .125);
+        }
+
+        /* 执行信息样式   */
+        .test_info {
+            width: 90%;
+            position: absolute;
+            top: 900px;
+            margin-left: 5%;
+
+            color: #28a745 !important;
+        }
+
+        .table td, th {
+            border: solid 2px rgba(9, 122, 51, 0.11) !important;
+            padding: 0;
+            line-height: 40px;
+            text-align: center;
+
+        }
+
+
+        select {
+            border: 0;
+            padding: 0;
+            margin: 0;
+            height: 2em;
+            width: 8em;
+            margin-left: 2em;
+        }
+
+        option {
+            text-align: center;
+            height: 36px;
+            font: none 18px/36px "Microsoft YaHei UI";
+            color: #28a745 !important;
+        }
+
+        .test_log {
+            background: rgba(163, 171, 189, 0.15);
+            width: 100%;
+            height: 50px;
+            border-top: none;
+            border-bottom: none;
+            display: none;
+            text-align: left;
+        }
+
+        .test_log td {
+            text-align: left;
+            height: 30px;
+            margin: 0;
+            padding-left: 3em;
+            padding-right: 3em;
+            font: none 18px/24px "Microsoft YaHei UI";
+            /*color: #9e141a;*/
+        }
+
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /*    测试图表显示*/
+        .char {
+            width: 90%;
+            position: absolute;
+            top: 450px;
+            margin-left: 5%;
+            color: #28a745 !important;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--报告标题-->
+<div class="title text-success">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded">测试报告</div>
+</div>
+
+<!--汇总信息-->
+<div class="summary">
+    <p class="text-left text-success">测试结果汇总</p>
+    <div class="left">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">测试人员</button>
+                <span class="text-dark">测试员</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">开始时间</button>
+                <span class="text-dark">2021-06-05 20:44:34</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">执行时间</button>
+                <span class="text-dark">0.76 S</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">用例总数</button>
+                <span class="text-dark">2</span>
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        <ul class="list-group">
+
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">成功用例</button>
+                <span class="text-success">2</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-warning">失败用例</button>
+                <span class="text-warning">0</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-danger">错误用例</button>
+                <span class="text-danger">0</span>
+            </li>
+            <li class="list-group-item">
+                <button type="button" class="btn btn-secondary">跳过用例</button>
+                <span class="text-secondary">0</span>
+            </li>
+        </ul>
+    </div>
+    <div class="desc">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <button type="button" class="btn btn-success">描述信息</button>
+                <span class="text-secondary">XX项目测试生成的报告</span>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+
+<!--测试图表-->
+<div class="char">
+    <p class="text-left text-success">图表展示</p>
+    <div id="char2" style="width: 49%;height: 400px;float: left"></div>
+    <div id="char" style="width: 49%;height: 400px ;float: left"></div>
+</div>
+
+<!--详细信息-->
+<div class="test_info">
+
+    <p class="text-left text-success">详细信息</p>
+    <div class="table_data">
+
+        <table class="table">
+            <thead class="bg-success text-light">
+            <tr>
+                <th scope="col" style="width: 5%;padding: 0">编号</th>
+                <th scope="col" style="width: 20%;padding: 0">
+                    <span>测试类</span>
+                    <select id="testClass">
+                        <option>所有</option>
+                        
+                        <option>TestCase0</option>
+                        
+                    </select>
+
+                </th>
+
+                <th scope="col" style="width: 15%;padding: 0">测试方法</th>
+                <th scope="col" style="width: 20%;padding: 0">用例描述</th>
+                <th scope="col" style="width: 10%;padding: 0">执行时间</th>
+                <th scope="col" style="width: 20%;padding: 0">
+
+                    <span>执行结果</span>
+                    <select id="testResult">
+                        <option>所有</option>
+                        <option class="text-success">成功</option>
+                        <option class="text-danger">失败</option>
+                        <option class="text-warning">错误</option>
+                        <option class="text-info">跳过</option>
+                    </select>
+
+                </th>
+                <th scope="col" style="width: 10%;padding: 0">详细信息</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            <tr class="case_">
+                <td>1</td>
+                <td class="TestCase0">TestCase0</td>
+                <td>test_01_post</td>
+                <td>json-demo-1</td>
+                <td>0.515s</td>
+                
+                <td class="text-success">成功</td>
+                
+                <td>
+                    <button type="button" class="btn btn-success btn_info">查看详情</button>
+                </td>
+            </tr>
+
+            <tr class="test_log">
+
+                <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all;padding: 0">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-sm">
+                                <thead>
+                                <tr>
+                                    <th scope="col">请求方法:<span
+                                            style="margin-left: 30px;color: #5ccc88">POST</span>
+                                    </th>
+                                    <th scope="col">请求地址:<span
+                                            style="margin-left: 30px;color: #5ccc88">http://httpbin.org/post</span>
+                                    </th>
+                                    <th scope="col">响应状态码:<span style="margin-left: 30px;color: #5ccc88">200</span>
+                                    </th>
+                                </tr>
+                                </thead>
+                            </table>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" data-toggle="tab" role="tab" aria-controls="home"
+                                       aria-selected="true" style="padding: 0 16px">运行日志</a>
+                                </li>
+                                
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
+                                       aria-selected="false" style="padding: 0 16px">断言结果 </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
+                                       aria-selected="false" style="padding: 0 16px">环境数据 </a>
+                                </li>
+                                
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
+                                       aria-selected="false" style="padding: 0 16px">响应数据提取 </a>
+                                </li>
+                                
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="profile"
+                                       aria-selected="false" style="padding: 0 16px">请求信息</a>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
+                                       aria-selected="false" style="padding: 0 16px">响应信息 </a>
+                                </li>
+
+                                
+                            </ul>
+                            <div class="tab-content" style="height: 300px;overflow-y: auto;padding: 20px">
+
+                                <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="profile-tab">
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.298523 |: 开始执行用例：【test_01_post (apin.core.basecase.TestCase0)】
+</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.299520 |: 当前全局变量：
+dd:123
+</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.299520 |: 当前局部变量：
+user_mobile:'17780928224'
+admin_mobile:'17780928224'
+timestamp:1622897074.2995207
+</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:44:34.805616 |: [POST]: http://httpbin.org/post </pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:44:34.806614 |: 开始发送请求，请求信息如下:
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "17780928224",
+  "pwd": "lemonban"
+}</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:44:34.806614 |: 接收后台的响应结果，响应信息如下:
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "args": {},
+  "data": "{\"mobile_phone\": \"17780928224\", \"pwd\": \"lemonban\"}",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Length": "50",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.24.0",
+    "X-Amzn-Trace-Id": "Root=1-60bb71b2-3899559f78dbb59c48e83d55",
+    "X-Lemonban-Media-Type": "lemonban.v2"
+  },
+  "json": {
+    "mobile_phone": "17780928224",
+    "pwd": "lemonban"
+  },
+  "origin": "175.8.48.142",
+  "url": "http://httpbin.org/post"
+}</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.806614 |: 从响应结果中开始提取数据</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.809572 |: 提取变量：token,提取方式【jsonpath】,提取表达式:$..json,提取值为:{'mobile_phone': '17780928224', 'pwd': 'lemonban'}</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.810555 |: 提取变量：member_id,提取方式【jsonpath】,提取表达式:$..headers,提取值为:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60bb71b2-3899559f78dbb59c48e83d55', 'X-Lemonban-Media-Type': 'lemonban.v2'}</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.811558 |: 断言表达式:['eq', 200, 'status_code']</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.811558 |: 断言http响应状态码是否和预期一致</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.811558 |: 预期结果：200 </pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.812554 |: 实际结果：200</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.812554 |: 断言通过！</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.813552 |: test_01_post (apin.core.basecase.TestCase0)执行——>【通过】
+</pre>
+                                    
+                                    
+
+                                </div>
+                                
+
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">用例断言
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table table-sm">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 40%">预期结果</th>
+                                                    <th scope="col" style="width: 40%">实际结果</th>
+                                                    <th scope="col" style="width: 8%">断言方法</th>
+                                                    <th scope="col" style="width: 12%">断言结果</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                
+                                                <tr>
+                                                    <td style="text-align:center">200</td>
+                                                    <td style="text-align:center">200</td>
+                                                    <td style="text-align:center">eq</td>
+                                                    
+                                                    <td style="color: #5ccc88;font-weight: bold;text-align:center">通过</td>
+                                                    
+                                                </tr>
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">全局变量
+                                        </div>
+
+                                        <div class="card-body">
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">dd:123
+</pre>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">局部变量
+                                        </div>
+
+                                        <div class="card-body">
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">user_mobile:'17780928224'
+</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">admin_mobile:'17780928224'
+</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">timestamp:1622897074.2995207
+</pre>
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">响应数据提取
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table table-sm">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 15%">变量名</th>
+                                                    <th scope="col" style="width: 8%">级别</th>
+                                                    <th scope="col" style="width: 12%">提取方式</th>
+                                                    <th scope="col" style="width: 25%">提取规则</th>
+                                                    <th scope="col" style="width: 40%">提取结果</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                
+                                                <tr>
+                                                    <td style="text-align:center">token</td>
+                                                    <td style="text-align:center">env</td>
+                                                    <td style="text-align:center">jsonpath</td>
+                                                    <td style="text-align:center">$..json</td>
+                                                    <td style="text-align:center"><p style="line-height: 20px">{'mobile_phone': '17780928224', 'pwd': 'lemonban'}</p></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td style="text-align:center">member_id</td>
+                                                    <td style="text-align:center">ENV</td>
+                                                    <td style="text-align:center">jsonpath</td>
+                                                    <td style="text-align:center">$..headers</td>
+                                                    <td style="text-align:center"><p style="line-height: 20px">{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60bb71b2-3899559f78dbb59c48e83d55', 'X-Lemonban-Media-Type': 'lemonban.v2'}</p></td>
+                                                </tr>
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">请求头
+                                        </div>
+
+                                        <div class="card-body">
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">User-Agent:python-requests/2.24.0</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Accept-Encoding:gzip, deflate</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Accept:*/*</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Connection:keep-alive</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">X-Lemonban-Media-Type:lemonban.v2</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Content-Length:50</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Content-Type:application/json</pre>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">请求体
+                                        </div>
+                                        <div class="card-body">
+                                            <pre style="line-height: 22px;font-size: 14px">{
+  "mobile_phone": "17780928224",
+  "pwd": "lemonban"
+}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">响应头
+                                        </div>
+                                        <div class="card-body">
+
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Date:Sat, 05 Jun 2021 12:44:34 GMT</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Content-Type:application/json</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Content-Length:601</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Connection:keep-alive</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Server:gunicorn/19.9.0</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Access-Control-Allow-Origin:*</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Access-Control-Allow-Credentials:true</pre>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">响应体
+                                        </div>
+                                        <div class="card-body">
+                                            <pre style="line-height: 22px;font-size: 14px">{
+  &#34;args&#34;: {},
+  &#34;data&#34;: &#34;{\&#34;mobile_phone\&#34;: \&#34;17780928224\&#34;, \&#34;pwd\&#34;: \&#34;lemonban\&#34;}&#34;,
+  &#34;files&#34;: {},
+  &#34;form&#34;: {},
+  &#34;headers&#34;: {
+    &#34;Accept&#34;: &#34;*/*&#34;,
+    &#34;Accept-Encoding&#34;: &#34;gzip, deflate&#34;,
+    &#34;Content-Length&#34;: &#34;50&#34;,
+    &#34;Content-Type&#34;: &#34;application/json&#34;,
+    &#34;Host&#34;: &#34;httpbin.org&#34;,
+    &#34;User-Agent&#34;: &#34;python-requests/2.24.0&#34;,
+    &#34;X-Amzn-Trace-Id&#34;: &#34;Root=1-60bb71b2-3899559f78dbb59c48e83d55&#34;,
+    &#34;X-Lemonban-Media-Type&#34;: &#34;lemonban.v2&#34;
+  },
+  &#34;json&#34;: {
+    &#34;mobile_phone&#34;: &#34;17780928224&#34;,
+    &#34;pwd&#34;: &#34;lemonban&#34;
+  },
+  &#34;origin&#34;: &#34;175.8.48.142&#34;,
+  &#34;url&#34;: &#34;http://httpbin.org/post&#34;
+}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+            
+            <tr class="case_">
+                <td>2</td>
+                <td class="TestCase0">TestCase0</td>
+                <td>test_02_post</td>
+                <td>json-demo-2</td>
+                <td>0.249s</td>
+                
+                <td class="text-success">成功</td>
+                
+                <td>
+                    <button type="button" class="btn btn-success btn_info">查看详情</button>
+                </td>
+            </tr>
+
+            <tr class="test_log">
+
+                <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all;padding: 0">
+                    <div class="card">
+                        <div class="card-body">
+                            <table class="table table-sm">
+                                <thead>
+                                <tr>
+                                    <th scope="col">请求方法:<span
+                                            style="margin-left: 30px;color: #5ccc88">POST</span>
+                                    </th>
+                                    <th scope="col">请求地址:<span
+                                            style="margin-left: 30px;color: #5ccc88">http://httpbin.org/post</span>
+                                    </th>
+                                    <th scope="col">响应状态码:<span style="margin-left: 30px;color: #5ccc88">200</span>
+                                    </th>
+                                </tr>
+                                </thead>
+                            </table>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" data-toggle="tab" role="tab" aria-controls="home"
+                                       aria-selected="true" style="padding: 0 16px">运行日志</a>
+                                </li>
+                                
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
+                                       aria-selected="false" style="padding: 0 16px">断言结果 </a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
+                                       aria-selected="false" style="padding: 0 16px">环境数据 </a>
+                                </li>
+                                
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="profile"
+                                       aria-selected="false" style="padding: 0 16px">请求信息</a>
+                                </li>
+
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
+                                       aria-selected="false" style="padding: 0 16px">响应信息 </a>
+                                </li>
+
+                                
+                            </ul>
+                            <div class="tab-content" style="height: 300px;overflow-y: auto;padding: 20px">
+
+                                <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="profile-tab">
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.813552 |: 开始执行用例：【test_02_post (apin.core.basecase.TestCase0)】
+</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.813552 |: 当前全局变量：
+dd:123
+member_id:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60bb71b2-3899559f78dbb59c48e83d55', 'X-Lemonban-Media-Type': 'lemonban.v2'}
+</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:34.813552 |: 当前局部变量：
+user_mobile:'17780928224'
+admin_mobile:'17780928224'
+timestamp:1622897074.8135524
+token:{'mobile_phone': '17780928224', 'pwd': 'lemonban'}
+</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:44:35.061720 |: [POST]: http://httpbin.org/post </pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:44:35.062460 |: 开始发送请求，请求信息如下:
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "17780928224",
+  "pwd": "lemonban",
+  "type": 0
+}</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:44:35.062460 |: 接收后台的响应结果，响应信息如下:
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Response body:
+{
+  "args": {},
+  "data": "{\"mobile_phone\": \"17780928224\", \"pwd\": \"lemonban\", \"type\": 0}",
+  "files": {},
+  "form": {},
+  "headers": {
+    "Accept": "*/*",
+    "Accept-Encoding": "gzip, deflate",
+    "Content-Length": "61",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "python-requests/2.24.0",
+    "X-Amzn-Trace-Id": "Root=1-60bb71b2-6af976bc7c2651813674736b",
+    "X-Lemonban-Media-Type": "lemonban.v2"
+  },
+  "json": {
+    "mobile_phone": "17780928224",
+    "pwd": "lemonban",
+    "type": 0
+  },
+  "origin": "175.8.48.142",
+  "url": "http://httpbin.org/post"
+}</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:35.062460 |: 断言表达式:['eq', 200, 'status_code']</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:35.062460 |: 断言http响应状态码是否和预期一致</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:35.062460 |: 预期结果：200 </pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:35.062460 |: 实际结果：200</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:35.062460 |: 断言通过！</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:44:35.062460 |: test_02_post (apin.core.basecase.TestCase0)执行——>【通过】
+</pre>
+                                    
+                                    
+
+                                </div>
+                                
+
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">用例断言
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table table-sm">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 40%">预期结果</th>
+                                                    <th scope="col" style="width: 40%">实际结果</th>
+                                                    <th scope="col" style="width: 8%">断言方法</th>
+                                                    <th scope="col" style="width: 12%">断言结果</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                
+                                                <tr>
+                                                    <td style="text-align:center">200</td>
+                                                    <td style="text-align:center">200</td>
+                                                    <td style="text-align:center">eq</td>
+                                                    
+                                                    <td style="color: #5ccc88;font-weight: bold;text-align:center">通过</td>
+                                                    
+                                                </tr>
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">全局变量
+                                        </div>
+
+                                        <div class="card-body">
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">dd:123
+</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">member_id:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60bb71b2-3899559f78dbb59c48e83d55', 'X-Lemonban-Media-Type': 'lemonban.v2'}
+</pre>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">局部变量
+                                        </div>
+
+                                        <div class="card-body">
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">user_mobile:'17780928224'
+</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">admin_mobile:'17780928224'
+</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">timestamp:1622897074.8135524
+</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">token:{'mobile_phone': '17780928224', 'pwd': 'lemonban'}
+</pre>
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">请求头
+                                        </div>
+
+                                        <div class="card-body">
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">User-Agent:python-requests/2.24.0</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Accept-Encoding:gzip, deflate</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Accept:*/*</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Connection:keep-alive</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">X-Lemonban-Media-Type:lemonban.v2</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Content-Length:61</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Content-Type:application/json</pre>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">请求体
+                                        </div>
+                                        <div class="card-body">
+                                            <pre style="line-height: 22px;font-size: 14px">{
+  "mobile_phone": "17780928224",
+  "pwd": "lemonban",
+  "type": 0
+}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">响应头
+                                        </div>
+                                        <div class="card-body">
+
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Date:Sat, 05 Jun 2021 12:44:34 GMT</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Content-Type:application/json</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Content-Length:630</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Connection:keep-alive</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Server:gunicorn/19.9.0</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Access-Control-Allow-Origin:*</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">Access-Control-Allow-Credentials:true</pre>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">响应体
+                                        </div>
+                                        <div class="card-body">
+                                            <pre style="line-height: 22px;font-size: 14px">{
+  &#34;args&#34;: {},
+  &#34;data&#34;: &#34;{\&#34;mobile_phone\&#34;: \&#34;17780928224\&#34;, \&#34;pwd\&#34;: \&#34;lemonban\&#34;, \&#34;type\&#34;: 0}&#34;,
+  &#34;files&#34;: {},
+  &#34;form&#34;: {},
+  &#34;headers&#34;: {
+    &#34;Accept&#34;: &#34;*/*&#34;,
+    &#34;Accept-Encoding&#34;: &#34;gzip, deflate&#34;,
+    &#34;Content-Length&#34;: &#34;61&#34;,
+    &#34;Content-Type&#34;: &#34;application/json&#34;,
+    &#34;Host&#34;: &#34;httpbin.org&#34;,
+    &#34;User-Agent&#34;: &#34;python-requests/2.24.0&#34;,
+    &#34;X-Amzn-Trace-Id&#34;: &#34;Root=1-60bb71b2-6af976bc7c2651813674736b&#34;,
+    &#34;X-Lemonban-Media-Type&#34;: &#34;lemonban.v2&#34;
+  },
+  &#34;json&#34;: {
+    &#34;mobile_phone&#34;: &#34;17780928224&#34;,
+    &#34;pwd&#34;: &#34;lemonban&#34;,
+    &#34;type&#34;: 0
+  },
+  &#34;origin&#34;: &#34;175.8.48.142&#34;,
+  &#34;url&#34;: &#34;http://httpbin.org/post&#34;
+}</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </td>
+            </tr>
+            
+
+            </tbody>
+        </table>
+    </div>
+
+    <div style="height: 200px"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+
+<script>
+    var tbodyTr = $('tbody .case_');
+    var testResult = $("#testResult");
+    var testClass = $("#testClass");
+    <!--    用例执行详细信息显示切换-->
+    $(".btn_info").click(function () {
+        $(this).parent().parent().next().toggle();
+
+    });
+    // 当选择用例类之后触发
+    testClass.change(function () {
+        $('.test_log').hide();
+        var cls = $(this).val();
+        var res = testResult.val();
+        elementDisplay(cls, res);
+        sort()
+    });
+    testResult.change(function () {
+        var res = $(this).val();
+        var cls = testClass.val();
+        elementDisplay(cls, res);
+        sort()
+    });
+
+    function elementDisplay(cls, res) {
+        // 用例数据的显示
+        if (cls === "所有") {
+            if (res === "所有") {
+                tbodyTr.has('button').show();
+            } else if (res === '成功') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-success').show()
+
+            } else if (res === '失败') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-danger').show()
+
+            } else if (res === '错误') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-warning').show()
+
+            } else if (res === '跳过') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.text-info').show()
+            }
+        } else {
+            if (res === "所有") {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').show()
+            } else if (res === '成功') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-success').show()
+            } else if (res === '失败') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-danger').show()
+            } else if (res === '错误') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-warning').show()
+            } else if (res === '跳过') {
+                tbodyTr.hide();
+                tbodyTr.has('button').has('.' + cls + '').has('.text-info').show()
+            }
+        }
+    }
+
+    function sort() {
+        //重新排列显示序号
+        // 选择所有可以见的tr
+        var visibleTr = tbodyTr.filter(":visible");
+
+        visibleTr.each(function (index, element) {
+            element.firstElementChild.innerHTML = index + 1;
+
+        })
+
+    }
+
+    $('.nav-tabs li').click(function () {
+        $(this).find('a').addClass('active');
+        $(this).siblings().find('a').removeClass('active');
+        $(this).parent().next().children('.tab-content div').eq($(this).index()).addClass('active show').siblings().removeClass('active show')
+    });
+
+</script>
+
+<!--<script type="text/javascript">-->
+<!--    // 基于准备好的dom，初始化echarts实例-->
+<!--    var myChart = echarts.init(document.getElementById('char'));-->
+<!--    var myChart2 = echarts.init(document.getElementById('char2'));-->
+<!--    // 指定图表的配置项和数据-->
+<!--    option = {-->
+<!--        color: ['#00a10a', '#ddb518', 'rgba(204,46,41,0.73)', '#85898c'],-->
+<!--        tooltip: {-->
+<!--            trigger: 'item',-->
+<!--            formatter: '{a} <br/>{b}: {c} ({d}%)'-->
+<!--        },-->
+<!--        legend: {-->
+<!--            orient: 'vertical',-->
+<!--            left: 10,-->
+<!--            data: ['通过', '失败', '错误', '跳过']-->
+<!--        },-->
+<!--        series: [-->
+<!--            {-->
+<!--                name: '测试结果',-->
+<!--                type: 'pie',-->
+<!--                radius: ['50%', '70%'],-->
+<!--                avoidLabelOverlap: false,-->
+<!--                label: {-->
+<!--                    show: false,-->
+<!--                    position: 'center'-->
+<!--                },-->
+<!--                emphasis: {-->
+<!--                    label: {-->
+<!--                        show: true,-->
+<!--                        fontSize: '30',-->
+<!--                        fontWeight: 'bold'-->
+<!--                    }-->
+<!--                },-->
+<!--                labelLine: {-->
+<!--                    show: false-->
+<!--                },-->
+<!--                data: [-->
+<!--                    {value: 2, name: '通过'},-->
+<!--                    {value: 0, name: '失败'},-->
+<!--                    {value: 0, name: '错误'},-->
+<!--                    {value: 0, name: '跳过'}-->
+<!--                ]-->
+<!--            }-->
+<!--        ]-->
+<!--    };-->
+<!--    option2 = {-->
+<!--        tooltip: {-->
+<!--            formatter: '{a} <br/>{b} : {c}%'-->
+<!--        },-->
+<!--        toolbox: {-->
+<!--            feature: {-->
+<!--                restore: {},-->
+<!--                saveAsImage: {}-->
+<!--            }-->
+<!--        },-->
+<!--        series: [-->
+<!--            {-->
+<!--                name: '测试结果',-->
+<!--                type: 'gauge',-->
+<!--                detail: {formatter: '100.00%'},-->
+<!--                data: [{value: '100.00', name: '用例通过率'}],-->
+<!--                axisLine: {-->
+<!--                    lineStyle: {-->
+<!--                        color: [-->
+<!--                            [0.2, '#c20000'],-->
+<!--                            [0.8, '#ddb518'],-->
+<!--                            [1, '#00a10a']]-->
+<!--                    }-->
+<!--                }-->
+<!--            }-->
+<!--        ]-->
+<!--    };-->
+
+
+<!--    myChart2.setOption(option2);-->
+<!--    // 使用刚指定的配置项和数据显示图表。-->
+<!--    myChart.setOption(option);-->
+<!--</script>-->
+
+
+</body>
+</html>

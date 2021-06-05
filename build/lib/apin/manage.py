@@ -3,11 +3,27 @@ import os, sys
 import time
 import unittest
 from apin import TestRunner, Load
-from apin.core.create_project import ProjectManage
+from shutil import copytree
+from apin.core.logger import print_info
 from apin.core.parsersetting import ParserDB, settings
 from apin.core import log
+import apin
 
 sys.path.append(os.getcwd())
+template_path = os.path.join(os.path.dirname(os.path.abspath(apin.__file__)), 'templates')
+api_templates = os.path.join(template_path, 'http_demo')
+
+
+class ProjectManage(object):
+    @classmethod
+    def create_api(cls, name):
+        print_info("正在创建api自动化项目:{}".format(name))
+        try:
+            copytree(api_templates, os.path.join(".", name))
+        except Exception as e:
+            print_info("项目创建失败！:{}".format(e))
+        else:
+            print_info("项目创建成功！")
 
 
 class GlobalData:
@@ -35,13 +51,13 @@ def run(args=None):
     else:
         # help infp
         dir = os.path.abspath('.')
-    from apin.core import parserCase
+    from apin.core import generateCase
     # load TestCase
     # load yaml TestCase
     data_dir = os.path.join(dir, 'casedata')
-    suite1 = parserCase.parser_yaml_create_cases(data_dir) or unittest.TestSuite()
+    suite1 = generateCase.parser_yaml_create_cases(data_dir) or unittest.TestSuite()
     # load json TestCase
-    suite2 = parserCase.parser_json_create_cases(data_dir) or unittest.TestSuite()
+    suite2 = generateCase.parser_json_create_cases(data_dir) or unittest.TestSuite()
     # load py TestCase
     case_dir = os.path.join(dir, 'testcases')
     suite = unittest.defaultTestLoader.discover(case_dir)
@@ -94,7 +110,7 @@ def run(args=None):
 def create_parser():
     parser = argparse.ArgumentParser(prog='apin', description='ApiTest使用命令介绍')
     # 添加版本号
-    parser.add_argument('-V', '--version', action='version', version='%(prog)s 0.0.5')
+    parser.add_argument('-V', '--version', action='version', version='%(prog)s 0.2')
     subparsers = parser.add_subparsers(title='Command', metavar="命令")
     # 创建项目命令
     create_cmd = subparsers.add_parser('create', help='create test project ', aliases=['C'])

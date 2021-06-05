@@ -172,11 +172,11 @@
                 <span class="text-success">{{ success }}</span>
             </li>
             <li class="list-group-item">
-                <button type="button" class="btn btn-danger">失败用例</button>
+                <button type="button" class="btn btn-warning">失败用例</button>
                 <span class="text-warning">{{ fail }}</span>
             </li>
             <li class="list-group-item">
-                <button type="button" class="btn btn-warning">错误用例</button>
+                <button type="button" class="btn btn-danger">错误用例</button>
                 <span class="text-danger">{{ error }}</span>
             </li>
             <li class="list-group-item">
@@ -254,9 +254,9 @@
                 {% if foo.state == '成功' %}
                 <td class="text-success">{{ foo.state }}</td>
                 {% elif foo.state == '失败' %}
-                <td class="text-danger">{{ foo.state }}</td>
-                {% elif foo.state == '错误' %}
                 <td class="text-warning">{{ foo.state }}</td>
+                {% elif foo.state == '错误' %}
+                <td class="text-danger">{{ foo.state }}</td>
                 {% else %}
                 <td class="text-info">{{ foo.state }}</td>
                 {% endif %}
@@ -289,6 +289,12 @@
                                     <a class="nav-link active" data-toggle="tab" role="tab" aria-controls="home"
                                        aria-selected="true" style="padding: 0 16px">运行日志</a>
                                 </li>
+                                {% if foo.error_info %}
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
+                                       aria-selected="false" style="padding: 0 16px"><span style="color: red">错误信息</span> </a>
+                                </li>
+                                {% endif%}
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
                                        aria-selected="false" style="padding: 0 16px">断言结果 </a>
@@ -338,6 +344,23 @@
                                     {% endfor %}
 
                                 </div>
+                                {% if foo.error_info %}
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">错误信息
+                                        </div>
+                                        <div class="card-body">
+                                            {% for item in foo.error_info%}
+                                                <pre style="line-height: 18px;color: #dc3545 ">{{ item }}</pre>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+
+                                </div>
+                                {% endif%}
+
                                 <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
                                     <div class="card">
                                         <div class="alert alert-success"
@@ -587,84 +610,84 @@
 
 </script>
 
-<script type="text/javascript">
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('char'));
-    var myChart2 = echarts.init(document.getElementById('char2'));
-    // 指定图表的配置项和数据
-    option = {
-        color: ['#00a10a', '#ddb518', 'rgba(204,46,41,0.73)', '#85898c'],
-        tooltip: {
-            trigger: 'item',
-            formatter: '{a} <br/>{b}: {c} ({d}%)'
-        },
-        legend: {
-            orient: 'vertical',
-            left: 10,
-            data: ['通过', '失败', '错误', '跳过']
-        },
-        series: [
-            {
-                name: '测试结果',
-                type: 'pie',
-                radius: ['50%', '70%'],
-                avoidLabelOverlap: false,
-                label: {
-                    show: false,
-                    position: 'center'
-                },
-                emphasis: {
-                    label: {
-                        show: true,
-                        fontSize: '30',
-                        fontWeight: 'bold'
-                    }
-                },
-                labelLine: {
-                    show: false
-                },
-                data: [
-                    {value: {{success}}, name: '通过'},
-                    {value: {{fail}}, name: '失败'},
-                    {value: {{error}}, name: '错误'},
-                    {value: {{skip}}, name: '跳过'}
-                ]
-            }
-        ]
-    };
-    option2 = {
-        tooltip: {
-            formatter: '{a} <br/>{b} : {c}%'
-        },
-        toolbox: {
-            feature: {
-                restore: {},
-                saveAsImage: {}
-            }
-        },
-        series: [
-            {
-                name: '测试结果',
-                type: 'gauge',
-                detail: {formatter: '{{pass_rate}}%'},
-                data: [{value: '{{pass_rate}}', name: '用例通过率'}],
-                axisLine: {
-                    lineStyle: {
-                        color: [
-                            [0.2, '#c20000'],
-                            [0.8, '#ddb518'],
-                            [1, '#00a10a']]
-                    }
-                }
-            }
-        ]
-    };
+<!--<script type="text/javascript">-->
+<!--    // 基于准备好的dom，初始化echarts实例-->
+<!--    var myChart = echarts.init(document.getElementById('char'));-->
+<!--    var myChart2 = echarts.init(document.getElementById('char2'));-->
+<!--    // 指定图表的配置项和数据-->
+<!--    option = {-->
+<!--        color: ['#00a10a', '#ddb518', 'rgba(204,46,41,0.73)', '#85898c'],-->
+<!--        tooltip: {-->
+<!--            trigger: 'item',-->
+<!--            formatter: '{a} <br/>{b}: {c} ({d}%)'-->
+<!--        },-->
+<!--        legend: {-->
+<!--            orient: 'vertical',-->
+<!--            left: 10,-->
+<!--            data: ['通过', '失败', '错误', '跳过']-->
+<!--        },-->
+<!--        series: [-->
+<!--            {-->
+<!--                name: '测试结果',-->
+<!--                type: 'pie',-->
+<!--                radius: ['50%', '70%'],-->
+<!--                avoidLabelOverlap: false,-->
+<!--                label: {-->
+<!--                    show: false,-->
+<!--                    position: 'center'-->
+<!--                },-->
+<!--                emphasis: {-->
+<!--                    label: {-->
+<!--                        show: true,-->
+<!--                        fontSize: '30',-->
+<!--                        fontWeight: 'bold'-->
+<!--                    }-->
+<!--                },-->
+<!--                labelLine: {-->
+<!--                    show: false-->
+<!--                },-->
+<!--                data: [-->
+<!--                    {value: {{success}}, name: '通过'},-->
+<!--                    {value: {{fail}}, name: '失败'},-->
+<!--                    {value: {{error}}, name: '错误'},-->
+<!--                    {value: {{skip}}, name: '跳过'}-->
+<!--                ]-->
+<!--            }-->
+<!--        ]-->
+<!--    };-->
+<!--    option2 = {-->
+<!--        tooltip: {-->
+<!--            formatter: '{a} <br/>{b} : {c}%'-->
+<!--        },-->
+<!--        toolbox: {-->
+<!--            feature: {-->
+<!--                restore: {},-->
+<!--                saveAsImage: {}-->
+<!--            }-->
+<!--        },-->
+<!--        series: [-->
+<!--            {-->
+<!--                name: '测试结果',-->
+<!--                type: 'gauge',-->
+<!--                detail: {formatter: '{{pass_rate}}%'},-->
+<!--                data: [{value: '{{pass_rate}}', name: '用例通过率'}],-->
+<!--                axisLine: {-->
+<!--                    lineStyle: {-->
+<!--                        color: [-->
+<!--                            [0.2, '#c20000'],-->
+<!--                            [0.8, '#ddb518'],-->
+<!--                            [1, '#00a10a']]-->
+<!--                    }-->
+<!--                }-->
+<!--            }-->
+<!--        ]-->
+<!--    };-->
 
 
-    myChart2.setOption(option2);
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
-</script>
+<!--    myChart2.setOption(option2);-->
+<!--    // 使用刚指定的配置项和数据显示图表。-->
+<!--    myChart.setOption(option);-->
+<!--</script>-->
 
 
 </body>

@@ -75,10 +75,9 @@ class TestResult(unittest.TestResult):
         """
         super().addFailure(test, err)
         test.state = '失败'
-        getattr(test, 'warning_log')("{}执行——>【失败】\n".format( test))
         # 保存错误信息
         getattr(test, 'warning_log')(err[1])
-
+        getattr(test, 'warning_log')("{}执行——>【失败】\n".format(test))
         test.run_info = getattr(test, 'base_info', None)
 
     def addSkip(self, test, reason):
@@ -102,7 +101,6 @@ class TestResult(unittest.TestResult):
         """
         super().addError(test, err)
         test.state = '错误'
-
         getattr(test, 'error_log')(err[1])
         getattr(test, 'error_log')("{}执行——>【错误Error】\n".format(test))
         if test.__class__.__qualname__ == '_ErrorHolder':

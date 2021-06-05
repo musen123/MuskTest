@@ -191,9 +191,9 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
 
     def assert_result(self, response, case):
         """断言"""
-        error_info = """断言数据格式错误,verification字段为必须为数组，格式如下:
+        error_info = """断言数据格式错误,verification字段为必须为如下格式:
         verification:[
-            [断言方式,预期结果,实际结果]
+        [断言方式,预期结果,实际结果]
         ]
         """
         self.assert_info = []
@@ -205,14 +205,17 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
             for item in assert_list:
                 # 判断断言数据的类型
                 if isinstance(item, list) and len(item) == 3:
-                    self.__verification_list(response, item)
+                    self.__verification(response, item)
                 else:
-                    raise ValueError(error_info)
-
+                    raise ValueError("断言表达式 {} 格式错误:,\n断言表达式必须为如下格式：[断言方式,预期结果,实际结果]".format(item))
         elif assert_list:
-            raise ValueError(error_info)
+            raise ValueError("""{}verification字段格式错误
+            verification字段必须为如下格式：[
+                [断言方式,预期结果,实际结果]
+            ]""".format(assert_list))
 
-    def __verification_list(self, response, item: list):
+    def __verification(self, response, item: list):
+        self.info_log('断言表达式:{}'.format(item))
         # 判断断言的方法
         if item[2] == "status_code":
             if item[0] == 'eq':
@@ -244,7 +247,7 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
             for k, v in case.items():
                 setattr(data, k, v)
         else:
-            raise TypeError('请求数据只能为 dict 或 RequestData类型')
+            raise TypeError('用例数据只能为dict类型CaseData类型')
 
         for k, v in data.__dict__.items():
             if k not in ["extract", "verification"]:
@@ -347,7 +350,7 @@ class Request:
             self.test.requests_body = json.dumps(request_body, ensure_ascii=False, indent=2)
         except:
             body = response.request.body
-            self.test.requests_body = body or''
+            self.test.requests_body = body or ''
         self.requests_log(self.test)
         return response
 

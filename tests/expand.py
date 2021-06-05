@@ -3,73 +3,103 @@
 Author:柠檬班-木森
 Time:2021/5/25 20:16
 E-mail:3247119728@qq.com
-Company:湖南零檬信息技术有限公司
 =======
 """
-import unittest
-
-from apin import TestRunner
-from apin.core.basecase import GenerateTest
-from apin.core.httptest import HttpCase
-
-"""
-1、获取全局的配置
-
-2、获取工具函数模块
-
-3、获取用例数据
-
-"""
+import os
+from apin.core.initEvn import ENV
+from apin.core.testRunner import TestRunner
+from apin.core.generateCase import ParserDataToCase
 
 
-# 测试环境配置
-conf = {}
-# 用例数据
-case_data = {
-  "host": "http://httpbin.org",
-  "headers": {
-    "X-Lemonban-Media-Type": "lemonban.v2"
-  },
-  "setup_hook": {
-    "timestamp": "F{get_timestamp()}"
-  },
-  "setup_class_hook": {
-  },
-  "env": {
-    "user_mobile": "F{rand_phone()}",
-    "admin_mobile": "F{rand_phone()}"
-  },
-  "extract": {
-  },
-  "verification": [
-    ["eq", 200, "status_code"]
-  ],
-  "Cases": [
-    {
-      "title": "json-demo-1",
-      "interface": "/post",
-      "method": "post",
-      "json": {
-        "mobile_phone": "${{user_mobile}}",
-        "pwd": "lemonban"
-      }
-    },
-    {
-      "title": "json-demo-2",
-      "interface": "/post",
-      "method": "post",
-      "json": {
-        "mobile_phone": "${{admin_mobile}}",
-        "pwd": "lemonban",
-        "type": 0
-      }
+def run_test(env_config, case_data, func_tools_path=None,
+             no_report=False,
+             filename="reports.html",
+             report_dir=".",
+             title='测试报告',
+             tester='木森',
+             desc="XX项目测试生成的报告",
+             templates=1):
+    """
+    :param env_config: 全局环境变量
+    :param case_data: 测试套件数据
+    :param func_tools: 工具函数模块路径
+    :param filename: 报告文件名
+    :param report_dir:报告文件的路径
+    :param title:测试套件标题
+    :param templates: 可以通过参数值1或者2，指定报告的样式模板，目前只有两个模板
+    :param tester:测试者
+    :return:
+    """
+    if func_tools_path:
+        with open(func_tools_path, 'rb') as f1, open('funcTools.py', 'wb') as f2:
+            f2.write(f1.read())
+    ENV.update(env_config)
+    suite = ParserDataToCase.parser_data_create_cases([case_data])
+    runner = TestRunner(suite=suite,
+                        filename=filename,
+                        report_dir=report_dir,
+                        title=title,
+                        tester=tester,
+                        desc=desc,
+                        templates=templates,
+                        no_report=no_report
+                        )
+    res = runner.run()
+    if func_tools_path:
+        os.remove('funcTools.py')
+    return res
+
+
+if __name__ == '__main__':
+    case_data = {
+        "host": "http://httpbin.org",
+        "headers": {
+            "X-Lemonban-Media-Type": "lemonban.v2"
+        },
+        "setup_hook": {
+            "timestamp": "F{get_timestamp()}"
+        },
+        "setup_class_hook": {
+        },
+        "env": {
+            "user_mobile": "F{rand_phone()}",
+            "admin_mobile": "F{rand_phone()}"
+        },
+        "extract": {
+        },
+        "verification": [
+            ["eq", 200, "status_code"]
+        ],
+        "Cases": [
+            {
+                "title": "json-demo-1",
+                "interface": "/post",
+                "method": "post",
+                "json": {
+                    "mobile_phone": "${{user_mobile}}",
+                    "pwd": "lemonban"
+                },
+                "extract": {
+                    "token": ("env", "jsonpath", "$..json"),
+                    'member_id': ("ENV", "jsonpath", "$..headers")
+                }
+            },
+            {
+                "title": "json-demo-2",
+                "interface": "/post",
+                "method": "post",
+                "json": {
+                    "mobile_phone": "${{admin_mobile}}",
+                    "pwd": "lemonban",
+                    "type": 0
+                },
+
+            }
+        ]
     }
-  ]
-}
-cls = GenerateTest('Case', (HttpCase,), case_data)
-suite = unittest.defaultTestLoader.loadTestsFromTestCase(cls)
-
-runner = TestRunner(suite=suite,report_dir=r'C:\project\MSUnitTestReport\TestApi\apin\templates\http_demo\reports')
-runner.run()
-
-
+    ENV = {}
+    res = run_test(env_config=ENV,
+                   case_data=case_data,
+                   func_tools_path=r'C:\project\MSUnitTestReport\TestApi\tests\musenTools.py',
+                   no_report=True)
+    print(res)
