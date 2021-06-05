@@ -58,9 +58,9 @@ class GenerateTest(type):
         return test_name
 
     @classmethod
-    def __update_func(cls, new_func_name, params, test_desc, func, *args, **kwargs):
+    def __update_func(cls, new_func_name, params, test_desc, func):
         @wraps(func)
-        def wrapper(self, ):
+        def wrapper(self, *args, **kwargs):
             return func(self, params, *args, **kwargs)
 
         wrapper.__wrapped__ = func
@@ -99,6 +99,7 @@ class GenerateTest(type):
                 for k, item in setup_hook.items():
                     v = DataParser.parser_func(test_cls.env, item)
                     test_cls.env[k] = v
+
             setattr(test_cls, 'setUp', setUp)
 
         # 用例后置
@@ -108,6 +109,7 @@ class GenerateTest(type):
             def tearDown(self):
                 for k, item in teardown_hook.items():
                     DataParser.parser_func(test_cls.env, item)
+
             setattr(test_cls, 'tearDown', tearDown)
 
         # 类前置
@@ -119,6 +121,7 @@ class GenerateTest(type):
                 for k, item in setupclass_hook.items():
                     v = DataParser.parser_func(test_cls.env, item)
                     test_cls.env[k] = v
+
             setattr(test_cls, 'setUpClass', setUpClass)
         # 测试类后置
         teardown_class_hook = getattr(test_cls, 'teardown_class_hook ', None)

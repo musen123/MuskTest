@@ -36,7 +36,7 @@ class TestDomeV3(HttpCase):
     # 结果校验
     verification = [
         ["eq", 200, 'status_code'],
-        ["eq", {'code': 0, "msg": "OK"}, {'code': 'V{{$..code}}', "msg": "V{{$..msg}}"}]
+        ["eq", {'code': 0, "msg": "OK"}, {'data': 'V{{$.data}}'}]
     ]
 
     Cases = [
@@ -47,7 +47,7 @@ class TestDomeV3(HttpCase):
             "method": "post",
             'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
             "verification": [
-                ["eq", 0, "V{{$..msg}}"]
+                ["contain", 'O', "V{{$..msg}}"],
             ]
         },
         # 用例2：管理员注册

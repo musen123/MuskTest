@@ -3,14 +3,10 @@ Author:柠檬班-木森
 Time:2020/8/26   11:25
 E-mail:3247119728@qq.com
 """
-import json
 import re
 import traceback
 import unittest
 import time
-from apin.core.parsersetting import ENV
-from apin.core import log
-
 
 class TestResult(unittest.TestResult):
     """ 测试结果记录"""
@@ -36,6 +32,7 @@ class TestResult(unittest.TestResult):
         """
         super().startTest(test)
         self.start_time = time.time()
+        getattr(test, 'info_log')("开始执行用例：【{}】\n".format(test.__doc__ or test))
 
     def stopTest(self, test):
         """
@@ -67,12 +64,8 @@ class TestResult(unittest.TestResult):
         """用例执行通过，成功数量+1"""
         self.fields["success"] += 1
         test.state = '成功'
-        log.info("{}执行——>【通过】\n".format(test))
-        log.debug("当前运行环境全局变量有：\n{}\n".format(json.dumps(ENV, ensure_ascii=False, indent=2)))
-        log.debug("当前运行环境局部变量有：\n{}\n".format(json.dumps(getattr(test, 'env'), ensure_ascii=False, indent=2)))
-
+        getattr(test, 'info_log')("{}执行——>【通过】\n".format( test))
         test.run_info = getattr(test, 'base_info', None)
-
 
     def addFailure(self, test, err):
         """
@@ -82,14 +75,11 @@ class TestResult(unittest.TestResult):
         """
         super().addFailure(test, err)
         test.state = '失败'
-        log.debug("当前运行环境全局变量有：\n{}\n".format(json.dumps(ENV, ensure_ascii=False, indent=2)))
-        log.debug("当前运行环境局部变量有：\n{}\n".format(json.dumps(getattr(test, 'env'), ensure_ascii=False, indent=2)))
-        log.warning("{}执行——>【失败】\n".format(test))
+        getattr(test, 'warning_log')("{}执行——>【失败】\n".format( test))
         # 保存错误信息
-        log.warning(err[1])
-        log.exception(err)
-        test.run_info = getattr(test, 'base_info', None)
+        getattr(test, 'warning_log')(err[1])
 
+        test.run_info = getattr(test, 'base_info', None)
 
     def addSkip(self, test, reason):
         """
@@ -100,7 +90,7 @@ class TestResult(unittest.TestResult):
         """
         super().addSkip(test, reason)
         test.state = '跳过'
-        log.info("{}执行--【跳过Skip】\n".format(test))
+        getattr(test, 'info_log')("{}执行--【跳过Skip】\n".format(test))
         test.run_info = reason
 
     def addError(self, test, err):
@@ -112,20 +102,18 @@ class TestResult(unittest.TestResult):
         """
         super().addError(test, err)
         test.state = '错误'
-        log.error('\n' + "".join(traceback.format_exception(*err)))
-        log.debug("当前运行环境全局变量有：\n{}\n".format(json.dumps(ENV, ensure_ascii=False, indent=2)))
-        log.debug("当前运行环境局部变量有：\n{}\n".format(json.dumps(getattr(test, 'env'), ensure_ascii=False, indent=2)))
-        log.error("{}执行——>【错误Error】\n".format(test))
-        log.exception(err)
+
+        getattr(test, 'error_log')(err[1])
+        getattr(test, 'error_log')("{}执行——>【错误Error】\n".format(test))
         if test.__class__.__qualname__ == '_ErrorHolder':
             test.run_time = 0
-            res = re.search(r'(.*)\(.*\.(.*)\)', test.description)
+            res = re.search(r'(.*)\(.*\.(.*)\)', getattr(test, 'description'))
             test.class_name = res.group(2)
             test.method_name = res.group(1)
             test.method_doc = test.shortDescription()
             self.fields['results'].append(test)
             self.fields["testClass"].add(test.class_name)
-        test.run_info = getattr(test, 'base_info',None)
+        test.run_info = getattr(test, 'base_info', None)
 
 
 class ReRunResult(TestResult):
@@ -155,15 +143,15 @@ class ReRunResult(TestResult):
             test.count = 0
         if test.count < self.count:
             test.count += 1
-            log.error("{}执行——>【失败Failure】\n".format(test))
-            log.exception(err)
-            log.error("================{}重运行第{}次================\n".format(test, test.count))
+            getattr(test, 'error_log')("{}执行——>【失败Failure】\n".format(test))
+            getattr(test, 'exception_Log')(err)
+            getattr(test, 'error_log')("================{}重运行第{}次================\n".format(test, test.count))
             time.sleep(self.interval)
             test.run(self)
         else:
             super().addFailure(test, err)
             if test.count != 0:
-                log.debug("================重运行{}次完毕================\n".format(test.count))
+                getattr(test, 'debug_log')("================重运行{}次完毕================\n".format(test.count))
 
     def addError(self, test, err):
         """
@@ -176,12 +164,12 @@ class ReRunResult(TestResult):
             test.count = 0
         if test.count < self.count:
             test.count += 1
-            log.error("{}执行——>【错误Error】\n".format(test))
-            log.exception(err)
-            log.error("================{}重运行第{}次================\n".format(test, test.count))
+            getattr(test, 'error_log')("{}执行——>【错误Error】\n".format(test))
+            getattr(test, 'exception_Log')(err)
+            getattr(test, 'error_log')("================{}重运行第{}次================\n".format(test, test.count))
             time.sleep(self.interval)
             test.run(self)
         else:
             super().addError(test, err)
             if test.count != 0:
-                log.debug("================重运行{}次完毕================\n".format(test.count))
+                getattr(test, 'info_log')("================重运行{}次完毕================\n".format(test.count))

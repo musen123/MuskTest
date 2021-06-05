@@ -3,6 +3,7 @@ Author:柠檬班-木森
 Time:2020/8/4   21:31
 E-mail:3247119728@qq.com
 """
+import datetime
 import os
 import logging
 from logging.handlers import TimedRotatingFileHandler
@@ -30,7 +31,7 @@ class Logger:
                                           encoding="utf-8")
             fh.setLevel(level)
             # 定义handler的输出格式
-            formatter = logging.Formatter("%(levelname)s %(asctime)s | 【】 | : %(message)s")
+            formatter = logging.Formatter("%(asctime)s | 【%(levelname)s】 | : %(message)s")
             fh.setFormatter(formatter)
             log.addHandler(fh)
             cls.__instance.log = log
@@ -66,6 +67,40 @@ class Logger:
         formatter = logging.Formatter(color.format("%(asctime)s| ", "【%(levelname)s】", " | : %(message)s"))
         self.sh.setFormatter(formatter)
         self.log.addHandler(self.sh)
+
+
+class CaseLog:
+    log = Logger()
+
+    def save_log(self, message, level):
+        if not hasattr(self, 'log_data'):
+            setattr(self, 'log_data', [])
+        info = "【{}】| {} |: {}".format(level, datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'), message)
+        getattr(self, 'log_data').append((level, info))
+
+    def debug_log(self, message):
+        self.save_log(message, 'DEBUG')
+        self.log.debug(message)
+
+    def info_log(self, message):
+        self.save_log(message, 'INFO')
+        self.log.info(message)
+
+    def warning_log(self, message):
+        self.save_log(message, 'WARNING')
+        self.log.warning(message)
+
+    def error_log(self, message):
+        self.save_log(message, 'ERROR')
+        self.log.error(message)
+
+    def exception_log(self, message):
+        self.save_log(message, 'ERROR')
+        self.log.exception(message)
+
+    def critical_log(self, message):
+        self.save_log(message, 'CRITICAL')
+        self.log.critical(message)
 
 
 def print_info(msg):

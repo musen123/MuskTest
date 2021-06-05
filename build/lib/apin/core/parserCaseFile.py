@@ -18,7 +18,8 @@ import unittest
 def parser_json_create_cases(dir: str):
     """解析json文件创建用例"""
     # 支持yaml
-
+    suite = unittest.TestSuite()
+    load = unittest.TestLoader()
     files = os.listdir(dir)
     for filename in files:
         if filename.endswith('.json') and filename.startswith('test'):
@@ -27,11 +28,14 @@ def parser_json_create_cases(dir: str):
             cls_name = filename.replace('.json', '').replace('test', '').split('_')
             cls_name = 'Test' + ''.join([i.capitalize() for i in cls_name])
             cls = GenerateTest(cls_name, (HttpCase,), case_data)
-            return unittest.defaultTestLoader.loadTestsFromTestCase(cls)
+            suite.addTest(load.loadTestsFromTestCase(cls))
+    return suite
 
 
 def parser_yaml_create_cases(dir: str):
     """解析yaml文件创建用例"""
+    suite = unittest.TestSuite()
+    load = unittest.TestLoader()
     files = os.listdir(dir)
     for filename in files:
         # 支持json
@@ -41,4 +45,5 @@ def parser_yaml_create_cases(dir: str):
             cls_name = filename.replace('.yaml', '').replace('test', '').split('_')
             cls_name = 'Test' + ''.join([i.capitalize() for i in cls_name])
             cls = GenerateTest(cls_name, (HttpCase,), case_data)
-            return unittest.defaultTestLoader.loadTestsFromTestCase(cls)
+            suite.addTest(load.loadTestsFromTestCase(cls))
+    return suite

@@ -11,7 +11,7 @@ import requests
 import jsonpath
 from apin.core.dataParser import DataParser
 from apin.core.basecase import BaseTestCase
-from apin.core import log
+from apin.core.logger import CaseLog
 from apin.core.parsersetting import ENV
 
 
@@ -120,60 +120,6 @@ class CaseData:
         return getattr(self, attr, None)
 
 
-class Request:
-
-    def __init__(self, case, test):
-        """
-        :param case: 用例数据
-        :param test: 测试用例
-        """
-        self.test = test
-        self.request_data = case
-
-    def request_api(self):
-        # 发送请求
-        response = self.test.session.request(**self.request_data.datas)
-
-        base_info = "[{}]: {} ".format(self.request_data.method.upper(), self.request_data.url)
-        log.debug(base_info)
-        self.test.url = self.request_data.url
-        self.test.method = response.request.method
-        self.test.status_cede = response.status_code
-        self.test.base_info = base_info
-        self.test.response_header = response.headers.items()
-        self.test.requests_header = response.request.headers.items()
-        try:
-            response_body = response.json()
-            self.test.response_body = json.dumps(response_body, ensure_ascii=False, indent=2)
-        except:
-            body = response.content
-            self.test.response_body = body.decode('utf-8') if body else ''
-        try:
-            request_body = json.loads(response.request.body.decode('utf-8'))
-            self.test.requests_body = json.dumps(request_body, ensure_ascii=False, indent=2)
-        except:
-            body = response.request.body
-            self.test.requests_body = body.decode('utf-8') if body else ''
-        self.requests_log(self.test)
-        return response
-
-    def requests_log(self, test):
-        requests_log_info = "\n=======================Requests Info======================="
-        requests_log_info += "\nRequest Headers:\n"
-        for k, v in test.requests_header:
-            requests_log_info += "      {}:{}\n".format(k, v)
-        requests_log_info += "Request body:\n"
-        requests_log_info += "{}".format(test.requests_body)
-        response_log_info = "\n=======================Response Info======================="
-        response_log_info += "\nResponse Headers:\n"
-        for k, v in test.requests_header:
-            response_log_info += "      {}:{}\n".format(k, v)
-        response_log_info += "Response body:\n"
-        response_log_info += test.response_body
-        log.debug(requests_log_info)
-        log.debug(response_log_info)
-
-
 class Extract:
     """数据提取"""
     env = {}
@@ -191,7 +137,7 @@ class Extract:
         return value
 
 
-class HttpCase(BaseTestCase, Extract):
+class HttpCase(BaseTestCase, Extract, CaseLog):
     host = None
     interface = None
     headers = None
@@ -202,12 +148,12 @@ class HttpCase(BaseTestCase, Extract):
     session = requests.Session()
 
     def perform(self, case):
-        log.info("开始执行用例：[{}]——>{}".format(case.get('title'), self))
+        self.__run_log()
         # 发送http请求
         response = self.http_requests(case)
         # 数据提取
         self.data_extraction(response, case)
-        # 断言
+        # 响应断言
         self.assert_result(response, case)
 
     def data_extraction(self, response, case):
@@ -218,8 +164,9 @@ class HttpCase(BaseTestCase, Extract):
         :return:
         """
         exts = case.get('extract') or getattr(self, 'extract', None)
-
-        if not isinstance(exts, dict): return
+        if not (isinstance(exts, dict) and exts): return
+        self.info_log("从响应结果中开始提取数据")
+        self.extras = []
         # 遍历要提取的数据
         for name, ext in exts.items():
             # 判断提取数据的方式
@@ -228,20 +175,28 @@ class HttpCase(BaseTestCase, Extract):
             elif len(ext) == 3 and ext[1] == "re":
                 value = self.re_extract(response, ext[2])
             else:
-                log.warning("变量{},的提取表达式 :{}格式不对！".format(name, ext))
+                self.warning_log("变量{},的提取表达式 :{}格式不对！".format(name, ext))
+                self.extras.append((name, ext, '提取失败！'))
                 break
             self.env[name] = value
-            log.debug("提取变量：{},提取方式【jsonpath】,提取表达式:{},提取值为:{}".format(name, ext[2], value))
+            self.extras.append((name, ext, value))
+            self.info_log("提取变量：{},提取方式【{}】,提取表达式:{},提取值为:{}".format(name, ext[1], ext[2], value))
 
     def http_requests(self, case):
         # 发送请求
         # 处理请求数据
-        case = self.handle_data(case)
+        case = self.__handle_data(case)
         response = Request(case, self).request_api()
         return response
 
     def assert_result(self, response, case):
         """断言"""
+        error_info = """断言数据格式错误,verification字段为必须为数组，格式如下:
+        verification:[
+            [断言方式,预期结果,实际结果]
+        ]
+        """
+        self.assert_info = []
         # 获取断言数据
         assert_list = case.get('verification') or getattr(self, 'verification', None)
         # 判断是否需要断言
@@ -251,131 +206,36 @@ class HttpCase(BaseTestCase, Extract):
                 # 判断断言数据的类型
                 if isinstance(item, list) and len(item) == 3:
                     self.__verification_list(response, item)
-                elif len(item) == 3 and isinstance(item, dict):
-                    self.__verification_dict(response, item)
                 else:
-                    raise ValueError('断言数据格式错误,verification字段为必须为数组，格式如下:\n'
-                                     'verification:[\n'
-                                     '[断言方式,预期结果,实际结果]\n'
-                                     ']'
-                                     '')
+                    raise ValueError(error_info)
+
         elif assert_list:
-            raise ValueError('断言数据格式错误,verification字段为必须为数组，格式如下:\n'
-                             'verification:[\n'
-                             '[断言方式,预期结果,实际结果]\n'
-                             ']'
-                             '')
+            raise ValueError(error_info)
 
     def __verification_list(self, response, item: list):
         # 判断断言的方法
-
-        actual_pattern = r"V{{(.+?)}}"
-        if item[0] == 'eq':
-            if item[2] == "status_code":
+        if item[2] == "status_code":
+            if item[0] == 'eq':
                 actual = response.status_code
                 expected = item[1]
-                log.info("预期结果：{} ".format(expected))
-                log.info("实际结果：{}".format(actual))
-                self.assertTrue(expected, actual)
-                return
-            act = item[2]
-            actual = DataParser.parser_variable(self.env, act) if act else act
-            if isinstance(actual, dict):
-                for k, v in actual.items():
-                    res = re.search(actual_pattern, v)
-                    if res:
-                        path = res.group(1)
-                        v1 = self.json_extract(response, path)
-                        v2 = self.re_extract(response, path)
-                        value = v1 if v1 or v1 == 0 else v2
-                        actual[k] = value
-            elif isinstance(actual, list):
-                for k, v in enumerate(copy.deepcopy(actual)):
-                    res = re.search(actual_pattern, v)
-                    if res:
-                        path = res.group(1)
-                        v1 = self.json_extract(response, path)
-                        v2 = self.re_extract(response, path)
-                        value = v1 if v1 or v1 == 0 else v2
-                        actual[k] = value
+                self.info_log('断言http响应状态码是否和预期一致')
+                return self.__assert(self.assertEqual, expected, actual, 'eq')
             else:
-                res = re.search(actual_pattern, actual)
-                if res:
-                    path = res.group(1)
-                    v1 = self.json_extract(response, path)
-                    v2 = self.re_extract(response, path)
-                    value = v1 if v1 or v1 == 0 else v2
-                    actual = value
-            expected = item[1]
-            expected = DataParser.parser_variable(self.env, expected) if expected else expected
-            log.info("预期结果：{} ".format(expected))
-            log.info("实际结果：{}".format(actual))
-            # 断言
-            self.assertEqual(expected, actual)
-        elif isinstance(item, dict) and item.get('method') == 'contain':
-            if item[2] == "status_code":
-                actual = response.status_code
-                expected = item[1]
-                log.info("预期结果：{} ".format(expected))
-                log.info("实际结果：{}".format(actual))
-                self.assertTrue(expected, actual)
-                return
-            # 断言包含
-            act = item.get('actual')
-            actual = DataParser.parser_variable(self.env, act) if act else act
-            for k, v in actual.items():
-                res = re.search(actual_pattern, v)
-                if res:
-                    path = res.group(1)
-                    v1 = self.json_extract(response, path)
-                    v2 = self.re_extract(response, path)
-                    value = v1 if v1 or v1 == 0 else v2
-                    actual[k] = value
-            expected = item.get('expected')
-            expected = DataParser.parser_variable(self.env, expected) if expected else expected
-            log.info("预期结果：{} ".format(expected))
-            log.info("实际结果：{}".format(actual))
-            self.assertIn(expected, actual)
+                self.error_log('http状态码，断言方式必须使用eq')
+                raise ValueError('http状态码，断言方式必须使用eq')
 
-    def __verification_dict(self, response, item):
-        # 判断断言的方法
-        actual_pattern = r"V{{(.+?)}}"
-        if isinstance(item, dict) and item.get('method') == 'eq':
-            act = item.get('actual')
-            actual = DataParser.parser_variable(self.env, act) if act else act
-            for k, v in actual.items():
-                res = re.search(actual_pattern, v)
-                if res:
-                    path = res.group(1)
-                    v1 = self.json_extract(response, path)
-                    v2 = self.re_extract(response, path)
-                    value = v1 if v1 or v1 == 0 else v2
-                    actual[k] = value
-            expected = item.get('expected')
-            expected = DataParser.parser_variable(self.env, expected) if expected else expected
-            log.info("预期结果：{} ".format(expected))
-            log.info("实际结果：{}".format(actual))
-            # 断言
-            self.assertEqual(expected, actual)
-        elif isinstance(item, dict) and item.get('method') == 'contain':
-            # 断言包含
-            act = item.get('actual')
-            actual = DataParser.parser_variable(self.env, act) if act else act
-            for k, v in actual.items():
-                res = re.search(actual_pattern, v)
-                if res:
-                    path = res.group(1)
-                    v1 = self.json_extract(response, path)
-                    v2 = self.re_extract(response, path)
-                    value = v1 if v1 or v1 == 0 else v2
-                    actual[k] = value
-            expected = item.get('expected')
-            expected = DataParser.parser_variable(self.env, expected) if expected else expected
-            log.info("预期结果：{} ".format(expected))
-            log.info("实际结果：{}".format(actual))
-            self.assertIn(expected, actual)
+        actual = self.__actualDataHandle(response, item[2])
+        expected = item[1]
+        expected = DataParser.parser_variable(self.env, expected) if expected else expected
+        if item[0] == 'eq':
+            self.info_log('断言响应数据中的实际结果是否和预期相等')
+            self.__assert(self.assertEqual, expected, actual, 'eq')
 
-    def handle_data(self, case):
+        elif item[0] == 'contain':
+            self.info_log('断言响应数据中的实际结果是否包含预期结果')
+            self.__assert(self.assertIn, expected, actual, 'contain')
+
+    def __handle_data(self, case):
         """处理用例数据"""
         if isinstance(case, CaseData):
             data = case
@@ -395,3 +255,114 @@ class HttpCase(BaseTestCase, Extract):
                 setattr(data, k, v)
         data.data_handle(self)
         return data
+
+    def __run_log(self):
+        """输出当前环境变量数据的日志"""
+        self.l_env = ['{}:{}\n'.format(k, repr(v)) for k, v in self.env.items()]
+        self.g_env = ['{}:{}\n'.format(k, repr(v)) for k, v in ENV.items()]
+        self.info_log("当前全局变量：\n{}".format(''.join(self.g_env)))
+        self.info_log("当前局部变量：\n{}".format(''.join(self.l_env)))
+
+    def __actualDataHandle(self, response, act):
+        """处理实际结果"""
+        actual_pattern = r"V{{(.+?)}}"
+        actual = DataParser.parser_variable(self.env, act) if act else act
+        if isinstance(actual, dict):
+            for k, v in actual.items():
+                res = re.search(actual_pattern, v)
+                if res:
+                    path = res.group(1)
+                    v1 = self.json_extract(response, path)
+                    v2 = self.re_extract(response, path)
+                    value = v1 if v1 or v1 == 0 else v2
+                    actual[k] = value
+        elif isinstance(actual, list):
+            for k, v in enumerate(copy.deepcopy(actual)):
+                res = re.search(actual_pattern, v)
+                if res:
+                    path = res.group(1)
+                    v1 = self.json_extract(response, path)
+                    v2 = self.re_extract(response, path)
+                    value = v1 if v1 or v1 == 0 else v2
+                    actual[k] = value
+        else:
+            res = re.search(actual_pattern, actual)
+            if res:
+                path = res.group(1)
+                v1 = self.json_extract(response, path)
+                v2 = self.re_extract(response, path)
+                value = v1 if v1 or v1 == 0 else v2
+                actual = value
+        return actual
+
+    def __assert(self, assert_method, expected, actual, method):
+        """断言"""
+        self.info_log("预期结果：{} ".format(expected))
+        self.info_log("实际结果：{}".format(actual))
+        try:
+            assert_method(expected, actual)
+        except AssertionError as e:
+            self.assert_info.append((repr(expected), repr(actual), 'fail', method))
+            self.warning_log('断言未通过')
+            raise e
+        else:
+            self.assert_info.append((repr(expected), repr(actual), 'pass', method))
+            self.info_log('断言通过！')
+
+
+class Request:
+
+    def __init__(self, case, test: HttpCase):
+        """
+        :param case: 用例数据
+        :param test: 测试用例
+        """
+        self.test = test
+        self.request_data = case
+
+    def request_api(self):
+        # 发送请求
+        try:
+            self.test.url = self.request_data.datas.get('url')
+            self.test.method = self.request_data.datas.get('method')
+            response = self.test.session.request(**self.request_data.datas)
+        except Exception as e:
+            raise ValueError('请求发送失败，错误信息如下：{}'.format(e))
+        base_info = "[{}]: {} ".format(self.request_data.method.upper(), self.request_data.url)
+        self.test.debug_log(base_info)
+        self.test.url = self.request_data.url
+        self.test.method = response.request.method
+        self.test.status_cede = response.status_code
+        self.test.base_info = base_info
+        self.test.response_header = response.headers.items()
+        self.test.requests_header = response.request.headers.items()
+        try:
+            response_body = response.json()
+            self.test.response_body = json.dumps(response_body, ensure_ascii=False, indent=2)
+        except:
+            body = response.content
+            self.test.response_body = body.decode('utf-8') if body else ''
+        try:
+            request_body = json.loads(response.request.body.decode('utf-8'))
+            self.test.requests_body = json.dumps(request_body, ensure_ascii=False, indent=2)
+        except:
+            body = response.request.body
+            self.test.requests_body = body or''
+        self.requests_log(self.test)
+        return response
+
+    def requests_log(self, test):
+        requests_log_info = "开始发送请求，请求信息如下:"
+        requests_log_info += "\nRequest Headers:\n"
+        for k, v in getattr(test, 'requests_header'):
+            requests_log_info += "      {}:{}\n".format(k, v)
+        requests_log_info += "Request body:\n"
+        requests_log_info += "{}".format(getattr(test, 'requests_body'))
+        response_log_info = "接收后台的响应结果，响应信息如下:"
+        response_log_info += "\nResponse Headers:\n"
+        for k, v in getattr(test, 'requests_header'):
+            response_log_info += "      {}:{}\n".format(k, v)
+        response_log_info += "Response body:\n"
+        response_log_info += getattr(test, 'response_body')
+        self.test.debug_log(requests_log_info)
+        self.test.debug_log(response_log_info)

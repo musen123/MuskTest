@@ -35,13 +35,13 @@ def run(args=None):
     else:
         # help infp
         dir = os.path.abspath('.')
-    from apin.core import parserCaseFile
+    from apin.core import parserCase
     # load TestCase
     # load yaml TestCase
     data_dir = os.path.join(dir, 'casedata')
-    suite1 = parserCaseFile.parser_yaml_create_cases(data_dir) or unittest.TestSuite()
+    suite1 = parserCase.parser_yaml_create_cases(data_dir) or unittest.TestSuite()
     # load json TestCase
-    suite2 = parserCaseFile.parser_json_create_cases(data_dir) or unittest.TestSuite()
+    suite2 = parserCase.parser_json_create_cases(data_dir) or unittest.TestSuite()
     # load py TestCase
     case_dir = os.path.join(dir, 'testcases')
     suite = unittest.defaultTestLoader.discover(case_dir)

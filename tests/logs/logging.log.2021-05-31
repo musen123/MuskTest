@@ -1,0 +1,2289 @@
+INFO 2021-05-31 16:36:04,788 | 【】 | : 开始执行用例：[普通用户注册]——>test_01_member_register (test_json_demo.TestCeiKai)
+DEBUG 2021-05-31 16:36:05,166 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/register 
+DEBUG 2021-05-31 16:36:05,166 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "15585182191",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:05,166 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580175,
+    "reg_name": "小柠檬",
+    "mobile_phone": "15585182191"
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:05,167 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:05,168 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:05,168 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:05,168 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:05,168 | 【】 | : test_01_member_register (test_json_demo.TestCeiKai)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:05,168 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:05,168 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15585182191",
+  "admin_mobile": "13393127884",
+  "timestamp": 1622450164.7883868
+}
+
+INFO 2021-05-31 16:36:05,168 | 【】 | : 开始执行用例：[管理员注册]——>test_02_member_register (test_json_demo.TestCeiKai)
+DEBUG 2021-05-31 16:36:05,369 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/register 
+DEBUG 2021-05-31 16:36:05,370 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "13393127884",
+  "pwd": "lemonban",
+  "type": 0
+}
+DEBUG 2021-05-31 16:36:05,370 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580176,
+    "reg_name": "小柠檬",
+    "mobile_phone": "13393127884"
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:05,370 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:05,370 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:05,371 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:05,371 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:05,371 | 【】 | : test_02_member_register (test_json_demo.TestCeiKai)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:05,371 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:05,372 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15585182191",
+  "admin_mobile": "13393127884",
+  "timestamp": 1622450165.168198
+}
+
+INFO 2021-05-31 16:36:05,372 | 【】 | : 开始执行用例：[普通用户登录]——>test_03_member_login (test_json_demo.TestCeiKai)
+DEBUG 2021-05-31 16:36:05,576 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/login 
+DEBUG 2021-05-31 16:36:05,577 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "15585182191",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:05,577 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580175,
+    "leave_amount": 0.0,
+    "mobile_phone": "15585182191",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:04.0",
+    "type": 1,
+    "token_info": {
+      "token_type": "Bearer",
+      "expires_in": "2021-05-31 16:41:05",
+      "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg"
+    }
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+DEBUG 2021-05-31 16:36:05,577 | 【】 | : 提取变量：token,提取方式【jsonpath】,提取表达式:$..token,提取值为:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg
+DEBUG 2021-05-31 16:36:05,578 | 【】 | : 提取变量：member_id,提取方式【jsonpath】,提取表达式:$..id,提取值为:1234580175
+INFO 2021-05-31 16:36:05,578 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:05,578 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:05,578 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:05,578 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:05,578 | 【】 | : test_03_member_login (test_json_demo.TestCeiKai)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:05,579 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:05,579 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15585182191",
+  "admin_mobile": "13393127884",
+  "timestamp": 1622450165.372561,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg",
+  "member_id": 1234580175
+}
+
+INFO 2021-05-31 16:36:05,579 | 【】 | : 开始执行用例：[充值]——>test_04_member_recharge (test_json_demo.TestCeiKai)
+DEBUG 2021-05-31 16:36:05,658 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/recharge 
+DEBUG 2021-05-31 16:36:05,658 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg
+      Content-Length:258
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580175,
+  "amount": 20000,
+  "timestamp": 1622450165.579455,
+  "sign": "GNef/rUea4vfejiEENmAO1OxNh8hY88/t/x5vkiQ+WjQATPPmLz4ab6bXrmCD/pL7zVFB1jWblsFl4/HMuy9oyHRIUHVSX8HUes+qR22jQEMUlDY3GZHkgr3zMTHOadWY/irVMZQbCOv9a9PDuRA1a8Ao1L5ecHv040/dAEnoiw="
+}
+DEBUG 2021-05-31 16:36:05,658 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg
+      Content-Length:258
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580175,
+    "leave_amount": 20000.0,
+    "mobile_phone": "15585182191",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:04.0",
+    "type": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:05,659 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:05,659 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:05,659 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:05,659 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:05,659 | 【】 | : test_04_member_recharge (test_json_demo.TestCeiKai)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:05,659 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:05,659 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15585182191",
+  "admin_mobile": "13393127884",
+  "timestamp": 1622450165.579455,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg",
+  "member_id": 1234580175
+}
+
+INFO 2021-05-31 16:36:05,659 | 【】 | : 开始执行用例：[管理员用户登录]——>test_05_member_login (test_json_demo.TestCeiKai)
+DEBUG 2021-05-31 16:36:05,976 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/login 
+DEBUG 2021-05-31 16:36:05,977 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "13393127884",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:05,977 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580176,
+    "leave_amount": 0.0,
+    "mobile_phone": "13393127884",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:04.0",
+    "type": 0,
+    "token_info": {
+      "token_type": "Bearer",
+      "expires_in": "2021-05-31 16:41:05",
+      "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzYsImV4cCI6MTYyMjQ1MDQ2NX0.COUhlmiga_ut7l2xkVhU-G0AMu-IHdpRGa3YSwaF5EQsiWWFo0QWvtUXsv_JZosTozaBvgcU3eANW3lNyf8_MQ"
+    }
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+DEBUG 2021-05-31 16:36:05,977 | 【】 | : 提取变量：admin_token,提取方式【jsonpath】,提取表达式:$..token,提取值为:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzYsImV4cCI6MTYyMjQ1MDQ2NX0.COUhlmiga_ut7l2xkVhU-G0AMu-IHdpRGa3YSwaF5EQsiWWFo0QWvtUXsv_JZosTozaBvgcU3eANW3lNyf8_MQ
+DEBUG 2021-05-31 16:36:05,978 | 【】 | : 提取变量：admin_member_id,提取方式【jsonpath】,提取表达式:$..id,提取值为:1234580176
+INFO 2021-05-31 16:36:05,978 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:05,978 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:05,978 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:05,978 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:05,979 | 【】 | : test_05_member_login (test_json_demo.TestCeiKai)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:05,979 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:05,979 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15585182191",
+  "admin_mobile": "13393127884",
+  "timestamp": 1622450165.6599462,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg",
+  "member_id": 1234580175,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzYsImV4cCI6MTYyMjQ1MDQ2NX0.COUhlmiga_ut7l2xkVhU-G0AMu-IHdpRGa3YSwaF5EQsiWWFo0QWvtUXsv_JZosTozaBvgcU3eANW3lNyf8_MQ",
+  "admin_member_id": 1234580176
+}
+
+INFO 2021-05-31 16:36:05,979 | 【】 | : 开始执行用例：[管理员添加项目]——>test_06_loan_add (test_json_demo.TestCeiKai)
+DEBUG 2021-05-31 16:36:06,013 | 【】 | : [POST]: http://api.lemonban.com/futureloan/loan/add 
+DEBUG 2021-05-31 16:36:06,013 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzYsImV4cCI6MTYyMjQ1MDQ2NX0.COUhlmiga_ut7l2xkVhU-G0AMu-IHdpRGa3YSwaF5EQsiWWFo0QWvtUXsv_JZosTozaBvgcU3eANW3lNyf8_MQ
+      Content-Length:414
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580176,
+  "title": "世界这么大，借钱去看看",
+  "amount": 2000.0,
+  "loan_rate": 18.0,
+  "loan_term": 6,
+  "loan_date_type": 1,
+  "bidding_days": 10,
+  "timestamp": 1622450165.979413,
+  "sign": "AYG3PsFkJLWx2JXtqmcJDUSHc+8GNd4wHYXl0/PjQxz337CQQ9H/uwjM4CpR1yA10Zd3BthAfBrAt9GFMnrDJYXM4ostwRg8fIHLtlge4uVBkLYjYXaQoqfJv1QJlbhYey5c2xh5cX+ZLLfrncm5y4QeN7NlJDC1o9Wy0bSP1Rw="
+}
+DEBUG 2021-05-31 16:36:06,014 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzYsImV4cCI6MTYyMjQ1MDQ2NX0.COUhlmiga_ut7l2xkVhU-G0AMu-IHdpRGa3YSwaF5EQsiWWFo0QWvtUXsv_JZosTozaBvgcU3eANW3lNyf8_MQ
+      Content-Length:414
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 2092135,
+    "member_id": 1234580176,
+    "title": "世界这么大，借钱去看看",
+    "amount": 2000.0,
+    "loan_rate": 18.0,
+    "loan_term": 6,
+    "loan_date_type": 1,
+    "bidding_days": 5,
+    "create_time": "2021-05-31 16:36:05.0",
+    "bidding_start_time": null,
+    "full_time": null,
+    "status": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+DEBUG 2021-05-31 16:36:06,014 | 【】 | : 提取变量：loan_id,提取方式【jsonpath】,提取表达式:$..id,提取值为:2092135
+INFO 2021-05-31 16:36:06,014 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:06,015 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:06,018 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:06,019 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:06,019 | 【】 | : test_06_loan_add (test_json_demo.TestCeiKai)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:06,019 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:06,019 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15585182191",
+  "admin_mobile": "13393127884",
+  "timestamp": 1622450165.979413,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg",
+  "member_id": 1234580175,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzYsImV4cCI6MTYyMjQ1MDQ2NX0.COUhlmiga_ut7l2xkVhU-G0AMu-IHdpRGa3YSwaF5EQsiWWFo0QWvtUXsv_JZosTozaBvgcU3eANW3lNyf8_MQ",
+  "admin_member_id": 1234580176,
+  "loan_id": 2092135
+}
+
+INFO 2021-05-31 16:36:06,019 | 【】 | : 开始执行用例：[管理员审核项目]——>test_07_loan_audit (test_json_demo.TestCeiKai)
+DEBUG 2021-05-31 16:36:06,051 | 【】 | : [PATCH]: http://api.lemonban.com/futureloan/loan/audit 
+DEBUG 2021-05-31 16:36:06,051 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzYsImV4cCI6MTYyMjQ1MDQ2NX0.COUhlmiga_ut7l2xkVhU-G0AMu-IHdpRGa3YSwaF5EQsiWWFo0QWvtUXsv_JZosTozaBvgcU3eANW3lNyf8_MQ
+      Content-Length:261
+      Content-Type:application/json
+Request body:
+{
+  "loan_id": 2092135,
+  "approved_or_not": true,
+  "timestamp": 1622450166.019304,
+  "sign": "RX4MtnLRRAYR9kTb19t+Jyw20UeyxRiNk6WSPjKuXNQ6Zw6F9U/aoPhAba5ufAgoae5H0pLZopsu9YTGZgNb4/Jhv/gZQWK4Uw2Tncpms5VvtHLmzRB4SQMGgmHpyEeS9acHW2ZI+RsngskjTKGihS5zgGgSjtIV7Ra8s8jUM7k="
+}
+DEBUG 2021-05-31 16:36:06,051 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzYsImV4cCI6MTYyMjQ1MDQ2NX0.COUhlmiga_ut7l2xkVhU-G0AMu-IHdpRGa3YSwaF5EQsiWWFo0QWvtUXsv_JZosTozaBvgcU3eANW3lNyf8_MQ
+      Content-Length:261
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": null,
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:06,052 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:06,052 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:06,052 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:06,052 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:06,052 | 【】 | : test_07_loan_audit (test_json_demo.TestCeiKai)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:06,052 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:06,052 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15585182191",
+  "admin_mobile": "13393127884",
+  "timestamp": 1622450166.019304,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg",
+  "member_id": 1234580175,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzYsImV4cCI6MTYyMjQ1MDQ2NX0.COUhlmiga_ut7l2xkVhU-G0AMu-IHdpRGa3YSwaF5EQsiWWFo0QWvtUXsv_JZosTozaBvgcU3eANW3lNyf8_MQ",
+  "admin_member_id": 1234580176,
+  "loan_id": 2092135
+}
+
+INFO 2021-05-31 16:36:06,053 | 【】 | : 开始执行用例：[普通用户投资]——>test_08_member_recharge (test_json_demo.TestCeiKai)
+DEBUG 2021-05-31 16:36:06,086 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/recharge 
+DEBUG 2021-05-31 16:36:06,088 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg
+      Content-Length:277
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580175,
+  "loan_id": 2092135,
+  "amount": 200,
+  "timestamp": 1622450166.0532157,
+  "sign": "gf7ZdLvIJZhSsqpUA+13Kkl6vX/S/4O8jEmdi9FwDOwbizsscTg/JI27VzEvaTZB1nxOm7sKZc1Sw/Lo0lKTd7IY6VSue26IMVpCJUCwExXDpkqi1FCl2NZx8yAStq0AKUD6Ixjt6UfwmmxuiKKqLDEKCnCmUA92Z2TeoBfLTcU="
+}
+DEBUG 2021-05-31 16:36:06,088 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg
+      Content-Length:277
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580175,
+    "leave_amount": 20200.0,
+    "mobile_phone": "15585182191",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:04.0",
+    "type": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:06,088 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:06,089 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:06,089 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:06,089 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:06,089 | 【】 | : test_08_member_recharge (test_json_demo.TestCeiKai)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:06,089 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:06,090 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15585182191",
+  "admin_mobile": "13393127884",
+  "timestamp": 1622450166.0532157,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg",
+  "member_id": 1234580175,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzYsImV4cCI6MTYyMjQ1MDQ2NX0.COUhlmiga_ut7l2xkVhU-G0AMu-IHdpRGa3YSwaF5EQsiWWFo0QWvtUXsv_JZosTozaBvgcU3eANW3lNyf8_MQ",
+  "admin_member_id": 1234580176,
+  "loan_id": 2092135
+}
+
+INFO 2021-05-31 16:36:06,090 | 【】 | : 开始执行用例：[取现]——>test_09_member_withdraw (test_json_demo.TestCeiKai)
+DEBUG 2021-05-31 16:36:06,125 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/withdraw 
+DEBUG 2021-05-31 16:36:06,125 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg
+      Content-Length:257
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580175,
+  "amount": 2000,
+  "timestamp": 1622450166.090116,
+  "sign": "vu/8OERFV/sCilhodQWN6+X7z5xgJd2DrQwsrHmf8TYzVLLsg22FIRd/GUJ/KolKvGu3hl08E8oyuYmuseU66ZiRmkwUwjKKDfYTfx77LEKGEdOIPouAw0e+LIoTp+/+R3+fujWPPw6NweJMKJoL1DpzF9efgneZOWXfaqvAqu8="
+}
+DEBUG 2021-05-31 16:36:06,126 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg
+      Content-Length:257
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580175,
+    "leave_amount": 18200.0,
+    "mobile_phone": "15585182191",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:04.0",
+    "type": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:06,126 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:06,126 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:06,126 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:06,126 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:06,126 | 【】 | : test_09_member_withdraw (test_json_demo.TestCeiKai)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:06,127 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:06,127 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15585182191",
+  "admin_mobile": "13393127884",
+  "timestamp": 1622450166.090116,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzUsImV4cCI6MTYyMjQ1MDQ2NX0.Axnu2VRnTX7zyI7s6CEhmRAxpKGeBTHwMAN2mPIAwS99E0HKveqE_U5o47mA5DXh2P88ZzVAjypAJA8XyM1TLg",
+  "member_id": 1234580175,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzYsImV4cCI6MTYyMjQ1MDQ2NX0.COUhlmiga_ut7l2xkVhU-G0AMu-IHdpRGa3YSwaF5EQsiWWFo0QWvtUXsv_JZosTozaBvgcU3eANW3lNyf8_MQ",
+  "admin_member_id": 1234580176,
+  "loan_id": 2092135
+}
+
+INFO 2021-05-31 16:36:06,127 | 【】 | : 开始执行用例：[普通用户注册]——>test_01_member_register (test_stream_V3.TestDomeV3)
+DEBUG 2021-05-31 16:36:06,330 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/register 
+DEBUG 2021-05-31 16:36:06,330 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "15516671422",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:06,331 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580177,
+    "reg_name": "小柠檬",
+    "mobile_phone": "15516671422"
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:06,331 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:06,331 | 【】 | : 实际结果：OK
+DEBUG 2021-05-31 16:36:06,342 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:06,343 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15516671422",
+  "admin_mobile": "13392831518",
+  "timestamp": 1622450166.127018
+}
+
+WARNING 2021-05-31 16:36:06,343 | 【】 | : test_01_member_register (test_stream_V3.TestDomeV3)执行——>【失败】
+
+WARNING 2021-05-31 16:36:06,343 | 【】 | : 0 != 'OK'
+ERROR 2021-05-31 16:36:06,343 | 【】 | : (<class 'AssertionError'>, AssertionError("0 != 'OK'"), <traceback object at 0x0463E7D8>)
+NoneType: None
+INFO 2021-05-31 16:36:06,344 | 【】 | : 开始执行用例：[管理员注册]——>test_02_member_register (test_stream_V3.TestDomeV3)
+DEBUG 2021-05-31 16:36:06,548 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/register 
+DEBUG 2021-05-31 16:36:06,548 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "13392831518",
+  "pwd": "lemonban",
+  "type": 0
+}
+DEBUG 2021-05-31 16:36:06,548 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580178,
+    "reg_name": "小柠檬",
+    "mobile_phone": "13392831518"
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:06,548 | 【】 | : 预期结果：200 
+INFO 2021-05-31 16:36:06,548 | 【】 | : 实际结果：200
+INFO 2021-05-31 16:36:06,548 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:06,549 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:06,549 | 【】 | : test_02_member_register (test_stream_V3.TestDomeV3)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:06,549 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:06,549 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15516671422",
+  "admin_mobile": "13392831518",
+  "timestamp": 1622450166.3444786
+}
+
+INFO 2021-05-31 16:36:06,549 | 【】 | : 开始执行用例：[普通用户登录]——>test_03_member_login (test_stream_V3.TestDomeV3)
+DEBUG 2021-05-31 16:36:06,750 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/login 
+DEBUG 2021-05-31 16:36:06,750 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "15516671422",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:06,750 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580177,
+    "leave_amount": 0.0,
+    "mobile_phone": "15516671422",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:05.0",
+    "type": 1,
+    "token_info": {
+      "token_type": "Bearer",
+      "expires_in": "2021-05-31 16:41:06",
+      "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ"
+    }
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+DEBUG 2021-05-31 16:36:06,751 | 【】 | : 提取变量：token,提取方式【jsonpath】,提取表达式:$..token,提取值为:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ
+DEBUG 2021-05-31 16:36:06,751 | 【】 | : 提取变量：member_id,提取方式【jsonpath】,提取表达式:$..id,提取值为:1234580177
+INFO 2021-05-31 16:36:06,751 | 【】 | : 预期结果：200 
+INFO 2021-05-31 16:36:06,751 | 【】 | : 实际结果：200
+INFO 2021-05-31 16:36:06,752 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:06,752 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:06,752 | 【】 | : test_03_member_login (test_stream_V3.TestDomeV3)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:06,752 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:06,752 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15516671422",
+  "admin_mobile": "13392831518",
+  "timestamp": 1622450166.5497859,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ",
+  "member_id": 1234580177
+}
+
+INFO 2021-05-31 16:36:06,752 | 【】 | : 开始执行用例：[充值]——>test_04_member_recharge (test_stream_V3.TestDomeV3)
+DEBUG 2021-05-31 16:36:06,785 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/recharge 
+DEBUG 2021-05-31 16:36:06,785 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ
+      Content-Length:259
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580177,
+  "amount": 20000,
+  "timestamp": 1622450166.7522185,
+  "sign": "IbD/8JMDHc2ORNmuAvpSNz/Gt+8WBy29vIa5dtWyAZOhqEJ/gGTfRkhRO+JCra5ahh4pA26eKoaUIBCZ8Y5gK5aKnPBE/3rn1U2GuoKH88jgr0mbtqFDygMk85cwwcPPbaGP3HGyA/OPIHG7A4RMT6ffH7LVJfSdHWST6TIP8Lg="
+}
+DEBUG 2021-05-31 16:36:06,785 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ
+      Content-Length:259
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580177,
+    "leave_amount": 20000.0,
+    "mobile_phone": "15516671422",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:05.0",
+    "type": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:06,785 | 【】 | : 预期结果：200 
+INFO 2021-05-31 16:36:06,785 | 【】 | : 实际结果：200
+INFO 2021-05-31 16:36:06,786 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:06,786 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:06,786 | 【】 | : test_04_member_recharge (test_stream_V3.TestDomeV3)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:06,786 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:06,786 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15516671422",
+  "admin_mobile": "13392831518",
+  "timestamp": 1622450166.7522185,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ",
+  "member_id": 1234580177
+}
+
+INFO 2021-05-31 16:36:06,786 | 【】 | : 开始执行用例：[管理员用户登录]——>test_05_member_login (test_stream_V3.TestDomeV3)
+DEBUG 2021-05-31 16:36:06,987 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/login 
+DEBUG 2021-05-31 16:36:06,988 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "13392831518",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:06,988 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580178,
+    "leave_amount": 0.0,
+    "mobile_phone": "13392831518",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:06.0",
+    "type": 0,
+    "token_info": {
+      "token_type": "Bearer",
+      "expires_in": "2021-05-31 16:41:06",
+      "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzgsImV4cCI6MTYyMjQ1MDQ2Nn0.4f9dzjC3wxmAobFkIaGaKYXtHDydRVxHiUxNeoDy5gZpbFIBxbaCipPbNX8NwSs69fXtXKfdnrVXCmTcRclQag"
+    }
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+DEBUG 2021-05-31 16:36:06,989 | 【】 | : 提取变量：admin_token,提取方式【jsonpath】,提取表达式:$..token,提取值为:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzgsImV4cCI6MTYyMjQ1MDQ2Nn0.4f9dzjC3wxmAobFkIaGaKYXtHDydRVxHiUxNeoDy5gZpbFIBxbaCipPbNX8NwSs69fXtXKfdnrVXCmTcRclQag
+DEBUG 2021-05-31 16:36:06,989 | 【】 | : 提取变量：admin_member_id,提取方式【jsonpath】,提取表达式:$..id,提取值为:1234580178
+INFO 2021-05-31 16:36:06,989 | 【】 | : 预期结果：200 
+INFO 2021-05-31 16:36:06,989 | 【】 | : 实际结果：200
+INFO 2021-05-31 16:36:06,990 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:06,990 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:06,990 | 【】 | : test_05_member_login (test_stream_V3.TestDomeV3)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:06,990 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:06,991 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15516671422",
+  "admin_mobile": "13392831518",
+  "timestamp": 1622450166.786163,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ",
+  "member_id": 1234580177,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzgsImV4cCI6MTYyMjQ1MDQ2Nn0.4f9dzjC3wxmAobFkIaGaKYXtHDydRVxHiUxNeoDy5gZpbFIBxbaCipPbNX8NwSs69fXtXKfdnrVXCmTcRclQag",
+  "admin_member_id": 1234580178
+}
+
+INFO 2021-05-31 16:36:06,991 | 【】 | : 开始执行用例：[管理员添加项目]——>test_06_loan_add (test_stream_V3.TestDomeV3)
+DEBUG 2021-05-31 16:36:07,022 | 【】 | : [POST]: http://api.lemonban.com/futureloan/loan/add 
+DEBUG 2021-05-31 16:36:07,023 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzgsImV4cCI6MTYyMjQ1MDQ2Nn0.4f9dzjC3wxmAobFkIaGaKYXtHDydRVxHiUxNeoDy5gZpbFIBxbaCipPbNX8NwSs69fXtXKfdnrVXCmTcRclQag
+      Content-Length:414
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580178,
+  "title": "世界这么大，借钱去看看",
+  "amount": 2000.0,
+  "loan_rate": 18.0,
+  "loan_term": 6,
+  "loan_date_type": 1,
+  "bidding_days": 10,
+  "timestamp": 1622450166.991149,
+  "sign": "Ag7nIZ2zKiYQDRd5vXHMen4AaasH1Xx4JSWyInCSH+xOy4n/xZykLnA493FAc5Y6DgDmLMQ8XKUNeQr/Ywsgj27gw03Yv1KoxEoY0Arwfl3rdtK5zUn/30pkizfbkJ3CjlOi6ct645SdMFBhDZXlUDYj/WDodk7yslndytgpgf0="
+}
+DEBUG 2021-05-31 16:36:07,023 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzgsImV4cCI6MTYyMjQ1MDQ2Nn0.4f9dzjC3wxmAobFkIaGaKYXtHDydRVxHiUxNeoDy5gZpbFIBxbaCipPbNX8NwSs69fXtXKfdnrVXCmTcRclQag
+      Content-Length:414
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 2092136,
+    "member_id": 1234580178,
+    "title": "世界这么大，借钱去看看",
+    "amount": 2000.0,
+    "loan_rate": 18.0,
+    "loan_term": 6,
+    "loan_date_type": 1,
+    "bidding_days": 5,
+    "create_time": "2021-05-31 16:36:06.0",
+    "bidding_start_time": null,
+    "full_time": null,
+    "status": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+DEBUG 2021-05-31 16:36:07,024 | 【】 | : 提取变量：loan_id,提取方式【jsonpath】,提取表达式:$..id,提取值为:2092136
+INFO 2021-05-31 16:36:07,024 | 【】 | : 预期结果：200 
+INFO 2021-05-31 16:36:07,024 | 【】 | : 实际结果：200
+INFO 2021-05-31 16:36:07,025 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:07,025 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:07,026 | 【】 | : test_06_loan_add (test_stream_V3.TestDomeV3)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:07,026 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:07,026 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15516671422",
+  "admin_mobile": "13392831518",
+  "timestamp": 1622450166.991149,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ",
+  "member_id": 1234580177,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzgsImV4cCI6MTYyMjQ1MDQ2Nn0.4f9dzjC3wxmAobFkIaGaKYXtHDydRVxHiUxNeoDy5gZpbFIBxbaCipPbNX8NwSs69fXtXKfdnrVXCmTcRclQag",
+  "admin_member_id": 1234580178,
+  "loan_id": 2092136
+}
+
+INFO 2021-05-31 16:36:07,027 | 【】 | : 开始执行用例：[管理员审核项目]——>test_07_loan_audit (test_stream_V3.TestDomeV3)
+DEBUG 2021-05-31 16:36:07,060 | 【】 | : [PATCH]: http://api.lemonban.com/futureloan/loan/audit 
+DEBUG 2021-05-31 16:36:07,061 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzgsImV4cCI6MTYyMjQ1MDQ2Nn0.4f9dzjC3wxmAobFkIaGaKYXtHDydRVxHiUxNeoDy5gZpbFIBxbaCipPbNX8NwSs69fXtXKfdnrVXCmTcRclQag
+      Content-Length:262
+      Content-Type:application/json
+Request body:
+{
+  "loan_id": 2092136,
+  "approved_or_not": true,
+  "timestamp": 1622450167.0270555,
+  "sign": "sb+yfnLVSm+pi7FGQ7L9As9qQ6ZfaFSi9KixgfzaDDks08lqIf0xTzAksnluB+NL6zHy5hx24Tg6crJj6rf2PswOv0dvkmDRQeeUyXUX42lr3oOzi9Ohes7xjKRnvPvbFVYCJ3xC441mjasXnDeXFVvILwjf7fDVqDTvZAcwBv8="
+}
+DEBUG 2021-05-31 16:36:07,061 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzgsImV4cCI6MTYyMjQ1MDQ2Nn0.4f9dzjC3wxmAobFkIaGaKYXtHDydRVxHiUxNeoDy5gZpbFIBxbaCipPbNX8NwSs69fXtXKfdnrVXCmTcRclQag
+      Content-Length:262
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": null,
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:07,061 | 【】 | : 预期结果：200 
+INFO 2021-05-31 16:36:07,061 | 【】 | : 实际结果：200
+INFO 2021-05-31 16:36:07,061 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:07,062 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:07,062 | 【】 | : test_07_loan_audit (test_stream_V3.TestDomeV3)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:07,062 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:07,062 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15516671422",
+  "admin_mobile": "13392831518",
+  "timestamp": 1622450167.0270555,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ",
+  "member_id": 1234580177,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzgsImV4cCI6MTYyMjQ1MDQ2Nn0.4f9dzjC3wxmAobFkIaGaKYXtHDydRVxHiUxNeoDy5gZpbFIBxbaCipPbNX8NwSs69fXtXKfdnrVXCmTcRclQag",
+  "admin_member_id": 1234580178,
+  "loan_id": 2092136
+}
+
+INFO 2021-05-31 16:36:07,062 | 【】 | : 开始执行用例：[普通用户投资]——>test_08_member_recharge (test_stream_V3.TestDomeV3)
+DEBUG 2021-05-31 16:36:07,094 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/recharge 
+DEBUG 2021-05-31 16:36:07,095 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ
+      Content-Length:277
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580177,
+  "loan_id": 2092136,
+  "amount": 200,
+  "timestamp": 1622450167.0629582,
+  "sign": "HJeSb9cNNA2EjxZduJHYtugMmiT/Emja+JVAJMhXjYvTA7AmzXRWWRyIM7RtnK2P1HerW6Z3NebQzrQVOznCpBo7HKgPax86h2KQV1lwgmwUOC2R6M3R/Crx375nOVFOyvb3upQDFLp6mRcU/PGDy7gdZMTc5v4ELPy5aFmP4x4="
+}
+DEBUG 2021-05-31 16:36:07,095 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ
+      Content-Length:277
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580177,
+    "leave_amount": 20200.0,
+    "mobile_phone": "15516671422",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:05.0",
+    "type": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:07,095 | 【】 | : 预期结果：200 
+INFO 2021-05-31 16:36:07,095 | 【】 | : 实际结果：200
+INFO 2021-05-31 16:36:07,095 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:07,096 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:07,096 | 【】 | : test_08_member_recharge (test_stream_V3.TestDomeV3)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:07,096 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:07,096 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15516671422",
+  "admin_mobile": "13392831518",
+  "timestamp": 1622450167.0629582,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ",
+  "member_id": 1234580177,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzgsImV4cCI6MTYyMjQ1MDQ2Nn0.4f9dzjC3wxmAobFkIaGaKYXtHDydRVxHiUxNeoDy5gZpbFIBxbaCipPbNX8NwSs69fXtXKfdnrVXCmTcRclQag",
+  "admin_member_id": 1234580178,
+  "loan_id": 2092136
+}
+
+INFO 2021-05-31 16:36:07,096 | 【】 | : 开始执行用例：[取现]——>test_09_member_withdraw (test_stream_V3.TestDomeV3)
+DEBUG 2021-05-31 16:36:07,128 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/withdraw 
+DEBUG 2021-05-31 16:36:07,129 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ
+      Content-Length:258
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580177,
+  "amount": 2000,
+  "timestamp": 1622450167.0969112,
+  "sign": "uzGJt+/2SVUV1wbVh7BpY82KdvhheCCc9tLlDZHBsPPp+8mw8dipBMzkZ2R5AaF/++aNfwa5Trty7KHO0QDfsbKbZfpufiN1UfAaJ8RRxh2vMdq1lvQ7AFfsvTGzI1OlluZPlwmNgZChFuX8Ry684Bj3P1GrmV/VntfzUEol/H8="
+}
+DEBUG 2021-05-31 16:36:07,129 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ
+      Content-Length:258
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580177,
+    "leave_amount": 18200.0,
+    "mobile_phone": "15516671422",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:05.0",
+    "type": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:07,129 | 【】 | : 预期结果：200 
+INFO 2021-05-31 16:36:07,129 | 【】 | : 实际结果：200
+INFO 2021-05-31 16:36:07,129 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:07,130 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:07,130 | 【】 | : test_09_member_withdraw (test_stream_V3.TestDomeV3)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:07,130 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:07,130 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15516671422",
+  "admin_mobile": "13392831518",
+  "timestamp": 1622450167.0969112,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzcsImV4cCI6MTYyMjQ1MDQ2Nn0.iOXoVcyCdDzPnWcVAsw3NfuqveifIK_WJNJ9hnInDK4UAVdTwIm6jSeL1URSYXIgYnHeyfR7poP_Fi75IqDveQ",
+  "member_id": 1234580177,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzgsImV4cCI6MTYyMjQ1MDQ2Nn0.4f9dzjC3wxmAobFkIaGaKYXtHDydRVxHiUxNeoDy5gZpbFIBxbaCipPbNX8NwSs69fXtXKfdnrVXCmTcRclQag",
+  "admin_member_id": 1234580178,
+  "loan_id": 2092136
+}
+
+INFO 2021-05-31 16:36:07,130 | 【】 | : 开始执行用例：[百度]——>test_01_ (test_stream_V3.Testbaidu)
+DEBUG 2021-05-31 16:36:07,259 | 【】 | : [GET]: http://www.baidu.com/ 
+DEBUG 2021-05-31 16:36:07,259 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+Request body:
+
+DEBUG 2021-05-31 16:36:07,259 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+Response body:
+<!DOCTYPE html>
+<!--STATUS OK--><html> <head><meta http-equiv=content-type content=text/html;charset=utf-8><meta http-equiv=X-UA-Compatible content=IE=Edge><meta content=always name=referrer><link rel=stylesheet type=text/css href=http://s1.bdstatic.com/r/www/cache/bdorz/baidu.min.css><title>百度一下，你就知道</title></head> <body link=#0000cc> <div id=wrapper> <div id=head> <div class=head_wrapper> <div class=s_form> <div class=s_form_wrapper> <div id=lg> <img hidefocus=true src=//www.baidu.com/img/bd_logo1.png width=270 height=129> </div> <form id=form name=f action=//www.baidu.com/s class=fm> <input type=hidden name=bdorz_come value=1> <input type=hidden name=ie value=utf-8> <input type=hidden name=f value=8> <input type=hidden name=rsv_bp value=1> <input type=hidden name=rsv_idx value=1> <input type=hidden name=tn value=baidu><span class="bg s_ipt_wr"><input id=kw name=wd class=s_ipt value maxlength=255 autocomplete=off autofocus></span><span class="bg s_btn_wr"><input type=submit id=su value=百度一下 class="bg s_btn"></span> </form> </div> </div> <div id=u1> <a href=http://news.baidu.com name=tj_trnews class=mnav>新闻</a> <a href=http://www.hao123.com name=tj_trhao123 class=mnav>hao123</a> <a href=http://map.baidu.com name=tj_trmap class=mnav>地图</a> <a href=http://v.baidu.com name=tj_trvideo class=mnav>视频</a> <a href=http://tieba.baidu.com name=tj_trtieba class=mnav>贴吧</a> <noscript> <a href=http://www.baidu.com/bdorz/login.gif?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1 name=tj_login class=lb>登录</a> </noscript> <script>document.write('<a href="http://www.baidu.com/bdorz/login.gif?login&tpl=mn&u='+ encodeURIComponent(window.location.href+ (window.location.search === "" ? "?" : "&")+ "bdorz_come=1")+ '" name="tj_login" class="lb">登录</a>');</script> <a href=//www.baidu.com/more/ name=tj_briicon class=bri style="display: block;">更多产品</a> </div> </div> </div> <div id=ftCon> <div id=ftConw> <p id=lh> <a href=http://home.baidu.com>关于百度</a> <a href=http://ir.baidu.com>About Baidu</a> </p> <p id=cp>&copy;2017&nbsp;Baidu&nbsp;<a href=http://www.baidu.com/duty/>使用百度前必读</a>&nbsp; <a href=http://jianyi.baidu.com/ class=cp-feedback>意见反馈</a>&nbsp;京ICP证030173号&nbsp; <img src=//www.baidu.com/img/gs.gif> </p> </div> </div> </div> </body> </html>
+
+INFO 2021-05-31 16:36:07,259 | 【】 | : test_01_ (test_stream_V3.Testbaidu)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:07,259 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:07,260 | 【】 | : 当前运行环境局部变量有：
+{}
+
+INFO 2021-05-31 16:36:07,260 | 【】 | : 开始执行用例：[普通用户注册]——>test_01_member_register (test_yaml_demo.TestYamlDemo)
+DEBUG 2021-05-31 16:36:07,461 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/register 
+DEBUG 2021-05-31 16:36:07,462 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "15525330442",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:07,462 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580179,
+    "reg_name": "小柠檬",
+    "mobile_phone": "15525330442"
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:07,463 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:07,464 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:07,464 | 【】 | : test_01_member_register (test_yaml_demo.TestYamlDemo)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:07,465 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:07,465 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15525330442",
+  "admin_mobile": "13397751405",
+  "timestamp": 1622450167.2602317
+}
+
+INFO 2021-05-31 16:36:07,466 | 【】 | : 开始执行用例：[管理员注册]——>test_02_member_register (test_yaml_demo.TestYamlDemo)
+DEBUG 2021-05-31 16:36:07,671 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/register 
+DEBUG 2021-05-31 16:36:07,672 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "13397751405",
+  "pwd": "lemonban",
+  "type": 0
+}
+DEBUG 2021-05-31 16:36:07,673 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580180,
+    "reg_name": "小柠檬",
+    "mobile_phone": "13397751405"
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:07,674 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:07,675 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:07,676 | 【】 | : test_02_member_register (test_yaml_demo.TestYamlDemo)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:07,677 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:07,679 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15525330442",
+  "admin_mobile": "13397751405",
+  "timestamp": 1622450167.4653344
+}
+
+INFO 2021-05-31 16:36:07,680 | 【】 | : 开始执行用例：[普通用户登录]——>test_03_member_login (test_yaml_demo.TestYamlDemo)
+DEBUG 2021-05-31 16:36:07,880 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/login 
+DEBUG 2021-05-31 16:36:07,880 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "15525330442",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:07,880 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580179,
+    "leave_amount": 0.0,
+    "mobile_phone": "15525330442",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:06.0",
+    "type": 1,
+    "token_info": {
+      "token_type": "Bearer",
+      "expires_in": "2021-05-31 16:41:07",
+      "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzksImV4cCI6MTYyMjQ1MDQ2N30.DIx0aexLUNSxGuWQ5nhYlXs5f3vWCZ0YYipG0Eo-KweZhRCvjlu4S_qkHfXBYEce0V4WLYJgnmUjfME-O2cV0Q"
+    }
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+DEBUG 2021-05-31 16:36:07,881 | 【】 | : 提取变量：token,提取方式【jsonpath】,提取表达式:$..token,提取值为:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzksImV4cCI6MTYyMjQ1MDQ2N30.DIx0aexLUNSxGuWQ5nhYlXs5f3vWCZ0YYipG0Eo-KweZhRCvjlu4S_qkHfXBYEce0V4WLYJgnmUjfME-O2cV0Q
+DEBUG 2021-05-31 16:36:07,881 | 【】 | : 提取变量：member_id,提取方式【jsonpath】,提取表达式:$..id,提取值为:1234580179
+INFO 2021-05-31 16:36:07,881 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:07,881 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:07,882 | 【】 | : test_03_member_login (test_yaml_demo.TestYamlDemo)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:07,882 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:07,882 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15525330442",
+  "admin_mobile": "13397751405",
+  "timestamp": 1622450167.6802967,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzksImV4cCI6MTYyMjQ1MDQ2N30.DIx0aexLUNSxGuWQ5nhYlXs5f3vWCZ0YYipG0Eo-KweZhRCvjlu4S_qkHfXBYEce0V4WLYJgnmUjfME-O2cV0Q",
+  "member_id": 1234580179
+}
+
+INFO 2021-05-31 16:36:07,882 | 【】 | : 开始执行用例：[充值]——>test_04_member_recharge (test_yaml_demo.TestYamlDemo)
+DEBUG 2021-05-31 16:36:07,916 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/recharge 
+DEBUG 2021-05-31 16:36:07,917 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzksImV4cCI6MTYyMjQ1MDQ2N30.DIx0aexLUNSxGuWQ5nhYlXs5f3vWCZ0YYipG0Eo-KweZhRCvjlu4S_qkHfXBYEce0V4WLYJgnmUjfME-O2cV0Q
+      Content-Length:259
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580179,
+  "amount": 20000,
+  "timestamp": 1622450167.8828177,
+  "sign": "aHiMABqbHbRbDaoUXdRmNz7HfnKa+mdmDyrcSPUHe3mnSzbWhXzX36n2TqbPS8a70aRWoSWOs1IsHad7IH1ox01qJ2EoopHb0uYqzUrLxoPLKfBtBbir/BEvwIMxi5kNHwVPXL29aKQ//mq14o5pBlTWPiWI6zd+BXgRXp6wMJM="
+}
+DEBUG 2021-05-31 16:36:07,917 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzksImV4cCI6MTYyMjQ1MDQ2N30.DIx0aexLUNSxGuWQ5nhYlXs5f3vWCZ0YYipG0Eo-KweZhRCvjlu4S_qkHfXBYEce0V4WLYJgnmUjfME-O2cV0Q
+      Content-Length:259
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580179,
+    "leave_amount": 20000.0,
+    "mobile_phone": "15525330442",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:06.0",
+    "type": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:07,918 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:07,918 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:07,918 | 【】 | : test_04_member_recharge (test_yaml_demo.TestYamlDemo)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:07,918 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:07,918 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15525330442",
+  "admin_mobile": "13397751405",
+  "timestamp": 1622450167.8828177,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxNzksImV4cCI6MTYyMjQ1MDQ2N30.DIx0aexLUNSxGuWQ5nhYlXs5f3vWCZ0YYipG0Eo-KweZhRCvjlu4S_qkHfXBYEce0V4WLYJgnmUjfME-O2cV0Q",
+  "member_id": 1234580179
+}
+
+INFO 2021-05-31 16:36:07,919 | 【】 | : 开始执行用例：[普通用户注册]——>test_01_member_register (apin.core.basecase.TestQcd)
+DEBUG 2021-05-31 16:36:08,119 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/register 
+DEBUG 2021-05-31 16:36:08,119 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "15599519161",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:08,119 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580181,
+    "reg_name": "小柠檬",
+    "mobile_phone": "15599519161"
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:08,119 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:08,119 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:08,119 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:08,120 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:08,120 | 【】 | : test_01_member_register (apin.core.basecase.TestQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:08,120 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:08,120 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15599519161",
+  "admin_mobile": "13375585676",
+  "timestamp": 1622450167.91866
+}
+
+INFO 2021-05-31 16:36:08,120 | 【】 | : 开始执行用例：[管理员注册]——>test_02_member_register (apin.core.basecase.TestQcd)
+DEBUG 2021-05-31 16:36:08,322 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/register 
+DEBUG 2021-05-31 16:36:08,323 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "13375585676",
+  "pwd": "lemonban",
+  "type": 0
+}
+DEBUG 2021-05-31 16:36:08,323 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580182,
+    "reg_name": "小柠檬",
+    "mobile_phone": "13375585676"
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:08,323 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:08,324 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:08,324 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:08,324 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:08,325 | 【】 | : test_02_member_register (apin.core.basecase.TestQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:08,325 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:08,325 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15599519161",
+  "admin_mobile": "13375585676",
+  "timestamp": 1622450168.1209605
+}
+
+INFO 2021-05-31 16:36:08,326 | 【】 | : 开始执行用例：[普通用户登录]——>test_03_member_login (apin.core.basecase.TestQcd)
+DEBUG 2021-05-31 16:36:08,529 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/login 
+DEBUG 2021-05-31 16:36:08,530 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "15599519161",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:08,530 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580181,
+    "leave_amount": 0.0,
+    "mobile_phone": "15599519161",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:07.0",
+    "type": 1,
+    "token_info": {
+      "token_type": "Bearer",
+      "expires_in": "2021-05-31 16:41:08",
+      "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODEsImV4cCI6MTYyMjQ1MDQ2OH0.dh3PZDrp3MP1qYQtTof6on47TKi_AFeQiJE2nelo4qUCPHpToxX4i80JS1Yh7EtyS22NrD23jlCfLKtU4aXlxw"
+    }
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+DEBUG 2021-05-31 16:36:08,530 | 【】 | : 提取变量：token,提取方式【jsonpath】,提取表达式:$..token,提取值为:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODEsImV4cCI6MTYyMjQ1MDQ2OH0.dh3PZDrp3MP1qYQtTof6on47TKi_AFeQiJE2nelo4qUCPHpToxX4i80JS1Yh7EtyS22NrD23jlCfLKtU4aXlxw
+DEBUG 2021-05-31 16:36:08,531 | 【】 | : 提取变量：member_id,提取方式【jsonpath】,提取表达式:$..id,提取值为:1234580181
+INFO 2021-05-31 16:36:08,531 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:08,532 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:08,532 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:08,532 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:08,533 | 【】 | : test_03_member_login (apin.core.basecase.TestQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:08,533 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:08,533 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15599519161",
+  "admin_mobile": "13375585676",
+  "timestamp": 1622450168.3263845,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODEsImV4cCI6MTYyMjQ1MDQ2OH0.dh3PZDrp3MP1qYQtTof6on47TKi_AFeQiJE2nelo4qUCPHpToxX4i80JS1Yh7EtyS22NrD23jlCfLKtU4aXlxw",
+  "member_id": 1234580181
+}
+
+INFO 2021-05-31 16:36:08,533 | 【】 | : 开始执行用例：[充值]——>test_04_member_recharge (apin.core.basecase.TestQcd)
+DEBUG 2021-05-31 16:36:08,567 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/recharge 
+DEBUG 2021-05-31 16:36:08,568 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODEsImV4cCI6MTYyMjQ1MDQ2OH0.dh3PZDrp3MP1qYQtTof6on47TKi_AFeQiJE2nelo4qUCPHpToxX4i80JS1Yh7EtyS22NrD23jlCfLKtU4aXlxw
+      Content-Length:259
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580181,
+  "amount": 20000,
+  "timestamp": 1622450168.5335073,
+  "sign": "HKgXJlO8tipdNsFgdiHDTc9yRbo9GJwHMxInT9TP6WsiPTB8GoYYSdGR7isL6DxVLSjWDJ4NFpJT8kfRK7h4mr9N8Uemj1gzNjALoxHON/1VES1583ymTj/L8Eo3fSb0tYJJxZ6ECtDmVkte68LUb6k5N64EHboPHf5WlZbcOI0="
+}
+DEBUG 2021-05-31 16:36:08,568 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODEsImV4cCI6MTYyMjQ1MDQ2OH0.dh3PZDrp3MP1qYQtTof6on47TKi_AFeQiJE2nelo4qUCPHpToxX4i80JS1Yh7EtyS22NrD23jlCfLKtU4aXlxw
+      Content-Length:259
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580181,
+    "leave_amount": 20000.0,
+    "mobile_phone": "15599519161",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:07.0",
+    "type": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:08,568 | 【】 | : 预期结果：0 
+INFO 2021-05-31 16:36:08,568 | 【】 | : 实际结果：0
+INFO 2021-05-31 16:36:08,568 | 【】 | : 预期结果：OK 
+INFO 2021-05-31 16:36:08,569 | 【】 | : 实际结果：OK
+INFO 2021-05-31 16:36:08,569 | 【】 | : test_04_member_recharge (apin.core.basecase.TestQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:08,569 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:08,569 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15599519161",
+  "admin_mobile": "13375585676",
+  "timestamp": 1622450168.5335073,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODEsImV4cCI6MTYyMjQ1MDQ2OH0.dh3PZDrp3MP1qYQtTof6on47TKi_AFeQiJE2nelo4qUCPHpToxX4i80JS1Yh7EtyS22NrD23jlCfLKtU4aXlxw",
+  "member_id": 1234580181
+}
+
+INFO 2021-05-31 16:36:08,569 | 【】 | : 开始执行用例：[普通用户注册]——>test_01_member_register (apin.core.basecase.TestJsonQcd)
+DEBUG 2021-05-31 16:36:08,830 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/register 
+DEBUG 2021-05-31 16:36:08,830 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "15530665129",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:08,830 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580183,
+    "reg_name": "小柠檬",
+    "mobile_phone": "15530665129"
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:08,831 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:08,831 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:08,831 | 【】 | : test_01_member_register (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:08,831 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:08,831 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15530665129",
+  "admin_mobile": "13383417451",
+  "timestamp": 1622450168.569442
+}
+
+INFO 2021-05-31 16:36:08,832 | 【】 | : 开始执行用例：[管理员注册]——>test_02_member_register (apin.core.basecase.TestJsonQcd)
+DEBUG 2021-05-31 16:36:09,033 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/register 
+DEBUG 2021-05-31 16:36:09,034 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "13383417451",
+  "pwd": "lemonban",
+  "type": 0
+}
+DEBUG 2021-05-31 16:36:09,034 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:61
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580184,
+    "reg_name": "小柠檬",
+    "mobile_phone": "13383417451"
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:09,034 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:09,034 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:09,034 | 【】 | : test_02_member_register (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:09,034 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:09,034 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15530665129",
+  "admin_mobile": "13383417451",
+  "timestamp": 1622450168.8322487
+}
+
+INFO 2021-05-31 16:36:09,035 | 【】 | : 开始执行用例：[普通用户登录]——>test_03_member_login (apin.core.basecase.TestJsonQcd)
+DEBUG 2021-05-31 16:36:09,353 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/login 
+DEBUG 2021-05-31 16:36:09,353 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "15530665129",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:09,353 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580183,
+    "leave_amount": 0.0,
+    "mobile_phone": "15530665129",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:08.0",
+    "type": 1,
+    "token_info": {
+      "token_type": "Bearer",
+      "expires_in": "2021-05-31 16:41:08",
+      "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA"
+    }
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+DEBUG 2021-05-31 16:36:09,353 | 【】 | : 提取变量：token,提取方式【jsonpath】,提取表达式:$..token,提取值为:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA
+DEBUG 2021-05-31 16:36:09,354 | 【】 | : 提取变量：member_id,提取方式【jsonpath】,提取表达式:$..id,提取值为:1234580183
+INFO 2021-05-31 16:36:09,354 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:09,354 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:09,354 | 【】 | : test_03_member_login (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:09,355 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:09,355 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15530665129",
+  "admin_mobile": "13383417451",
+  "timestamp": 1622450169.0356116,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA",
+  "member_id": 1234580183
+}
+
+INFO 2021-05-31 16:36:09,355 | 【】 | : 开始执行用例：[充值]——>test_04_member_recharge (apin.core.basecase.TestJsonQcd)
+DEBUG 2021-05-31 16:36:09,387 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/recharge 
+DEBUG 2021-05-31 16:36:09,387 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA
+      Content-Length:259
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580183,
+  "amount": 20000,
+  "timestamp": 1622450169.3551881,
+  "sign": "S1yUnfyREo/zEt4bq1CVTnfUe6CwUjMilYSuNCOq58SuT4MBccQMcbjnBGwZeWNHc1KAu1Ty5vvOR+vTLGwtZJVJhNpCI3VuM9JwRLBqNr9TAnSelTQal3h/kprGbSqvo001dYiUjClwsZu40vA1lcAT9uYEs8QV9NQp24JK+Mg="
+}
+DEBUG 2021-05-31 16:36:09,387 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA
+      Content-Length:259
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580183,
+    "leave_amount": 20000.0,
+    "mobile_phone": "15530665129",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:08.0",
+    "type": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:09,388 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:09,388 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:09,388 | 【】 | : test_04_member_recharge (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:09,388 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:09,388 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15530665129",
+  "admin_mobile": "13383417451",
+  "timestamp": 1622450169.3551881,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA",
+  "member_id": 1234580183
+}
+
+INFO 2021-05-31 16:36:09,388 | 【】 | : 开始执行用例：[管理员用户登录]——>test_05_member_login (apin.core.basecase.TestJsonQcd)
+DEBUG 2021-05-31 16:36:09,605 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/login 
+DEBUG 2021-05-31 16:36:09,605 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Request body:
+{
+  "mobile_phone": "13383417451",
+  "pwd": "lemonban"
+}
+DEBUG 2021-05-31 16:36:09,605 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Content-Length:50
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580184,
+    "leave_amount": 0.0,
+    "mobile_phone": "13383417451",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:08.0",
+    "type": 0,
+    "token_info": {
+      "token_type": "Bearer",
+      "expires_in": "2021-05-31 16:41:09",
+      "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODQsImV4cCI6MTYyMjQ1MDQ2OX0.WX3wTmF6hVGy9QC52eOcBIT8qolOr0NkZb4RRaI0Akr0Fnr5P0jJoX_VdJv5GyjQr3vVfg0Myat_jtSr3byeYQ"
+    }
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+DEBUG 2021-05-31 16:36:09,605 | 【】 | : 提取变量：admin_token,提取方式【jsonpath】,提取表达式:$..token,提取值为:eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODQsImV4cCI6MTYyMjQ1MDQ2OX0.WX3wTmF6hVGy9QC52eOcBIT8qolOr0NkZb4RRaI0Akr0Fnr5P0jJoX_VdJv5GyjQr3vVfg0Myat_jtSr3byeYQ
+DEBUG 2021-05-31 16:36:09,605 | 【】 | : 提取变量：admin_member_id,提取方式【jsonpath】,提取表达式:$..id,提取值为:1234580184
+INFO 2021-05-31 16:36:09,606 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:09,606 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:09,606 | 【】 | : test_05_member_login (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:09,606 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:09,607 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15530665129",
+  "admin_mobile": "13383417451",
+  "timestamp": 1622450169.388358,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA",
+  "member_id": 1234580183,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODQsImV4cCI6MTYyMjQ1MDQ2OX0.WX3wTmF6hVGy9QC52eOcBIT8qolOr0NkZb4RRaI0Akr0Fnr5P0jJoX_VdJv5GyjQr3vVfg0Myat_jtSr3byeYQ",
+  "admin_member_id": 1234580184
+}
+
+INFO 2021-05-31 16:36:09,607 | 【】 | : 开始执行用例：[管理员添加项目]——>test_06_loan_add (apin.core.basecase.TestJsonQcd)
+DEBUG 2021-05-31 16:36:09,638 | 【】 | : [POST]: http://api.lemonban.com/futureloan/loan/add 
+DEBUG 2021-05-31 16:36:09,638 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODQsImV4cCI6MTYyMjQ1MDQ2OX0.WX3wTmF6hVGy9QC52eOcBIT8qolOr0NkZb4RRaI0Akr0Fnr5P0jJoX_VdJv5GyjQr3vVfg0Myat_jtSr3byeYQ
+      Content-Length:415
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580184,
+  "title": "世界这么大，借钱去看看",
+  "amount": 2000.0,
+  "loan_rate": 18.0,
+  "loan_term": 6,
+  "loan_date_type": 1,
+  "bidding_days": 10,
+  "timestamp": 1622450169.6078806,
+  "sign": "cX33PfAyQkaApwRgNZ1EEoNNC4H7YypPsCJ7PJC28TC8cb14MDhwcuVCFRbGcqPkSJdy/K2J7FWLg8OP16x0uUlACI4McfJ41LuvtCuDuED2U91hjbakIf/5vbgkNMbGAjImavR6x3Snw6Usmnm/dJoeBatClsTM+uXnLst6Wjs="
+}
+DEBUG 2021-05-31 16:36:09,638 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODQsImV4cCI6MTYyMjQ1MDQ2OX0.WX3wTmF6hVGy9QC52eOcBIT8qolOr0NkZb4RRaI0Akr0Fnr5P0jJoX_VdJv5GyjQr3vVfg0Myat_jtSr3byeYQ
+      Content-Length:415
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 2092137,
+    "member_id": 1234580184,
+    "title": "世界这么大，借钱去看看",
+    "amount": 2000.0,
+    "loan_rate": 18.0,
+    "loan_term": 6,
+    "loan_date_type": 1,
+    "bidding_days": 5,
+    "create_time": "2021-05-31 16:36:09.0",
+    "bidding_start_time": null,
+    "full_time": null,
+    "status": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+DEBUG 2021-05-31 16:36:09,639 | 【】 | : 提取变量：loan_id,提取方式【jsonpath】,提取表达式:$..id,提取值为:2092137
+INFO 2021-05-31 16:36:09,639 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:09,639 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:09,640 | 【】 | : test_06_loan_add (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:09,640 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:09,640 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15530665129",
+  "admin_mobile": "13383417451",
+  "timestamp": 1622450169.6078806,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA",
+  "member_id": 1234580183,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODQsImV4cCI6MTYyMjQ1MDQ2OX0.WX3wTmF6hVGy9QC52eOcBIT8qolOr0NkZb4RRaI0Akr0Fnr5P0jJoX_VdJv5GyjQr3vVfg0Myat_jtSr3byeYQ",
+  "admin_member_id": 1234580184,
+  "loan_id": 2092137
+}
+
+INFO 2021-05-31 16:36:09,640 | 【】 | : 开始执行用例：[管理员审核项目]——>test_07_loan_audit (apin.core.basecase.TestJsonQcd)
+DEBUG 2021-05-31 16:36:09,671 | 【】 | : [PATCH]: http://api.lemonban.com/futureloan/loan/audit 
+DEBUG 2021-05-31 16:36:09,671 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODQsImV4cCI6MTYyMjQ1MDQ2OX0.WX3wTmF6hVGy9QC52eOcBIT8qolOr0NkZb4RRaI0Akr0Fnr5P0jJoX_VdJv5GyjQr3vVfg0Myat_jtSr3byeYQ
+      Content-Length:262
+      Content-Type:application/json
+Request body:
+{
+  "loan_id": 2092137,
+  "approved_or_not": true,
+  "timestamp": 1622450169.6407943,
+  "sign": "XP0gnOSGzAP0k/ucM+ySzsPFmZrpUAni8pWd0fVT+s3XYEYMbfOF7IN7Nwucc+2DIStzP3wggWvg5ZcKJarrQ/w8o2QnM9jSYvLRVeyQDPKjmLCps6x6PSHYOoBEOwplhIZq4z7FvjpiTSKEN1vjlPSYTYmVtGIge6AKxLf0O5s="
+}
+DEBUG 2021-05-31 16:36:09,671 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODQsImV4cCI6MTYyMjQ1MDQ2OX0.WX3wTmF6hVGy9QC52eOcBIT8qolOr0NkZb4RRaI0Akr0Fnr5P0jJoX_VdJv5GyjQr3vVfg0Myat_jtSr3byeYQ
+      Content-Length:262
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": null,
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:09,671 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:09,672 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:09,672 | 【】 | : test_07_loan_audit (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:09,672 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:09,672 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15530665129",
+  "admin_mobile": "13383417451",
+  "timestamp": 1622450169.6407943,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA",
+  "member_id": 1234580183,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODQsImV4cCI6MTYyMjQ1MDQ2OX0.WX3wTmF6hVGy9QC52eOcBIT8qolOr0NkZb4RRaI0Akr0Fnr5P0jJoX_VdJv5GyjQr3vVfg0Myat_jtSr3byeYQ",
+  "admin_member_id": 1234580184,
+  "loan_id": 2092137
+}
+
+INFO 2021-05-31 16:36:09,672 | 【】 | : 开始执行用例：[普通用户投资]——>test_08_member_recharge (apin.core.basecase.TestJsonQcd)
+DEBUG 2021-05-31 16:36:09,705 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/recharge 
+DEBUG 2021-05-31 16:36:09,705 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA
+      Content-Length:277
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580183,
+  "loan_id": 2092137,
+  "amount": 200,
+  "timestamp": 1622450169.6727164,
+  "sign": "TS32ZMAM9cYMkEyXPxeGhxMIjV24tDNw9Uf2pAC0cAxVtDsxtQ3f+omGlccsFcvA7Cpqw9c1Fz6vtQ0seNf9EIeBFWnpuXK5S0TtIeACqyl3XCryfF454+D8H5s1AmCIk1Pl0JLReoDo69jT+F5Tz7Nzzo6jY2vnjR2ZiF9EdyY="
+}
+DEBUG 2021-05-31 16:36:09,706 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA
+      Content-Length:277
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580183,
+    "leave_amount": 20200.0,
+    "mobile_phone": "15530665129",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:08.0",
+    "type": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:09,706 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:09,706 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:09,706 | 【】 | : test_08_member_recharge (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:09,706 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:09,707 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15530665129",
+  "admin_mobile": "13383417451",
+  "timestamp": 1622450169.6727164,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA",
+  "member_id": 1234580183,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODQsImV4cCI6MTYyMjQ1MDQ2OX0.WX3wTmF6hVGy9QC52eOcBIT8qolOr0NkZb4RRaI0Akr0Fnr5P0jJoX_VdJv5GyjQr3vVfg0Myat_jtSr3byeYQ",
+  "admin_member_id": 1234580184,
+  "loan_id": 2092137
+}
+
+INFO 2021-05-31 16:36:09,707 | 【】 | : 开始执行用例：[取现]——>test_09_member_withdraw (apin.core.basecase.TestJsonQcd)
+DEBUG 2021-05-31 16:36:09,753 | 【】 | : [POST]: http://api.lemonban.com/futureloan/member/withdraw 
+DEBUG 2021-05-31 16:36:09,753 | 【】 | : 
+=======================Requests Info=======================
+Request Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA
+      Content-Length:257
+      Content-Type:application/json
+Request body:
+{
+  "member_id": 1234580183,
+  "amount": 2000,
+  "timestamp": 1622450169.707587,
+  "sign": "YQQhDMVWTgvAOl9byOtWB4sCNQ6qQP+8GkYWcSPUnGIP8pe00cFneRsvG1BcbZmY7cMnHE5Z+fNm2E27Y8hZnMu5sAXQo6J7z2Z4IvDiWHhK1VAR0hNS4x6OFIIc/B7MhqaAeoAfy/jOo1fb/IBaIth6F2nziIUT8qaXXmqriZM="
+}
+DEBUG 2021-05-31 16:36:09,753 | 【】 | : 
+=======================Response Info=======================
+Response Headers:
+      User-Agent:python-requests/2.24.0
+      Accept-Encoding:gzip, deflate
+      Accept:*/*
+      Connection:keep-alive
+      X-Lemonban-Media-Type:lemonban.v2
+      Authorization:Bearer eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA
+      Content-Length:257
+      Content-Type:application/json
+Response body:
+{
+  "code": 0,
+  "msg": "OK",
+  "data": {
+    "id": 1234580183,
+    "leave_amount": 18200.0,
+    "mobile_phone": "15530665129",
+    "reg_name": "小柠檬",
+    "reg_time": "2021-05-31 16:36:08.0",
+    "type": 1
+  },
+  "copyright": "Copyright 柠檬班 © 2017-2020 湖南省零檬信息技术有限公司 All Rights Reserved"
+}
+INFO 2021-05-31 16:36:09,753 | 【】 | : 预期结果：{'code': 0, 'msg': 'OK'} 
+INFO 2021-05-31 16:36:09,753 | 【】 | : 实际结果：{'code': 0, 'msg': 'OK'}
+INFO 2021-05-31 16:36:09,754 | 【】 | : test_09_member_withdraw (apin.core.basecase.TestJsonQcd)执行——>【通过】
+
+DEBUG 2021-05-31 16:36:09,754 | 【】 | : 当前运行环境全局变量有：
+{
+  "host": "http://api.lemonban.com/futureloan/"
+}
+
+DEBUG 2021-05-31 16:36:09,754 | 【】 | : 当前运行环境局部变量有：
+{
+  "user_mobile": "15530665129",
+  "admin_mobile": "13383417451",
+  "timestamp": 1622450169.707587,
+  "token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODMsImV4cCI6MTYyMjQ1MDQ2OH0.K8rvDrGdOwJUJEdPjvJqQxJ0ip0J1wqMxszv0FwBfZGSpoxJjln6jKNnmYQFYKHqpPtIo7x0YD1ylj5QMVfHaA",
+  "member_id": 1234580183,
+  "admin_token": "eyJhbGciOiJIUzUxMiJ9.eyJtZW1iZXJfaWQiOjEyMzQ1ODAxODQsImV4cCI6MTYyMjQ1MDQ2OX0.WX3wTmF6hVGy9QC52eOcBIT8qolOr0NkZb4RRaI0Akr0Fnr5P0jJoX_VdJv5GyjQr3vVfg0Myat_jtSr3byeYQ",
+  "admin_member_id": 1234580184,
+  "loan_id": 2092137
+}
+
+INFO 2021-05-31 16:36:09,754 | 【】 | : 用例运行完毕,结果如下：
+共运行：36条 
+通过:35条
+失败:1条
+错误:1条
+运行时间:4.97 S
+INFO 2021-05-31 16:36:09,754 | 【】 | : 正在生成测试报告中......
+INFO 2021-05-31 16:36:09,794 | 【】 | : 测试报告已经生成，报告路径为:C:\project\MSUnitTestReport\TestApi\tests\reports\2021-05-31_16_36_04report.html

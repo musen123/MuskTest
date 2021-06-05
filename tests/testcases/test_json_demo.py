@@ -25,7 +25,7 @@ class TestCeiKai(HttpCase):
     # j结果校验
     verification = [
         ["eq", 0, 'V{{$..code}}'],
-        ["eq", "OK", "V{{$..msg}}"]
+        ["eq", "OK"]
     ]
 
     Cases = 'cekai.json'

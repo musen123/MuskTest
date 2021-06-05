@@ -5,10 +5,9 @@
 import os
 
 BASEDIR = os.path.dirname(os.path.abspath(__file__))
+
 # 日志文件路径
 LOG_FILE_PATH = os.path.join(BASEDIR, "./logs")
-
-
 
 # 是否为debug模式
 DEBUG = True
@@ -20,7 +19,7 @@ DB = {
 
 # 测试环境配置
 ENV = {
-    "host":"http://api.lemonban.com/futureloan/",
+    "host":"http://api.lemonban.com/futureloan/3",
 
 }
 
@@ -40,21 +39,21 @@ TEST_RESULT = {
     "desc": "XX项目测试生成的报告"
 }
 
-# # 邮箱通知配置
-EMAIL = {
-    # smtp服务器地址
-    "host": '',
-    # smtp服务器端口
-    "port": "",
-    # 邮箱账号
-    "user": "",
-    # smtps授权码
-    "password": "",
-    # 收件人列表
-    "to_addrs": [],
-    # 是否发送附件
-    "is_file": True
-}
+# # # 邮箱通知配置
+# EMAIL = {
+#     # smtp服务器地址
+#     "host": '',
+#     # smtp服务器端口
+#     "port": "",
+#     # 邮箱账号
+#     "user": "",
+#     # smtps授权码
+#     "password": "",
+#     # 收件人列表
+#     "to_addrs": [],
+#     # 是否发送附件
+#     "is_file": True
+# }
 #
 # # 钉钉通知
 # DINGTALK = {

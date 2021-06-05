@@ -10,7 +10,7 @@ from apin.core.httptest import HttpCase
 
 
 class TestYamlDemo(HttpCase):
-    host = "http://api.lemonban.com/futureloan/"
+    host = "http://127.0.0.1/futureloan/2"
     headers = {
         "X-Lemonban-Media-Type": "lemonban.v2"
     }
