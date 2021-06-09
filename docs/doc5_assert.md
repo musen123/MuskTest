@@ -32,7 +32,7 @@ verification = [
 
 ```python
 verification = [
-        ['contians', 预期结果, 实际结果]
+        ['contains', 预期结果, 实际结果]
     ] 
 ```
 
