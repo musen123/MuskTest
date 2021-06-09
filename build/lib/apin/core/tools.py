@@ -1,3 +1,5 @@
+# Author:柠檬班-木森
+# E-mail:musen_nmb@qq.com
 import base64
 import random
 import time

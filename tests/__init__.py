@@ -10,7 +10,6 @@ Company:湖南零檬信息技术有限公司
 """
 python setup.py sdist
 python setup.py sdist bdist_wheel
-
 twine upload dist/*
 
 """

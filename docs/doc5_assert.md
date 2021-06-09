@@ -45,7 +45,7 @@ verification = [
 ```python
 # 通过正则表达式来提取实际结果中的msg字段。
 verification = [
-        ['contians', {'msg':"OK"}, {"msg": "V{{msg:'(.+?)'}}"}]
+        ['eq', {'msg':"OK"}, {"msg": "V{{msg:'(.+?)'}}"}]
     ] 
 
 ```
@@ -55,7 +55,7 @@ verification = [
 ```python
 # 通过jsonpath来提取实际结果中的msg字段。
 verification = [
-        ['contians', {'msg':"OK"}, {"msg": 'V{{$..msg}}']
+        ['eq', {'msg':"OK"}, {"msg": 'V{{$..msg}}']
     ] 
 
 ```

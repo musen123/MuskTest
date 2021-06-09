@@ -1,32 +1,36 @@
-"""
-Author:柠檬班-木森
-Time:2021/2/4 14:53
-E-mail:3247119728@qq.com
-"""
+# Author:柠檬班-木森
+# E-mail:musen_nmb@qq.com
 import os
 import yaml
 import json
 import unittest
 from functools import wraps
 from apin.core.dataParser import DataParser
+from apin.core.initEvn import BaseEnv
 
 
 class GenerateTest(type):
     """生成用例的类"""
 
     def __new__(cls, name, bases, namespace, *args, **kwargs):
-        
+
         if name in ('BaseTestCase', 'HttpCase'):
             return super().__new__(cls, name, bases, namespace)
         else:
             # -------------------生成用例---------------------
             # Case外的类属性中，是否有需要动态执行的函数
-            for k, v in namespace.items():
+            for k, v in list(namespace.items()):
+
                 if k not in ['Cases', "extract", "verification", "setup_hook"]:
                     # 解析数据中的变量
                     v = DataParser.parser_func(namespace.get('env'), v)
                     v = DataParser.parser_variable(namespace.get('env'), v)
                     namespace[k] = v
+                if k == 'env':
+                    _v = BaseEnv('env')
+                    _v.update(v)
+                    namespace[k] = _v
+
             test_cls = super().__new__(cls, name, bases, namespace)
             # --创建前后置方法--
             cls.__create_fixture(test_cls)
@@ -102,7 +106,6 @@ class GenerateTest(type):
                     test_cls.env[k] = v
 
             setattr(test_cls, 'setUp', setUp)
-
         # 用例后置
         teardown_hook = getattr(test_cls, 'teardown_hook', None)
         if teardown_hook and isinstance(teardown_hook, dict):
@@ -144,3 +147,6 @@ class BaseTestCase(unittest.TestCase, metaclass=GenerateTest):
     def get(self, attr):
         """支持通过get方法获取属性"""
         return getattr(self, attr, None)
+
+    def setUp(self):
+        pass

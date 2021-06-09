@@ -1,8 +1,5 @@
-"""
-Author:柠檬班-木森
-Time:2021/3/1 20:13
-E-mail:3247119728@qq.com
-"""
+# Author:柠檬班-木森
+# E-mail:musen_nmb@qq.com
 import json
 import re
 from numbers import Number

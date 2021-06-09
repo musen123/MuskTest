@@ -66,6 +66,8 @@ if __name__ == '__main__':
             "admin_mobile": "F{rand_phone()}"
         },
         "extract": {
+            "token": ("env", "jsonpath", "$..json"),
+            'member_id': ("env", "jsonpath", "$..data")
         },
         "verification": [
             ["eq", 200, "status_code"]

@@ -1,16 +1,12 @@
-"""
-Author:柠檬班-木森
-Time:2021/2/27 20:15
-E-mail:3247119728@qq.com
-Company:湖南零檬信息技术有限公司
-"""
+# Author:柠檬班-木森
+# E-mail:musen_nmb@qq.com
 import copy
 import re
 import json
 import requests
 import jsonpath
 from apin.core.dataParser import DataParser
-from apin.core.initEvn import ENV
+from apin.core.initEvn import ENV, BaseEnv
 from apin.core.basecase import BaseTestCase
 from apin.core.logger import CaseLog
 
@@ -122,7 +118,6 @@ class CaseData:
 
 class Extract:
     """数据提取"""
-    env = {}
 
     def json_extract(self, response, ext):
         """jsonpath数据提取"""
@@ -138,6 +133,7 @@ class Extract:
 
 
 class HttpCase(BaseTestCase, Extract, CaseLog):
+    env = {}
     host = None
     interface = None
     headers = None
@@ -153,6 +149,7 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
         response = self.http_requests(case)
         # 数据提取
         self.data_extraction(response, case)
+        self.__run_log()
         # 响应断言
         self.assert_result(response, case)
 
@@ -191,8 +188,11 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
     def http_requests(self, case):
         # 发送请求
         # 处理请求数据
+        self.__request_hook(case)
         case = self.__handle_data(case)
+        self.info_log('正在发送请求：')
         response = Request(case, self).request_api()
+        self.__response_hook(case, response)
         return response
 
     def assert_result(self, response, case):
@@ -240,9 +240,11 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
             self.info_log('断言响应数据中的实际结果是否和预期相等')
             self.__assert(self.assertEqual, expected, actual, 'eq')
 
-        elif item[0] == 'contain':
+        elif item[0] == 'contains':
             self.info_log('断言响应数据中的实际结果是否包含预期结果')
             self.__assert(self.assertIn, expected, actual, 'contain')
+        else:
+            raise ValueError('断言方法有误！断言方式只支持 eq 和 contains')
 
     def __handle_data(self, case):
         """处理用例数据"""
@@ -269,8 +271,8 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
         """输出当前环境变量数据的日志"""
         self.l_env = ['{}:{}\n'.format(k, repr(v)) for k, v in self.env.items()]
         self.g_env = ['{}:{}\n'.format(k, repr(v)) for k, v in ENV.items()]
-        self.info_log("当前全局变量：\n{}".format(''.join(self.g_env)))
-        self.info_log("当前局部变量：\n{}".format(''.join(self.l_env)))
+        self.debug_log("全局变量：\n{}".format(''.join(self.g_env)))
+        self.debug_log("局部变量：\n{}".format(''.join(self.l_env)))
 
     def __actualDataHandle(self, response, act):
         """处理实际结果"""
@@ -318,6 +320,26 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
             self.assert_info.append((repr(expected), repr(actual), 'pass', method))
             self.info_log('断言通过！')
 
+    def __request_hook(self, case):
+        """请求钩子函数"""
+        env = self.env
+        if case.get('request_hook'):
+            self.info_log('执行请求钩子函数')
+            try:
+                exec(case.get('request_hook'))
+            except Exception as e:
+                self.error_log('请求钩子函数执行错误:\n{}'.format(e))
+
+    def __response_hook(self, case, response):
+        """响应钩子函数"""
+        env = self.env
+        if case.get('response_hook'):
+            self.info_log('执行响应钩子函数')
+            try:
+                exec(case.get('request_hook'))
+            except Exception as e:
+                self.error_log('响应钩子函数执行错误:\n{}'.format(e))
+
 
 class Request:
 
@@ -330,6 +352,7 @@ class Request:
         self.request_data = case
 
     def request_api(self):
+
         # 发送请求
         try:
             self.test.url = self.request_data.datas.get('url')
@@ -361,7 +384,7 @@ class Request:
         return response
 
     def requests_log(self, test):
-        requests_log_info = "开始发送请求，请求信息如下:"
+        requests_log_info = "请求信息如下:"
         requests_log_info += "\nRequest Headers:\n"
         for k, v in getattr(test, 'requests_header'):
             requests_log_info += "      {}:{}\n".format(k, v)
