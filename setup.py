@@ -13,7 +13,7 @@ with open("readme.md", "r", encoding='utf8') as fh:
 
 setup(
     name='apin',
-    version='0.2.8',
+    version='0.3.0',
     author='MuSen',
     author_email='musen_nmb@qq.com',
     url='https://github.com/musen123/apin',

@@ -21,7 +21,7 @@ class TestRunner():
                  tester='测试员',
                  desc="XX项目测试生成的报告",
                  templates=1,
-                 no_report=False
+                 no_report=True
                  ):
         """
         初始化用例运行程序
@@ -31,7 +31,7 @@ class TestRunner():
         :param title:测试套件标题
         :param templates: 可以通过参数值1或者2，指定报告的样式模板，目前只有两个模板
         :param tester:测试者
-        :param no_report:不生成测试报告，默认生成，设置True则不生成报告
+        :param no_report:不生成测试报告，以json数据格式返回测试结果，默认生成，设置True则不生成报告
         """
         if not isinstance(suite, unittest.TestSuite):
             raise TypeError("suites 不是测试套件")
@@ -104,7 +104,11 @@ class TestRunner():
                  "\n运行时间:{}".format(
             test_result['all'], test_result['success'], test_result['fail'], test_result['fail'], test_result['runtime']
         ))
-        if self.no_report: return test_result
+        self.test_result = test_result
+        # 判断是否要生产测试报告
+
+        if self.no_report:
+            return self.__get_results(test_result)
         log.info("正在生成测试报告中......")
         # 获取报告模板
         template_path = os.path.join(os.path.dirname(__file__), '../templates/reports')
@@ -130,8 +134,18 @@ class TestRunner():
         self.email_conent = {"file": os.path.abspath(file_path),
                              "content": env.get_template('templates03.html').render(test_result)
                              }
-        self.test_result = test_result
-        return test_result
+
+        return {'success': test_result['success'],
+                'all': test_result['all'],
+                'fail': test_result['fail'],
+                'skip': test_result['skip'],
+                'error': test_result['error'],
+                'runtime': test_result['runtime'],
+                'begin_time': test_result['begin_time'],
+                'tester': test_result['tester'],
+                'pass_rate': test_result['pass_rate'],
+                'report': file_path
+                }
 
     def __get_notice_content(self):
         """获取通知的内容"""
@@ -140,7 +154,15 @@ class TestRunner():
         res_text = env.get_template('dingtalk.md').render(self.test_result)
         return res_text
 
-    def run(self, thread_count=1):
+    def __get_results(self, test_result):
+        """返回测试结果"""
+        results = []
+        for case in test_result.get('results'):
+            results.append({k: v for k, v in case.__dict__.items() if not k.startswith('_')})
+        test_result['results'] = results
+        return test_result
+
+    def run(self, thread_count=1, rerun=0, interval=2):
         """
         支持多线程执行
         注意点：如果多个测试类共用某一个全局变量，由于资源竞争可能会出现错误
@@ -151,28 +173,12 @@ class TestRunner():
         suites = self.__classification_suite()
         with ThreadPoolExecutor(max_workers=thread_count) as ts:
             for i in suites:
-                res = TestResult()
+                res = ReRunResult(count=rerun, interval=interval)
                 self.result.append(res)
                 ts.submit(i.run, result=res).add_done_callback(res.stopTestRun)
             ts.shutdown(wait=True)
-        res = self.__get_reports()
-        return res
-
-    def rerun_run(self, count=0, interval=2):
-        """
-        测试用例失败、错误重跑机制
-        :param count: 重跑次数，默认为0
-        :param interval: 重跑时间间隔，默认为2
-        :return: 测试运行结果
-        """
-        res = ReRunResult(count=count, interval=interval)
-        self.result.append(res)
-        suites = self.__classification_suite()
-        for case in suites:
-            case.run(res)
-        res.stopTestRun()
-        res = self.__get_reports()
-        return res
+        result = self.__get_reports()
+        return result
 
     def send_email(self, host, port, user, password, to_addrs, is_file=True):
         """

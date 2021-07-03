@@ -2,26 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="304f45c0-637a-4712-8582-51ec2bc62f9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MANIFEST.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TestApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TestApi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apin.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/apin.egg-info/PKG-INFO" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apin.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/apin.egg-info/SOURCES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/basecase.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/basecase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/dataParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/dataParser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/generateCase.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/generateCase.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/lib/apin/core/httptest.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/httptest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/initEvn.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/initEvn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/logger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/lib/apin/core/resultPush.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/resultPush.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/testResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/testResult.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/lib/apin/core/testRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/testRunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/tools.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/lib/apin/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/lib/tests/expand.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/expand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/doc5_assert.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/doc5_assert.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/tests/funcTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/funcTools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/tests/reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/tests/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/apin-0.2.7-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/apin-0.2.7.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/apin-0.2.8-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/apin-0.2.8.tar.gz" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/expand.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/expand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/funcTools.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/reports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/run.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +47,17 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -68,6 +81,7 @@
       <find>test.info_log</find>
       <find>test.exception_Log</find>
       <find>DataParser</find>
+      <find>res</find>
     </findStrings>
     <replaceStrings>
       <replace>print</replace>
@@ -80,6 +94,9 @@
       <replace>getattr(test,'exception_Log')</replace>
       <replace>parser</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>C:\project\MSUnitTestReport\TestApi\tests</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,8 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apin/templates/http_demo/casedata/test_yaml_demo.yaml" />
-        <option value="$PROJECT_DIR$/docs/cases.md" />
         <option value="$PROJECT_DIR$/docs/start.md" />
         <option value="$PROJECT_DIR$/docs/index.md" />
         <option value="$PROJECT_DIR$/docs/Home.md" />
@@ -108,7 +123,6 @@
         <option value="$PROJECT_DIR$/tests/testcases/test_json_demo.py" />
         <option value="$PROJECT_DIR$/tests/casedata/test_json_qcd.json" />
         <option value="$PROJECT_DIR$/apin/core/parserCaseFile.py" />
-        <option value="$PROJECT_DIR$/tests/run.py" />
         <option value="$PROJECT_DIR$/apin/core/parserCase.py" />
         <option value="$PROJECT_DIR$/apin/core/create_project.py" />
         <option value="$PROJECT_DIR$/apin/core/parsersetting.py" />
@@ -125,25 +139,29 @@
         <option value="$PROJECT_DIR$/apin/core/dataParser.py" />
         <option value="$PROJECT_DIR$/apin/core/generateCase.py" />
         <option value="$PROJECT_DIR$/apin/core/logger.py" />
-        <option value="$PROJECT_DIR$/apin/core/resultPush.py" />
-        <option value="$PROJECT_DIR$/apin/core/testRunner.py" />
         <option value="$PROJECT_DIR$/apin/core/tools.py" />
-        <option value="$PROJECT_DIR$/apin/manage.py" />
         <option value="$PROJECT_DIR$/tests/settings.py" />
         <option value="$PROJECT_DIR$/apin/core/testResult.py" />
-        <option value="$PROJECT_DIR$/tests/expand.py" />
         <option value="$PROJECT_DIR$/apin/core/basecase.py" />
         <option value="$PROJECT_DIR$/apin/core/initEvn.py" />
-        <option value="$PROJECT_DIR$/apin/core/httptest.py" />
-        <option value="$PROJECT_DIR$/docs/doc5_assert.md" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/tests/__init__.py" />
+        <option value="$PROJECT_DIR$/docs/doc5_assert.md" />
+        <option value="$PROJECT_DIR$/apin/core/httptest.py" />
+        <option value="$PROJECT_DIR$/apin/core/databases.py" />
+        <option value="$PROJECT_DIR$/apin/core/resultPush.py" />
+        <option value="$PROJECT_DIR$/tests/run.py" />
+        <option value="$PROJECT_DIR$/apin/manage.py" />
+        <option value="$PROJECT_DIR$/tests/testcases/__init__.py" />
+        <option value="$PROJECT_DIR$/tests/expand.py" />
+        <option value="$PROJECT_DIR$/apin/core/testRunner.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-3" />
-    <option name="width" value="1477" />
+    <option name="x" value="-19" />
+    <option name="y" value="10" />
+    <option name="width" value="1652" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -161,6 +179,11 @@
             </path>
             <path>
               <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestApi" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
@@ -174,7 +197,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -183,7 +206,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -194,11 +217,11 @@
       <recent name="C:\project\MSUnitTestReport\TestApi\itestapi\httptest" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project\MSUnitTestReport\TestApi" />
       <recent name="C:\project\MSUnitTestReport\TestApi\tests" />
       <recent name="C:\project\MSUnitTestReport\TestApi\ddtest" />
       <recent name="C:\project\MSUnitTestReport\TestApi\tests\casedata" />
       <recent name="C:\project\MSUnitTestReport\TestApi\apin\templates\reports" />
-      <recent name="C:\project\MSUnitTestReport\TestApi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -327,8 +350,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.expand" />
-        <item itemvalue="Python.initEvn" />
         <item itemvalue="Python.run" />
+        <item itemvalue="Python.initEvn" />
         <item itemvalue="Python.expand (2)" />
         <item itemvalue="Python.dd89" />
       </list>
@@ -409,7 +432,26 @@
       <workItem from="1622871530564" duration="26590000" />
       <workItem from="1623044371865" duration="856000" />
       <workItem from="1623152200254" duration="5969000" />
-      <workItem from="1623160573487" duration="3061000" />
+      <workItem from="1623160573487" duration="3354000" />
+      <workItem from="1623225636501" duration="343000" />
+      <workItem from="1623232900119" duration="613000" />
+      <workItem from="1623311198032" duration="850000" />
+      <workItem from="1623312512262" duration="218000" />
+      <workItem from="1623314370495" duration="1252000" />
+      <workItem from="1623327222550" duration="246000" />
+      <workItem from="1623745028841" duration="5629000" />
+      <workItem from="1623921661304" duration="2004000" />
+      <workItem from="1624002826481" duration="2228000" />
+      <workItem from="1624349023318" duration="2306000" />
+      <workItem from="1624354173201" duration="882000" />
+      <workItem from="1624439077868" duration="18000" />
+      <workItem from="1624439397263" duration="2200000" />
+      <workItem from="1624512987754" duration="781000" />
+      <workItem from="1624518599925" duration="10673000" />
+      <workItem from="1624716468700" duration="282000" />
+      <workItem from="1625121717609" duration="1108000" />
+      <workItem from="1625133560299" duration="449000" />
+      <workItem from="1625134234080" duration="601000" />
     </task>
     <task id="LOCAL-00001" summary="v0.0.1">
       <created>1615634630342</created>
@@ -545,18 +587,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="329888000" />
+    <option name="totallyTimeSpent" value="362864000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="0" width="1477" height="1038" extended-state="0" />
+    <frame x="-19" y="10" width="1652" height="1038" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21850534" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25443038" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32448035" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.60366553" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.53264606" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32416952" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.49713632" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3127148" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -564,7 +607,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.7033219" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.46277204" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3250283" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -596,13 +639,18 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="res['tester']" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Apin$run.coverage" NAME="run Coverage Results" MODIFIED="1623158143827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Apin$run.coverage" NAME="run Coverage Results" MODIFIED="1623923298219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/TestApi$logger.coverage" NAME="logger Coverage Results" MODIFIED="1615540530570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testapi/core" />
     <SUITE FILE_PATH="coverage/TestApi$manage__1_.coverage" NAME="manage (1) Coverage Results" MODIFIED="1615787945499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/itestapi" />
     <SUITE FILE_PATH="coverage/TestApi$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1616492823451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apin/templates/http_demo" />
-    <SUITE FILE_PATH="coverage/Apin$expand.coverage" NAME="expand Coverage Results" MODIFIED="1623218956326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/Apin$expand.coverage" NAME="expand Coverage Results" MODIFIED="1624526173157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/TestApi$run__2_.coverage" NAME="run (2) Coverage Results" MODIFIED="1615788286919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demo2" />
     <SUITE FILE_PATH="coverage/Apin$dd89.coverage" NAME="dd89 Coverage Results" MODIFIED="1622897073931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/build" />
     <SUITE FILE_PATH="coverage/TestApi$management__1_.coverage" NAME="management (1) Coverage Results" MODIFIED="1615447167994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/build/lib/testapi" />
@@ -626,37 +674,17 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>namespace</expression-string>
+        <expression-string>results</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>_v</expression-string>
+        <expression-string>test_result</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>k</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>self.env</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>ENV</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>env</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>v</expression-string>
+        <expression-string>case_info</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -666,72 +694,33 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>err[1]</expression-string>
+        <expression-string>print(repr(case.__dict__))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>err</expression-string>
+        <expression-string>print(case.__dict__)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>test_result['results'][0]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>test_result['results']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>test_result['result']</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/casedata/test_json_qcd2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3668" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/casedata/test_json_qcd.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-04_17_03_08report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-05_13_50_21report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-05_14_17_07report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-05_14_54_41report.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1200" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-05_14_25_01report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-05_15_01_46report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-05_15_09_19report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/dataDriver.py" />
-    <entry file="file://$PROJECT_DIR$/apin/core/create_project.py" />
-    <entry file="file://$PROJECT_DIR$/apin/core/parsersetting.py" />
-    <entry file="file://$PROJECT_DIR$/tests/readme.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/templates/http_demo/logs/logging.log" />
-    <entry file="file://$PROJECT_DIR$/apin/core/envData.pyi" />
-    <entry file="file://$PROJECT_DIR$/apin/templates/http_demo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/python37/Lib/logging/handlers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-425">
@@ -756,14 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/funcTools.py" />
-    <entry file="file://$PROJECT_DIR$/tests/musenTools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python.py" />
     <entry file="file://$PROJECT_DIR$/build/funcTools.py" />
     <entry file="file://$PROJECT_DIR$/build/dd89.py" />
@@ -779,34 +760,6 @@
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/testRunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5966">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/resultPush.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3341">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/generateCase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-698">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -854,26 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apin/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="133" column="26" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
-          <folding>
-            <element signature="e#340#820#0" />
-            <element signature="e#847#3233#0" />
-            <element signature="e#3261#3982#0" />
-            <element signature="e#4020#4310#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/570376035/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -884,23 +817,6 @@
     <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-08_21_03_22report.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/testResult.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2450">
-          <caret line="101" column="69" selection-start-line="101" selection-start-column="69" selection-end-line="101" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/testcases/test_stream_V3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="65" column="12" lean-forward="true" selection-start-line="65" selection-start-column="12" selection-end-line="68" selection-end-column="13" />
-          <folding>
-            <element signature="e#198#377#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/python37/Lib/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -908,20 +824,158 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/expand.py">
+    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/logger.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="84" column="31" lean-forward="true" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="31" />
+        <state relative-caret-position="375">
+          <caret line="81" column="40" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="40" />
+          <folding>
+            <element signature="e#211#2461#0" />
+            <element signature="e#368#1448#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/doc5_assert.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="238">
-            <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
+          <first_editor relative-caret-position="511">
+            <caret line="37" selection-start-line="37" selection-end-line="37" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/databases.py" />
+    <entry file="file://$PROJECT_DIR$/apin/core/basecase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-458">
+          <caret line="108" column="14" selection-start-line="108" selection-start-column="14" selection-end-line="108" selection-end-column="14" />
+          <folding>
+            <element signature="e#42#51#0" expanded="true" />
+            <element signature="e#1404#2087#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/httptest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1366">
+          <caret line="354" column="8" selection-start-line="354" selection-start-column="8" selection-end-line="354" selection-end-column="8" />
+          <folding>
+            <element signature="e#42#53#0" expanded="true" />
+            <element signature="e#298#4846#0" />
+            <element signature="e#4868#5251#0" />
+            <element signature="e#5507#5729#0" />
+            <element signature="e#5786#6983#0" />
+            <element signature="e#7335#8193#0" />
+            <element signature="e#9320#9959#0" />
+            <element signature="e#9994#10298#0" />
+            <element signature="e#10357#11642#0" />
+            <element signature="e#11717#12192#0" />
+            <element signature="e#12246#12515#0" />
+            <element signature="e#12564#12834#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requir.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/casedata/test_json_qcd.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/generateCase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="19" selection-start-line="19" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/testcases/test_stream_V3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="54" />
+          <folding>
+            <element signature="e#198#377#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/resultPush.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="e#42#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/site-packages/certifi/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1025" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/site-packages/certifi/cacert.pem">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5775" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/site-packages/certifi/__main__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/site-packages/requests/certs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/site-packages/requests/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="24" column="19" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/site-packages/certifi/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/readme.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="54" column="19" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -932,55 +986,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/logger.py">
+    <entry file="file://$PROJECT_DIR$/apin/core/testResult.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="340">
+          <caret line="49" column="21" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/importlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="108" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apin/core/initEvn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+        <state relative-caret-position="257">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
           <folding>
             <element signature="e#43#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/basecase.py">
+    <entry file="file://$PROJECT_DIR$/tests/expand.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+        <state relative-caret-position="635">
+          <caret line="86" column="30" selection-start-line="86" selection-start-column="30" selection-end-line="86" selection-end-column="30" />
+          <folding>
+            <element signature="e#105#114#0" expanded="true" />
+            <element signature="e#519#790#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/testRunner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
           <folding>
             <element signature="e#42#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+    <entry file="file://$PROJECT_DIR$/tests/testcases/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        <state relative-caret-position="600">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/httptest.py">
+    <entry file="file://$PROJECT_DIR$/tests/funcTools.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/musenTools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1388">
-          <caret line="274" column="22" selection-start-line="274" selection-start-column="22" selection-end-line="274" selection-end-column="22" />
+        <state relative-caret-position="325">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-04_16_43_24report.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-08_21_15_44report.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
           <folding>
-            <element signature="e#42#53#0" expanded="true" />
-            <element signature="e#7335#8193#0" />
+            <element signature="e#42#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="206">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="19" />
         </state>
       </provider>
     </entry>

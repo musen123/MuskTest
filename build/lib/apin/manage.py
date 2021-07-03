@@ -11,6 +11,8 @@ from apin.core.logger import print_info
 from apin.core.initEvn import settings, log
 from apin.core.generateCase import ParserDataToCase
 
+ENV = settings.ENV
+
 
 def create(args):
     """创建项目"""
@@ -127,26 +129,30 @@ def main(params: list = None):
         parser.print_help()
 
 
-def run_test(env_config, case_data, func_tools_path=None,
+def run_test(env_config, case_data,
+             func_tools_path=None,
              no_report=False,
              filename="reports.html",
              report_dir=".",
              title='测试报告',
-             tester='木森',
-             desc="XX项目测试生成的报告",
-             templates=1):
+             tester='测试员',
+             desc="项目测试生成的报告",
+             templates=1,
+             thread_count=1,
+             rerun=0,
+             interval=2,
+             ):
     """
     :param env_config: 全局环境变量
     :param case_data: 测试套件数据
     :param func_tools: 工具函数模块路径
     :param filename: 报告文件名
     :param report_dir:报告文件的路径
-    :param title:测试报告标题
+    :param title:测试套件标题
     :param templates: 可以通过参数值1或者2，指定报告的样式模板，目前只有两个模板
     :param tester:测试者
     :return:
     """
-    ENV = settings.ENV
     if func_tools_path:
         with open(func_tools_path, 'rb') as f1, open('funcTools.py', 'wb') as f2:
             f2.write(f1.read())
@@ -161,7 +167,7 @@ def run_test(env_config, case_data, func_tools_path=None,
                         templates=templates,
                         no_report=no_report
                         )
-    res = runner.run()
+    res = runner.run(thread_count=thread_count, rerun=rerun, interval=interval)
     if func_tools_path:
         os.remove('funcTools.py')
     return res

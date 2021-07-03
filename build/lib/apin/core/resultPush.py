@@ -13,6 +13,8 @@ from email.mime.application import MIMEApplication
 from email.mime.multipart import MIMEMultipart
 
 
+from requests import utils
+
 class SendEmail:
     """发送邮件"""
 

@@ -152,11 +152,11 @@
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">开始时间</button>
-                <span class="text-dark">2021-06-05 20:38:17</span>
+                <span class="text-dark">2021-06-24 17:02:38</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">执行时间</button>
-                <span class="text-dark">0.89 S</span>
+                <span class="text-dark">0.75 S</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">用例总数</button>
@@ -189,7 +189,7 @@
         <ul class="list-group">
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">描述信息</button>
-                <span class="text-secondary">XX项目测试生成的报告</span>
+                <span class="text-secondary">项目测试生成的报告</span>
             </li>
         </ul>
     </div>
@@ -250,7 +250,7 @@
                 <td class="TestCase0">TestCase0</td>
                 <td>test_01_post</td>
                 <td>json-demo-1</td>
-                <td>0.511s</td>
+                <td>0.503s</td>
                 
                 <td class="text-success">成功</td>
                 
@@ -315,31 +315,34 @@
                                 <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="profile-tab">
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:17.637756 |: 开始执行用例：【test_01_post (apin.core.basecase.TestCase0)】
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:38.532480 |: 开始执行用例：【test_01_post (apin.core.basecase.TestCase0)】
 </pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:17.638753 |: 当前全局变量：
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:38.533477 |: 全局变量：
 host:'http://api.lemonban.com/futureloan/3'
-dd:123
 </pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:17.638753 |: 当前局部变量：
-user_mobile:'15598160557'
-admin_mobile:'15598160557'
-timestamp:1622896697.638754
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:38.533477 |: 局部变量：
+user_mobile:'17792837966'
+admin_mobile:'17792837966'
+timestamp:1624525358.5334773
 </pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:38:18.146989 |: [POST]: http://httpbin.org/post </pre>
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:38.533477 |: 正在发送请求：</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:38:18.147986 |: 开始发送请求，请求信息如下:
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.032002 |: [POST]: http://httpbin.org/post </pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.033002 |: 请求信息如下:
 Request Headers:
       User-Agent:python-requests/2.24.0
       Accept-Encoding:gzip, deflate
@@ -350,13 +353,13 @@ Request Headers:
       Content-Type:application/json
 Request body:
 {
-  "mobile_phone": "15598160557",
+  "mobile_phone": "17792837966",
   "pwd": "lemonban"
 }</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:38:18.147986 |: 接收后台的响应结果，响应信息如下:
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.033002 |: 接收后台的响应结果，响应信息如下:
 Response Headers:
       User-Agent:python-requests/2.24.0
       Accept-Encoding:gzip, deflate
@@ -368,7 +371,7 @@ Response Headers:
 Response body:
 {
   "args": {},
-  "data": "{\"mobile_phone\": \"15598160557\", \"pwd\": \"lemonban\"}",
+  "data": "{\"mobile_phone\": \"17792837966\", \"pwd\": \"lemonban\"}",
   "files": {},
   "form": {},
   "headers": {
@@ -378,52 +381,68 @@ Response body:
     "Content-Type": "application/json",
     "Host": "httpbin.org",
     "User-Agent": "python-requests/2.24.0",
-    "X-Amzn-Trace-Id": "Root=1-60bb7039-63947a3c0f6bb54d67c2e0ef",
+    "X-Amzn-Trace-Id": "Root=1-60d44a2e-2679157f5f68795c1135a855",
     "X-Lemonban-Media-Type": "lemonban.v2"
   },
   "json": {
-    "mobile_phone": "15598160557",
+    "mobile_phone": "17792837966",
     "pwd": "lemonban"
   },
-  "origin": "175.8.48.142",
+  "origin": "175.9.120.74",
   "url": "http://httpbin.org/post"
 }</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.147986 |: 从响应结果中开始提取数据</pre>
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.033002 |: 从响应结果中开始提取数据</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.149003 |: 提取变量：token,提取方式【jsonpath】,提取表达式:$..json,提取值为:{'mobile_phone': '15598160557', 'pwd': 'lemonban'}</pre>
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.034027 |: 提取变量：token,提取方式【jsonpath】,提取表达式:$..json,提取值为:{'mobile_phone': '17792837966', 'pwd': 'lemonban'}</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.149003 |: 提取变量：member_id,提取方式【jsonpath】,提取表达式:$..headers,提取值为:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60bb7039-63947a3c0f6bb54d67c2e0ef', 'X-Lemonban-Media-Type': 'lemonban.v2'}</pre>
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.034027 |: 提取变量：member_id,提取方式【jsonpath】,提取表达式:$..headers,提取值为:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60d44a2e-2679157f5f68795c1135a855', 'X-Lemonban-Media-Type': 'lemonban.v2'}</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.149003 |: 断言表达式:['eq', 200, 'status_code']</pre>
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.034027 |: 全局变量：
+host:'http://api.lemonban.com/futureloan/3'
+member_id:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60d44a2e-2679157f5f68795c1135a855', 'X-Lemonban-Media-Type': 'lemonban.v2'}
+</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.149003 |: 断言http响应状态码是否和预期一致</pre>
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.034027 |: 局部变量：
+user_mobile:'17792837966'
+admin_mobile:'17792837966'
+timestamp:1624525358.5334773
+token:{'mobile_phone': '17792837966', 'pwd': 'lemonban'}
+</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.149003 |: 预期结果：200 </pre>
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.034027 |: 断言表达式:['eq', 200, 'status_code']</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.149003 |: 实际结果：200</pre>
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.034027 |: 断言http响应状态码是否和预期一致</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.149003 |: 断言通过！</pre>
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.034027 |: 预期结果：200 </pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.149003 |: test_01_post (apin.core.basecase.TestCase0)执行——>【通过】
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.034027 |: 实际结果：200</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.035027 |: 断言通过！</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.035027 |: test_01_post (apin.core.basecase.TestCase0)执行——>【通过】
 </pre>
                                     
                                     
@@ -476,7 +495,7 @@ Response body:
                                             <pre style="line-height: 22px;font-size: 14px">host:'http://api.lemonban.com/futureloan/3'
 </pre>
                                             
-                                            <pre style="line-height: 22px;font-size: 14px">dd:123
+                                            <pre style="line-height: 22px;font-size: 14px">member_id:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60d44a2e-2679157f5f68795c1135a855', 'X-Lemonban-Media-Type': 'lemonban.v2'}
 </pre>
                                             
                                         </div>
@@ -489,13 +508,16 @@ Response body:
 
                                         <div class="card-body">
                                             
-                                            <pre style="line-height: 22px;font-size: 14px">user_mobile:'15598160557'
+                                            <pre style="line-height: 22px;font-size: 14px">user_mobile:'17792837966'
 </pre>
                                             
-                                            <pre style="line-height: 22px;font-size: 14px">admin_mobile:'15598160557'
+                                            <pre style="line-height: 22px;font-size: 14px">admin_mobile:'17792837966'
 </pre>
                                             
-                                            <pre style="line-height: 22px;font-size: 14px">timestamp:1622896697.638754
+                                            <pre style="line-height: 22px;font-size: 14px">timestamp:1624525358.5334773
+</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">token:{'mobile_phone': '17792837966', 'pwd': 'lemonban'}
 </pre>
                                             
                                         </div>
@@ -527,7 +549,7 @@ Response body:
                                                     <td style="text-align:center">env</td>
                                                     <td style="text-align:center">jsonpath</td>
                                                     <td style="text-align:center">$..json</td>
-                                                    <td style="text-align:center"><p style="line-height: 20px">{'mobile_phone': '15598160557', 'pwd': 'lemonban'}</p></td>
+                                                    <td style="text-align:center"><p style="line-height: 20px">{'mobile_phone': '17792837966', 'pwd': 'lemonban'}</p></td>
                                                 </tr>
                                                 
                                                 <tr>
@@ -535,7 +557,7 @@ Response body:
                                                     <td style="text-align:center">ENV</td>
                                                     <td style="text-align:center">jsonpath</td>
                                                     <td style="text-align:center">$..headers</td>
-                                                    <td style="text-align:center"><p style="line-height: 20px">{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60bb7039-63947a3c0f6bb54d67c2e0ef', 'X-Lemonban-Media-Type': 'lemonban.v2'}</p></td>
+                                                    <td style="text-align:center"><p style="line-height: 20px">{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60d44a2e-2679157f5f68795c1135a855', 'X-Lemonban-Media-Type': 'lemonban.v2'}</p></td>
                                                 </tr>
                                                 
                                                 </tbody>
@@ -577,7 +599,7 @@ Response body:
                                         </div>
                                         <div class="card-body">
                                             <pre style="line-height: 22px;font-size: 14px">{
-  "mobile_phone": "15598160557",
+  "mobile_phone": "17792837966",
   "pwd": "lemonban"
 }</pre>
                                         </div>
@@ -593,7 +615,7 @@ Response body:
                                         <div class="card-body">
 
                                             
-                                            <pre style="line-height: 22px;font-size: 14px">Date:Sat, 05 Jun 2021 12:38:17 GMT</pre>
+                                            <pre style="line-height: 22px;font-size: 14px">Date:Thu, 24 Jun 2021 09:02:38 GMT</pre>
                                             
                                             <pre style="line-height: 22px;font-size: 14px">Content-Type:application/json</pre>
                                             
@@ -617,7 +639,7 @@ Response body:
                                         <div class="card-body">
                                             <pre style="line-height: 22px;font-size: 14px">{
   &#34;args&#34;: {},
-  &#34;data&#34;: &#34;{\&#34;mobile_phone\&#34;: \&#34;15598160557\&#34;, \&#34;pwd\&#34;: \&#34;lemonban\&#34;}&#34;,
+  &#34;data&#34;: &#34;{\&#34;mobile_phone\&#34;: \&#34;17792837966\&#34;, \&#34;pwd\&#34;: \&#34;lemonban\&#34;}&#34;,
   &#34;files&#34;: {},
   &#34;form&#34;: {},
   &#34;headers&#34;: {
@@ -627,14 +649,14 @@ Response body:
     &#34;Content-Type&#34;: &#34;application/json&#34;,
     &#34;Host&#34;: &#34;httpbin.org&#34;,
     &#34;User-Agent&#34;: &#34;python-requests/2.24.0&#34;,
-    &#34;X-Amzn-Trace-Id&#34;: &#34;Root=1-60bb7039-63947a3c0f6bb54d67c2e0ef&#34;,
+    &#34;X-Amzn-Trace-Id&#34;: &#34;Root=1-60d44a2e-2679157f5f68795c1135a855&#34;,
     &#34;X-Lemonban-Media-Type&#34;: &#34;lemonban.v2&#34;
   },
   &#34;json&#34;: {
-    &#34;mobile_phone&#34;: &#34;15598160557&#34;,
+    &#34;mobile_phone&#34;: &#34;17792837966&#34;,
     &#34;pwd&#34;: &#34;lemonban&#34;
   },
-  &#34;origin&#34;: &#34;175.8.48.142&#34;,
+  &#34;origin&#34;: &#34;175.9.120.74&#34;,
   &#34;url&#34;: &#34;http://httpbin.org/post&#34;
 }</pre>
                                         </div>
@@ -652,7 +674,7 @@ Response body:
                 <td class="TestCase0">TestCase0</td>
                 <td>test_02_post</td>
                 <td>json-demo-2</td>
-                <td>0.373s</td>
+                <td>0.244s</td>
                 
                 <td class="text-success">成功</td>
                 
@@ -696,6 +718,11 @@ Response body:
                                 </li>
                                 
                                 <li class="nav-item" role="presentation">
+                                    <a class="nav-link" data-toggle="tab" role="tab" aria-controls="contact"
+                                       aria-selected="false" style="padding: 0 16px">响应数据提取 </a>
+                                </li>
+                                
+                                <li class="nav-item" role="presentation">
                                     <a class="nav-link" data-toggle="tab" role="tab" aria-controls="profile"
                                        aria-selected="false" style="padding: 0 16px">请求信息</a>
                                 </li>
@@ -712,33 +739,36 @@ Response body:
                                 <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="profile-tab">
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.149003 |: 开始执行用例：【test_02_post (apin.core.basecase.TestCase0)】
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.035027 |: 开始执行用例：【test_02_post (apin.core.basecase.TestCase0)】
 </pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.150000 |: 当前全局变量：
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.035027 |: 全局变量：
 host:'http://api.lemonban.com/futureloan/3'
-dd:123
-member_id:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60bb7039-63947a3c0f6bb54d67c2e0ef', 'X-Lemonban-Media-Type': 'lemonban.v2'}
+member_id:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60d44a2e-2679157f5f68795c1135a855', 'X-Lemonban-Media-Type': 'lemonban.v2'}
 </pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.150000 |: 当前局部变量：
-user_mobile:'15598160557'
-admin_mobile:'15598160557'
-timestamp:1622896698.15
-token:{'mobile_phone': '15598160557', 'pwd': 'lemonban'}
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.035027 |: 局部变量：
+user_mobile:'17792837966'
+admin_mobile:'17792837966'
+timestamp:1624525359.0350273
+token:{'mobile_phone': '17792837966', 'pwd': 'lemonban'}
 </pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:38:18.521257 |: [POST]: http://httpbin.org/post </pre>
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.035027 |: 正在发送请求：</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:38:18.522014 |: 开始发送请求，请求信息如下:
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.277351 |: [POST]: http://httpbin.org/post </pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.278349 |: 请求信息如下:
 Request Headers:
       User-Agent:python-requests/2.24.0
       Accept-Encoding:gzip, deflate
@@ -749,14 +779,14 @@ Request Headers:
       Content-Type:application/json
 Request body:
 {
-  "mobile_phone": "15598160557",
+  "mobile_phone": "17792837966",
   "pwd": "lemonban",
   "type": 0
 }</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-05 20:38:18.522014 |: 接收后台的响应结果，响应信息如下:
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.278349 |: 接收后台的响应结果，响应信息如下:
 Response Headers:
       User-Agent:python-requests/2.24.0
       Accept-Encoding:gzip, deflate
@@ -768,7 +798,7 @@ Response Headers:
 Response body:
 {
   "args": {},
-  "data": "{\"mobile_phone\": \"15598160557\", \"pwd\": \"lemonban\", \"type\": 0}",
+  "data": "{\"mobile_phone\": \"17792837966\", \"pwd\": \"lemonban\", \"type\": 0}",
   "files": {},
   "form": {},
   "headers": {
@@ -778,41 +808,70 @@ Response body:
     "Content-Type": "application/json",
     "Host": "httpbin.org",
     "User-Agent": "python-requests/2.24.0",
-    "X-Amzn-Trace-Id": "Root=1-60bb703a-70ea21987e135aba5a09ac87",
+    "X-Amzn-Trace-Id": "Root=1-60d44a2f-1c848bdd6b66e0eb7dcea472",
     "X-Lemonban-Media-Type": "lemonban.v2"
   },
   "json": {
-    "mobile_phone": "15598160557",
+    "mobile_phone": "17792837966",
     "pwd": "lemonban",
     "type": 0
   },
-  "origin": "175.8.48.142",
+  "origin": "175.9.120.74",
   "url": "http://httpbin.org/post"
 }</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.522014 |: 断言表达式:['eq', 200, 'status_code']</pre>
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.278349 |: 从响应结果中开始提取数据</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.522014 |: 断言http响应状态码是否和预期一致</pre>
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.278349 |: 提取变量：token,提取方式【jsonpath】,提取表达式:$..json,提取值为:{'mobile_phone': '17792837966', 'pwd': 'lemonban', 'type': 0}</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.522014 |: 预期结果：200 </pre>
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.278349 |: 提取变量：member_id,提取方式【jsonpath】,提取表达式:$..data,提取值为:{"mobile_phone": "17792837966", "pwd": "lemonban", "type": 0}</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.522014 |: 实际结果：200</pre>
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.278349 |: 全局变量：
+host:'http://api.lemonban.com/futureloan/3'
+member_id:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60d44a2e-2679157f5f68795c1135a855', 'X-Lemonban-Media-Type': 'lemonban.v2'}
+</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.522014 |: 断言通过！</pre>
+                                    <pre style="line-height: 18px;color: #6c757d">【DEBUG】| 2021-06-24 17:02:39.279347 |: 局部变量：
+user_mobile:'17792837966'
+admin_mobile:'17792837966'
+timestamp:1624525359.0350273
+token:{'mobile_phone': '17792837966', 'pwd': 'lemonban', 'type': 0}
+member_id:'{"mobile_phone": "17792837966", "pwd": "lemonban", "type": 0}'
+</pre>
                                     
                                     
                                     
-                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-05 20:38:18.522014 |: test_02_post (apin.core.basecase.TestCase0)执行——>【通过】
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.279347 |: 断言表达式:['eq', 200, 'status_code']</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.279347 |: 断言http响应状态码是否和预期一致</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.279347 |: 预期结果：200 </pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.279347 |: 实际结果：200</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.279347 |: 断言通过！</pre>
+                                    
+                                    
+                                    
+                                    <pre style="line-height: 18px;color: #28a745">【INFO】| 2021-06-24 17:02:39.279347 |: test_02_post (apin.core.basecase.TestCase0)执行——>【通过】
 </pre>
                                     
                                     
@@ -865,10 +924,7 @@ Response body:
                                             <pre style="line-height: 22px;font-size: 14px">host:'http://api.lemonban.com/futureloan/3'
 </pre>
                                             
-                                            <pre style="line-height: 22px;font-size: 14px">dd:123
-</pre>
-                                            
-                                            <pre style="line-height: 22px;font-size: 14px">member_id:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60bb7039-63947a3c0f6bb54d67c2e0ef', 'X-Lemonban-Media-Type': 'lemonban.v2'}
+                                            <pre style="line-height: 22px;font-size: 14px">member_id:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '50', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-60d44a2e-2679157f5f68795c1135a855', 'X-Lemonban-Media-Type': 'lemonban.v2'}
 </pre>
                                             
                                         </div>
@@ -881,21 +937,65 @@ Response body:
 
                                         <div class="card-body">
                                             
-                                            <pre style="line-height: 22px;font-size: 14px">user_mobile:'15598160557'
+                                            <pre style="line-height: 22px;font-size: 14px">user_mobile:'17792837966'
 </pre>
                                             
-                                            <pre style="line-height: 22px;font-size: 14px">admin_mobile:'15598160557'
+                                            <pre style="line-height: 22px;font-size: 14px">admin_mobile:'17792837966'
 </pre>
                                             
-                                            <pre style="line-height: 22px;font-size: 14px">timestamp:1622896698.15
+                                            <pre style="line-height: 22px;font-size: 14px">timestamp:1624525359.0350273
 </pre>
                                             
-                                            <pre style="line-height: 22px;font-size: 14px">token:{'mobile_phone': '15598160557', 'pwd': 'lemonban'}
+                                            <pre style="line-height: 22px;font-size: 14px">token:{'mobile_phone': '17792837966', 'pwd': 'lemonban', 'type': 0}
+</pre>
+                                            
+                                            <pre style="line-height: 22px;font-size: 14px">member_id:'{"mobile_phone": "17792837966", "pwd": "lemonban", "type": 0}'
 </pre>
                                             
                                         </div>
                                     </div>
 
+                                </div>
+                                
+                                <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
+                                    <div class="card">
+                                        <div class="alert alert-success"
+                                             style="text-align: center;line-height: 14px;font-size: 18px"
+                                             role="alert">响应数据提取
+                                        </div>
+                                        <div class="card-body">
+                                            <table class="table table-sm">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 15%">变量名</th>
+                                                    <th scope="col" style="width: 8%">级别</th>
+                                                    <th scope="col" style="width: 12%">提取方式</th>
+                                                    <th scope="col" style="width: 25%">提取规则</th>
+                                                    <th scope="col" style="width: 40%">提取结果</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                
+                                                <tr>
+                                                    <td style="text-align:center">token</td>
+                                                    <td style="text-align:center">env</td>
+                                                    <td style="text-align:center">jsonpath</td>
+                                                    <td style="text-align:center">$..json</td>
+                                                    <td style="text-align:center"><p style="line-height: 20px">{'mobile_phone': '17792837966', 'pwd': 'lemonban', 'type': 0}</p></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td style="text-align:center">member_id</td>
+                                                    <td style="text-align:center">env</td>
+                                                    <td style="text-align:center">jsonpath</td>
+                                                    <td style="text-align:center">$..data</td>
+                                                    <td style="text-align:center"><p style="line-height: 20px">{"mobile_phone": "17792837966", "pwd": "lemonban", "type": 0}</p></td>
+                                                </tr>
+                                                
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                                 
                                 <div class="tab-pane fade" role="tabpanel" aria-labelledby="contact-tab">
@@ -931,7 +1031,7 @@ Response body:
                                         </div>
                                         <div class="card-body">
                                             <pre style="line-height: 22px;font-size: 14px">{
-  "mobile_phone": "15598160557",
+  "mobile_phone": "17792837966",
   "pwd": "lemonban",
   "type": 0
 }</pre>
@@ -948,7 +1048,7 @@ Response body:
                                         <div class="card-body">
 
                                             
-                                            <pre style="line-height: 22px;font-size: 14px">Date:Sat, 05 Jun 2021 12:38:18 GMT</pre>
+                                            <pre style="line-height: 22px;font-size: 14px">Date:Thu, 24 Jun 2021 09:02:39 GMT</pre>
                                             
                                             <pre style="line-height: 22px;font-size: 14px">Content-Type:application/json</pre>
                                             
@@ -972,7 +1072,7 @@ Response body:
                                         <div class="card-body">
                                             <pre style="line-height: 22px;font-size: 14px">{
   &#34;args&#34;: {},
-  &#34;data&#34;: &#34;{\&#34;mobile_phone\&#34;: \&#34;15598160557\&#34;, \&#34;pwd\&#34;: \&#34;lemonban\&#34;, \&#34;type\&#34;: 0}&#34;,
+  &#34;data&#34;: &#34;{\&#34;mobile_phone\&#34;: \&#34;17792837966\&#34;, \&#34;pwd\&#34;: \&#34;lemonban\&#34;, \&#34;type\&#34;: 0}&#34;,
   &#34;files&#34;: {},
   &#34;form&#34;: {},
   &#34;headers&#34;: {
@@ -982,15 +1082,15 @@ Response body:
     &#34;Content-Type&#34;: &#34;application/json&#34;,
     &#34;Host&#34;: &#34;httpbin.org&#34;,
     &#34;User-Agent&#34;: &#34;python-requests/2.24.0&#34;,
-    &#34;X-Amzn-Trace-Id&#34;: &#34;Root=1-60bb703a-70ea21987e135aba5a09ac87&#34;,
+    &#34;X-Amzn-Trace-Id&#34;: &#34;Root=1-60d44a2f-1c848bdd6b66e0eb7dcea472&#34;,
     &#34;X-Lemonban-Media-Type&#34;: &#34;lemonban.v2&#34;
   },
   &#34;json&#34;: {
-    &#34;mobile_phone&#34;: &#34;15598160557&#34;,
+    &#34;mobile_phone&#34;: &#34;17792837966&#34;,
     &#34;pwd&#34;: &#34;lemonban&#34;,
     &#34;type&#34;: 0
   },
-  &#34;origin&#34;: &#34;175.8.48.142&#34;,
+  &#34;origin&#34;: &#34;175.9.120.74&#34;,
   &#34;url&#34;: &#34;http://httpbin.org/post&#34;
 }</pre>
                                         </div>
@@ -1101,84 +1201,84 @@ Response body:
 
 </script>
 
-<!--<script type="text/javascript">-->
-<!--    // 基于准备好的dom，初始化echarts实例-->
-<!--    var myChart = echarts.init(document.getElementById('char'));-->
-<!--    var myChart2 = echarts.init(document.getElementById('char2'));-->
-<!--    // 指定图表的配置项和数据-->
-<!--    option = {-->
-<!--        color: ['#00a10a', '#ddb518', 'rgba(204,46,41,0.73)', '#85898c'],-->
-<!--        tooltip: {-->
-<!--            trigger: 'item',-->
-<!--            formatter: '{a} <br/>{b}: {c} ({d}%)'-->
-<!--        },-->
-<!--        legend: {-->
-<!--            orient: 'vertical',-->
-<!--            left: 10,-->
-<!--            data: ['通过', '失败', '错误', '跳过']-->
-<!--        },-->
-<!--        series: [-->
-<!--            {-->
-<!--                name: '测试结果',-->
-<!--                type: 'pie',-->
-<!--                radius: ['50%', '70%'],-->
-<!--                avoidLabelOverlap: false,-->
-<!--                label: {-->
-<!--                    show: false,-->
-<!--                    position: 'center'-->
-<!--                },-->
-<!--                emphasis: {-->
-<!--                    label: {-->
-<!--                        show: true,-->
-<!--                        fontSize: '30',-->
-<!--                        fontWeight: 'bold'-->
-<!--                    }-->
-<!--                },-->
-<!--                labelLine: {-->
-<!--                    show: false-->
-<!--                },-->
-<!--                data: [-->
-<!--                    {value: 2, name: '通过'},-->
-<!--                    {value: 0, name: '失败'},-->
-<!--                    {value: 0, name: '错误'},-->
-<!--                    {value: 0, name: '跳过'}-->
-<!--                ]-->
-<!--            }-->
-<!--        ]-->
-<!--    };-->
-<!--    option2 = {-->
-<!--        tooltip: {-->
-<!--            formatter: '{a} <br/>{b} : {c}%'-->
-<!--        },-->
-<!--        toolbox: {-->
-<!--            feature: {-->
-<!--                restore: {},-->
-<!--                saveAsImage: {}-->
-<!--            }-->
-<!--        },-->
-<!--        series: [-->
-<!--            {-->
-<!--                name: '测试结果',-->
-<!--                type: 'gauge',-->
-<!--                detail: {formatter: '100.00%'},-->
-<!--                data: [{value: '100.00', name: '用例通过率'}],-->
-<!--                axisLine: {-->
-<!--                    lineStyle: {-->
-<!--                        color: [-->
-<!--                            [0.2, '#c20000'],-->
-<!--                            [0.8, '#ddb518'],-->
-<!--                            [1, '#00a10a']]-->
-<!--                    }-->
-<!--                }-->
-<!--            }-->
-<!--        ]-->
-<!--    };-->
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('char'));
+    var myChart2 = echarts.init(document.getElementById('char2'));
+    // 指定图表的配置项和数据
+    option = {
+        color: ['#00a10a', '#ddb518', 'rgba(204,46,41,0.73)', '#85898c'],
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 10,
+            data: ['通过', '失败', '错误', '跳过']
+        },
+        series: [
+            {
+                name: '测试结果',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    {value: 2, name: '通过'},
+                    {value: 0, name: '失败'},
+                    {value: 0, name: '错误'},
+                    {value: 0, name: '跳过'}
+                ]
+            }
+        ]
+    };
+    option2 = {
+        tooltip: {
+            formatter: '{a} <br/>{b} : {c}%'
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [
+            {
+                name: '测试结果',
+                type: 'gauge',
+                detail: {formatter: '100.00%'},
+                data: [{value: '100.00', name: '用例通过率'}],
+                axisLine: {
+                    lineStyle: {
+                        color: [
+                            [0.2, '#c20000'],
+                            [0.8, '#ddb518'],
+                            [1, '#00a10a']]
+                    }
+                }
+            }
+        ]
+    };
 
 
-<!--    myChart2.setOption(option2);-->
-<!--    // 使用刚指定的配置项和数据显示图表。-->
-<!--    myChart.setOption(option);-->
-<!--</script>-->
+    myChart2.setOption(option2);
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
 
 
 </body>

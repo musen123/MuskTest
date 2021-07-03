@@ -188,11 +188,11 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
     def http_requests(self, case):
         # 发送请求
         # 处理请求数据
-        self.__request_hook(case)
+        self.__request_hook(case, self.env, ENV)
         case = self.__handle_data(case)
         self.info_log('正在发送请求：')
         response = Request(case, self).request_api()
-        self.__response_hook(case, response)
+        self.__response_hook(case, response, self.env, ENV)
         return response
 
     def assert_result(self, response, case):
@@ -320,9 +320,9 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
             self.assert_info.append((repr(expected), repr(actual), 'pass', method))
             self.info_log('断言通过！')
 
-    def __request_hook(self, case):
+    def __request_hook(self, case, env, ENV):
         """请求钩子函数"""
-        env = self.env
+
         if case.get('request_hook'):
             self.info_log('执行请求钩子函数')
             try:
@@ -330,15 +330,16 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
             except Exception as e:
                 self.error_log('请求钩子函数执行错误:\n{}'.format(e))
 
-    def __response_hook(self, case, response):
+    def __response_hook(self, case, response, env, ENV):
         """响应钩子函数"""
-        env = self.env
         if case.get('response_hook'):
             self.info_log('执行响应钩子函数')
             try:
                 exec(case.get('request_hook'))
             except Exception as e:
                 self.error_log('响应钩子函数执行错误:\n{}'.format(e))
+
+
 
 
 class Request:

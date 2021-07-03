@@ -11,14 +11,19 @@ from apin.core.testRunner import TestRunner
 from apin.core.generateCase import ParserDataToCase
 
 
-def run_test(env_config, case_data, func_tools_path=None,
+def run_test(env_config, case_data,
+             func_tools_path=None,
              no_report=False,
              filename="reports.html",
              report_dir=".",
              title='测试报告',
-             tester='木森',
-             desc="XX项目测试生成的报告",
-             templates=1):
+             tester='测试员',
+             desc="项目测试生成的报告",
+             templates=1,
+             thread_count=1,
+             rerun=0,
+             interval=2,
+             ):
     """
     :param env_config: 全局环境变量
     :param case_data: 测试套件数据
@@ -28,6 +33,9 @@ def run_test(env_config, case_data, func_tools_path=None,
     :param title:测试套件标题
     :param templates: 可以通过参数值1或者2，指定报告的样式模板，目前只有两个模板
     :param tester:测试者
+    :param thread_count:运行线程数
+    :param rerun:失败重运行次数
+    :param interval:重运行间隔事件
     :return:
     """
     if func_tools_path:
@@ -44,13 +52,15 @@ def run_test(env_config, case_data, func_tools_path=None,
                         templates=templates,
                         no_report=no_report
                         )
-    res = runner.run()
+    res = runner.run(thread_count=thread_count, rerun=rerun, interval=interval)
     if func_tools_path:
         os.remove('funcTools.py')
     return res
 
 
 if __name__ == '__main__':
+    from apin import run_test
+
     case_data = {
         "host": "http://httpbin.org",
         "headers": {
@@ -74,7 +84,7 @@ if __name__ == '__main__':
         ],
         "Cases": [
             {
-                "title": "json-demo-1",
+                "title": "测试用例",
                 "interface": "/post",
                 "method": "post",
                 "json": {

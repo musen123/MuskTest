@@ -1,3 +1,6 @@
+LICENSE
+MANIFEST.in
+README.md
 setup.py
 apin/__init__.py
 apin/manage.py
@@ -35,6 +38,7 @@ apin/templates/reports/templates02.html
 apin/templates/reports/templates03.html
 tests/__init__.py
 tests/expand.py
+tests/funcTools.py
 tests/musenTools.py
 tests/readme.py
 tests/reports.html
