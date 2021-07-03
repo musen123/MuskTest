@@ -1,30 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="304f45c0-637a-4712-8582-51ec2bc62f9c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MANIFEST.in" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TestApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TestApi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="304f45c0-637a-4712-8582-51ec2bc62f9c" name="Default Changelist" comment="v0.1.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apin.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/apin.egg-info/PKG-INFO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apin.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/apin.egg-info/SOURCES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/httptest.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/httptest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/resultPush.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/resultPush.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/testRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/testRunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/expand.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/expand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/funcTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/funcTools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/reports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/apin-0.2.7-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/apin-0.2.7.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/apin-0.2.8-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/apin-0.2.8.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/expand.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/expand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports.html" beforeDir="false" afterPath="$PROJECT_DIR$/tests/reports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/doc8_fixtrue.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/doc8_fixtrue.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/casedata/cekai.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/casedata/qcd.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/casedata/test_json_qcd.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/casedata/test_json_qcd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/casedata/test_json_qcd2.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/casedata/test_json_qcd2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/casedata/test_qcd.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/casedata/test_qcd.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/funcTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/funcTools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-04_16_43_24report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-04_16_58_39report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-04_17_03_08report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_13_50_21report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_14_17_07report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_14_25_01report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_14_29_44report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_14_54_41report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_15_01_46report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_15_09_19report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_16_16_17report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_16_37_45report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_16_44_23report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_16_52_40report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_03_22report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_05_49report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_05_59report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_06_24report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_06_34report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_06_40report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_07_10report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_07_31report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_07_39report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_08_53report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_09_13report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_10_04report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_11_14report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_12_05report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_13_42report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_15_09report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_15_44report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-17_17_48_18report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testcases/test_json_demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testcases/test_stream_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testcases/test_stream_V3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/testcases/test_yaml_demo.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,12 +67,36 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="150">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/doc8_fixtrue.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="150">
+                <caret line="6" selection-start-line="6" selection-end-line="6" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/funcTools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+              <folding>
+                <element signature="e#125#138#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,6 +126,7 @@
       <find>test.exception_Log</find>
       <find>DataParser</find>
       <find>res</find>
+      <find>__perform_hook</find>
     </findStrings>
     <replaceStrings>
       <replace>print</replace>
@@ -93,6 +138,7 @@
       <replace>setattr(test,'info_log')</replace>
       <replace>getattr(test,'exception_Log')</replace>
       <replace>parser</replace>
+      <replace>__perform_fixture</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\project\MSUnitTestReport\TestApi\tests</dir>
@@ -104,24 +150,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/start.md" />
-        <option value="$PROJECT_DIR$/docs/index.md" />
-        <option value="$PROJECT_DIR$/docs/Home.md" />
         <option value="$PROJECT_DIR$/mkdocs.yml" />
         <option value="$PROJECT_DIR$/docs/doc4_extract.md" />
         <option value="$PROJECT_DIR$/docs/doc6_functon.md" />
         <option value="$PROJECT_DIR$/docs/doc7_settings.md" />
-        <option value="$PROJECT_DIR$/docs/doc8_fixtrue.md" />
         <option value="$PROJECT_DIR$/docs/doc1_index1.md" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/docs/doc2_start.md" />
         <option value="$PROJECT_DIR$/docs/doc3_cases.md" />
         <option value="$PROJECT_DIR$/apin/core/expand.py" />
         <option value="$PROJECT_DIR$/apin/templates/reports/templates02.html" />
-        <option value="$PROJECT_DIR$/tests/testcases/test_stream_V3.py" />
-        <option value="$PROJECT_DIR$/tests/testcases/test_yaml_demo.py" />
-        <option value="$PROJECT_DIR$/tests/testcases/test_json_demo.py" />
-        <option value="$PROJECT_DIR$/tests/casedata/test_json_qcd.json" />
         <option value="$PROJECT_DIR$/apin/core/parserCaseFile.py" />
         <option value="$PROJECT_DIR$/apin/core/parserCase.py" />
         <option value="$PROJECT_DIR$/apin/core/create_project.py" />
@@ -135,33 +173,41 @@
         <option value="$PROJECT_DIR$/build/dd89.py" />
         <option value="$PROJECT_DIR$/apin/__init__.py" />
         <option value="$PROJECT_DIR$/ddtest/expand.py" />
-        <option value="$PROJECT_DIR$/apin/templates/reports/templates.html" />
         <option value="$PROJECT_DIR$/apin/core/dataParser.py" />
         <option value="$PROJECT_DIR$/apin/core/generateCase.py" />
         <option value="$PROJECT_DIR$/apin/core/logger.py" />
         <option value="$PROJECT_DIR$/apin/core/tools.py" />
         <option value="$PROJECT_DIR$/tests/settings.py" />
         <option value="$PROJECT_DIR$/apin/core/testResult.py" />
-        <option value="$PROJECT_DIR$/apin/core/basecase.py" />
         <option value="$PROJECT_DIR$/apin/core/initEvn.py" />
         <option value="$PROJECT_DIR$/tests/__init__.py" />
         <option value="$PROJECT_DIR$/docs/doc5_assert.md" />
-        <option value="$PROJECT_DIR$/apin/core/httptest.py" />
         <option value="$PROJECT_DIR$/apin/core/databases.py" />
         <option value="$PROJECT_DIR$/apin/core/resultPush.py" />
         <option value="$PROJECT_DIR$/tests/run.py" />
-        <option value="$PROJECT_DIR$/apin/manage.py" />
         <option value="$PROJECT_DIR$/tests/testcases/__init__.py" />
         <option value="$PROJECT_DIR$/tests/expand.py" />
-        <option value="$PROJECT_DIR$/apin/core/testRunner.py" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/apin/manage.py" />
+        <option value="$PROJECT_DIR$/tests/testcases/test_stream_V3.py" />
+        <option value="$PROJECT_DIR$/tests/testcases/test_yaml_demo.py" />
+        <option value="$PROJECT_DIR$/tests/testcases/test_json_demo.py" />
+        <option value="$PROJECT_DIR$/apin/core/basecase.py" />
+        <option value="$PROJECT_DIR$/apin/templates/reports/templates.html" />
+        <option value="$PROJECT_DIR$/apin/core/testRunner.py" />
+        <option value="$PROJECT_DIR$/apin/core/httptest.py" />
+        <option value="$PROJECT_DIR$/tests/casedata/test_qcd.yaml" />
+        <option value="$PROJECT_DIR$/tests/casedata/test_json_qcd2.json" />
+        <option value="$PROJECT_DIR$/tests/casedata/test_json_qcd.json" />
+        <option value="$PROJECT_DIR$/docs/doc8_fixtrue.md" />
+        <option value="$PROJECT_DIR$/tests/funcTools.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-19" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="16" />
     <option name="y" value="10" />
-    <option name="width" value="1652" />
+    <option name="width" value="1732" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -180,7 +226,23 @@
             <path>
               <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
               <item name="TestApi" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="apin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestApi" type="462c0819:PsiDirectoryNode" />
+              <item name="apin" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestApi" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestApi" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
@@ -206,7 +268,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -236,29 +298,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.expand">
-    <configuration name="dd89" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="TestApi" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/build" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/build/dd89.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.run">
     <configuration name="expand (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TestApi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -347,13 +387,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in test_stream_V3.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="TestApi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/testcases" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/testcases/test_stream_V3.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.expand" />
         <item itemvalue="Python.run" />
+        <item itemvalue="Python tests.Unittests in test_stream_V3.py" />
+        <item itemvalue="Python.expand" />
         <item itemvalue="Python.initEvn" />
         <item itemvalue="Python.expand (2)" />
-        <item itemvalue="Python.dd89" />
       </list>
     </recent_temporary>
   </component>
@@ -452,6 +507,8 @@
       <workItem from="1625121717609" duration="1108000" />
       <workItem from="1625133560299" duration="449000" />
       <workItem from="1625134234080" duration="601000" />
+      <workItem from="1625290961362" duration="1591000" />
+      <workItem from="1625294565939" duration="9489000" />
     </task>
     <task id="LOCAL-00001" summary="v0.0.1">
       <created>1615634630342</created>
@@ -555,24 +612,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_test_stream_V3_py - 2021.03.15 at 14h 09m 44s.xml">
-      <configuration name="Unittests in test_stream_V3.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_yaml_demo_py - 2021.03.15 at 16h 28m 34s.xml">
-      <configuration name="Unittests in test_yaml_demo.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_yaml_demo_py - 2021.03.15 at 16h 35m 50s.xml">
-      <configuration name="Unittests in test_yaml_demo.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_json_demo_py - 2021.03.15 at 16h 36m 18s.xml">
-      <configuration name="Unittests in test_json_demo.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_json_demo_py - 2021.03.15 at 16h 36m 51s.xml">
-      <configuration name="Unittests in test_json_demo.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test_json_demo_py - 2021.03.15 at 16h 37m 50s.xml">
-      <configuration name="Unittests in test_json_demo.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="Unittests_in_test_json_demo_py - 2021.03.15 at 16h 37m 51s.xml">
       <configuration name="Unittests in test_json_demo.py" configurationId="tests" />
     </history-entry>
@@ -585,21 +624,39 @@
     <history-entry file="Unittests_in_test_demo_py - 2021.03.23 at 17h 42m 10s.xml">
       <configuration name="Unittests in test_demo.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test_stream_V3_py - 2021.07.03 at 16h 24m 31s.xml">
+      <configuration name="Unittests in test_stream_V3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_stream_V3_py - 2021.07.03 at 16h 24m 48s.xml">
+      <configuration name="Unittests in test_stream_V3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_stream_V3_py - 2021.07.03 at 16h 25m 15s.xml">
+      <configuration name="Unittests in test_stream_V3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_stream_V3_py - 2021.07.03 at 16h 26m 21s.xml">
+      <configuration name="Unittests in test_stream_V3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_stream_V3_py - 2021.07.03 at 16h 29m 14s.xml">
+      <configuration name="Unittests in test_stream_V3.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test_stream_V3_py - 2021.07.03 at 16h 30m 16s.xml">
+      <configuration name="Unittests in test_stream_V3.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="362864000" />
+    <option name="totallyTimeSpent" value="373944000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-19" y="10" width="1652" height="1038" extended-state="0" />
+    <frame x="16" y="10" width="1732" height="1038" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25443038" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19457832" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32416952" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.49713632" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3127148" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18327606" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5406644" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -607,7 +664,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.46277204" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.24284078" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3250283" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -646,30 +703,31 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Apin$run.coverage" NAME="run Coverage Results" MODIFIED="1623923298219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/TestApi$logger.coverage" NAME="logger Coverage Results" MODIFIED="1615540530570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testapi/core" />
-    <SUITE FILE_PATH="coverage/TestApi$manage__1_.coverage" NAME="manage (1) Coverage Results" MODIFIED="1615787945499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/itestapi" />
+    <SUITE FILE_PATH="coverage/Apin$Unittests_in_test_stream_V3_py.coverage" NAME="Unittests in test_stream_V3.py Coverage Results" MODIFIED="1625301029983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/testcases" />
+    <SUITE FILE_PATH="coverage/Apin$run.coverage" NAME="run Coverage Results" MODIFIED="1625303167255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/TestApi$run__1_.coverage" NAME="run (1) Coverage Results" MODIFIED="1616492823451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apin/templates/http_demo" />
     <SUITE FILE_PATH="coverage/Apin$expand.coverage" NAME="expand Coverage Results" MODIFIED="1624526173157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/TestApi$run__2_.coverage" NAME="run (2) Coverage Results" MODIFIED="1615788286919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demo2" />
-    <SUITE FILE_PATH="coverage/Apin$dd89.coverage" NAME="dd89 Coverage Results" MODIFIED="1622897073931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/build" />
     <SUITE FILE_PATH="coverage/TestApi$management__1_.coverage" NAME="management (1) Coverage Results" MODIFIED="1615447167994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/build/lib/testapi" />
     <SUITE FILE_PATH="coverage/TestApi$Unittests_in_222test_stream_V2_py.coverage" NAME="Unittests in 222test_stream_V2.py Coverage Results" MODIFIED="1615788383736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/testcases" />
-    <SUITE FILE_PATH="coverage/TestApi$Unittests_in_test_stream_py.coverage" NAME="Unittests in test_stream.py Coverage Results" MODIFIED="1614603159361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/testcases" />
     <SUITE FILE_PATH="coverage/TestApi$Unittests_in_test_json_demo_py.coverage" NAME="Unittests in test_json_demo.py Coverage Results" MODIFIED="1615797471068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/testcases" />
-    <SUITE FILE_PATH="coverage/Apin$expand__2_.coverage" NAME="expand (2) Coverage Results" MODIFIED="1622899727021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ddtest" />
-    <SUITE FILE_PATH="coverage/TestApi$handle_path.coverage" NAME="handle_path Coverage Results" MODIFIED="1614777689531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testapi/project_manage" />
     <SUITE FILE_PATH="coverage/TestApi$Unittests_in_test_yaml_demo_py.coverage" NAME="Unittests in test_yaml_demo.py Coverage Results" MODIFIED="1615797495086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/testcases" />
-    <SUITE FILE_PATH="coverage/TestApi$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1616056797283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apin" />
     <SUITE FILE_PATH="coverage/Apin$__init____1_.coverage" NAME="__init__ (1) Coverage Results" MODIFIED="1622727748460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/Apin$expand__1_.coverage" NAME="expand (1) Coverage Results" MODIFIED="1622896697276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/TestApi$Unittests_in_test_demo_py.coverage" NAME="Unittests in test_demo.py Coverage Results" MODIFIED="1616492528316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apin/templates/http_demo/testcases" />
-    <SUITE FILE_PATH="coverage/TestApi$manage.coverage" NAME="manage Coverage Results" MODIFIED="1615540854645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testapi" />
     <SUITE FILE_PATH="coverage/Apin$initEvn.coverage" NAME="initEvn Coverage Results" MODIFIED="1623218252542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apin/core" />
     <SUITE FILE_PATH="coverage/TestApi$run.coverage" NAME="run Coverage Results" MODIFIED="1616656964042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/TestApi$Unittests_for_test_stream_TestStream.coverage" NAME="Unittests for test_stream.TestStream Coverage Results" MODIFIED="1614606305340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/testcases" />
     <SUITE FILE_PATH="coverage/TestApi$management.coverage" NAME="management Coverage Results" MODIFIED="1615448893642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testapi" />
     <SUITE FILE_PATH="coverage/TestApi$Unittests_in_test_stream_V3_py.coverage" NAME="Unittests in test_stream_V3.py Coverage Results" MODIFIED="1615788633023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/testcases" />
+    <SUITE FILE_PATH="coverage/TestApi$logger.coverage" NAME="logger Coverage Results" MODIFIED="1615540530570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testapi/core" />
+    <SUITE FILE_PATH="coverage/TestApi$manage__1_.coverage" NAME="manage (1) Coverage Results" MODIFIED="1615787945499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/itestapi" />
+    <SUITE FILE_PATH="coverage/TestApi$run__2_.coverage" NAME="run (2) Coverage Results" MODIFIED="1615788286919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demo2" />
+    <SUITE FILE_PATH="coverage/Apin$dd89.coverage" NAME="dd89 Coverage Results" MODIFIED="1622897073931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/build" />
+    <SUITE FILE_PATH="coverage/TestApi$Unittests_in_test_stream_py.coverage" NAME="Unittests in test_stream.py Coverage Results" MODIFIED="1614603159361" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/testcases" />
+    <SUITE FILE_PATH="coverage/Apin$expand__2_.coverage" NAME="expand (2) Coverage Results" MODIFIED="1622899727021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ddtest" />
+    <SUITE FILE_PATH="coverage/TestApi$handle_path.coverage" NAME="handle_path Coverage Results" MODIFIED="1614777689531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testapi/project_manage" />
+    <SUITE FILE_PATH="coverage/TestApi$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1616056797283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apin" />
+    <SUITE FILE_PATH="coverage/TestApi$manage.coverage" NAME="manage Coverage Results" MODIFIED="1615540854645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testapi" />
+    <SUITE FILE_PATH="coverage/TestApi$Unittests_for_test_stream_TestStream.coverage" NAME="Unittests for test_stream.TestStream Coverage Results" MODIFIED="1614606305340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/testcases" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -721,102 +779,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/python37/Lib/logging/handlers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/testcases/test_json_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/templates/http_demo/funcTools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="38" column="14" lean-forward="true" selection-start-line="4" selection-end-line="51" />
-          <folding>
-            <element signature="e#15#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python.py" />
-    <entry file="file://$PROJECT_DIR$/build/funcTools.py" />
-    <entry file="file://$PROJECT_DIR$/build/dd89.py" />
-    <entry file="file://$PROJECT_DIR$/ddtest/reports.html" />
-    <entry file="file://$PROJECT_DIR$/ddtest/expand.py" />
-    <entry file="file://$PROJECT_DIR$/apin/core/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/dataParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2273">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/templates/reports/dingtalk.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/templates/reports/templates.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="672" column="42" selection-start-line="672" selection-start-column="42" selection-end-line="672" selection-end-column="42" />
-          <folding>
-            <element signature="n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#table#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#span#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#pre#0;n#div#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#pre#1;n#div#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#pre#2;n#div#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#pre#3;n#div#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#pre#4;n#div#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#pre#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/570376035/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="2912" column="41" selection-start-line="2912" selection-start-column="23" selection-end-line="2912" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-08_21_03_22report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://C:/python37/Lib/logging/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -826,17 +788,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mkdocs.yml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/logger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="81" column="40" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="40" />
-          <folding>
-            <element signature="e#211#2461#0" />
-            <element signature="e#368#1448#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/doc5_assert.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -849,38 +800,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apin/core/databases.py" />
-    <entry file="file://$PROJECT_DIR$/apin/core/basecase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-458">
-          <caret line="108" column="14" selection-start-line="108" selection-start-column="14" selection-end-line="108" selection-end-column="14" />
-          <folding>
-            <element signature="e#42#51#0" expanded="true" />
-            <element signature="e#1404#2087#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/httptest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1366">
-          <caret line="354" column="8" selection-start-line="354" selection-start-column="8" selection-end-line="354" selection-end-column="8" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-            <element signature="e#298#4846#0" />
-            <element signature="e#4868#5251#0" />
-            <element signature="e#5507#5729#0" />
-            <element signature="e#5786#6983#0" />
-            <element signature="e#7335#8193#0" />
-            <element signature="e#9320#9959#0" />
-            <element signature="e#9994#10298#0" />
-            <element signature="e#10357#11642#0" />
-            <element signature="e#11717#12192#0" />
-            <element signature="e#12246#12515#0" />
-            <element signature="e#12564#12834#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requir.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -888,34 +807,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/casedata/test_json_qcd.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-375">
-          <caret line="51" column="20" lean-forward="true" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/generateCase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="19" selection-start-line="19" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/testcases/test_stream_V3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="54" />
-          <folding>
-            <element signature="e#198#377#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -979,13 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apin/core/testResult.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1000,16 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/initEvn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding>
-            <element signature="e#43#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/expand.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="635">
@@ -1021,25 +899,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/testRunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-          <folding>
-            <element signature="e#42#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/testcases/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/funcTools.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/musenTools.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1054,18 +919,15 @@
     <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-08_21_15_44report.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/apin/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="154" column="7" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
-          <folding>
-            <element signature="e#42#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MANIFEST.in">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1074,10 +936,225 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+    <entry file="file://$PROJECT_DIR$/apin/core/generateCase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-630">
+          <caret line="298" column="4" selection-start-line="298" selection-start-column="4" selection-end-line="298" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/testcases/test_json_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/casedata/cekai.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-675" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/dataParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+          <folding>
+            <element signature="e#403#2400#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/basecase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="e#42#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/testcases/test_yaml_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-17_17_48_18report.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/reports/2021-07-03_16_48_57report.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/templates/reports/templates.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-219">
+          <caret line="560" column="34" selection-start-line="560" selection-start-column="34" selection-end-line="560" selection-end-column="34" />
+          <folding>
+            <element signature="n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#table#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#pre#0;n#div#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#pre#1;n#div#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#pre#2;n#div#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#pre#3;n#div#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#pre#4;n#div#0;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#pre#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/reports.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/templates/http_demo/funcTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/reports/2021-07-03_16_59_03report.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="76" column="6" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
+          <folding>
+            <element signature="e#211#2461#0" />
+            <element signature="e#368#1448#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="58" column="12" lean-forward="true" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+          <folding>
+            <element signature="e#42#57#0" expanded="true" />
+            <element signature="e#2053#2468#0" />
+            <element signature="e#2515#2852#0" />
+            <element signature="e#2897#3237#0" />
+            <element signature="e#3265#3986#0" />
+            <element signature="e#4024#4314#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/testRunner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="101" column="27" lean-forward="true" selection-start-line="101" selection-start-column="27" selection-end-line="101" selection-end-column="27" />
+          <folding>
+            <element signature="e#42#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/casedata/test_json_qcd.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/casedata/test_json_qcd2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/testcases/test_stream_V3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/casedata/test_qcd.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/httptest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="435" selection-start-line="435" selection-end-line="435" />
+          <folding>
+            <element signature="e#42#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/doc8_fixtrue.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="6" selection-start-line="6" selection-end-line="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apin/core/initEvn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+          <folding>
+            <element signature="e#43#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/视频/test_runner_0001.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="19" />
+          <caret line="12" column="46" lean-forward="true" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+          <folding>
+            <element signature="e#143#154#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/funcTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#125#138#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

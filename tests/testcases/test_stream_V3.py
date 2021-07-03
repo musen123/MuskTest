@@ -27,11 +27,13 @@ class TestDomeV3(HttpCase):
     host = "http://api.lemonban.com/futureloan/"
     headers = {"X-Lemonban-Media-Type": "lemonban.v2"}
     # 用例级别前置
-    setup_hook = {"timestamp": 'F{get_timestamp()}'}
+    setup_hook = 'setup_hook1'
+    teardown_hook = 'teardown_hook1'
     # 预设变量
     env = {
         "user_mobile": 'F{rand_phone("155")}',
-        "admin_mobile": 'F{rand_phone("133")}'
+        "admin_mobile": 'F{rand_phone("133")}',
+        "timestamp": 'F{get_timestamp()}'
     }
     # 结果校验
     verification = [
@@ -47,7 +49,7 @@ class TestDomeV3(HttpCase):
             "method": "post",
             'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
             "verification": [
-                ["contain", 'O', "V{{$..msg}}"],
+                ["contains", 'O', "V{{$..msg}}"],
             ]
         },
         # 用例2：管理员注册

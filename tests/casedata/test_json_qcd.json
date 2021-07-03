@@ -3,12 +3,10 @@
   "headers": {
     "X-Lemonban-Media-Type": "lemonban.v2"
   },
-  "setup_hook": {
-    "timestamp": "F{get_timestamp()}"
-  },
-  "setup_class_hook": {
-  },
+  "setup_hook": "setup_hook1",
+  "teardown_hook": "teardown_hook1",
   "env": {
+    "timestamp": "F{get_timestamp()}",
     "user_mobile": "F{rand_phone('155')}",
     "admin_mobile": "F{rand_phone('133')}"
   },
