@@ -558,11 +558,11 @@
                 tbodyTr.hide();
                 tbodyTr.has('button').has('.text-success').show()
 
-            } else if (res === '失败') {
+            } else if (res === '错误') {
                 tbodyTr.hide();
                 tbodyTr.has('button').has('.text-danger').show()
 
-            } else if (res === '错误') {
+            } else if (res === '失败') {
                 tbodyTr.hide();
                 tbodyTr.has('button').has('.text-warning').show()
 
@@ -577,10 +577,10 @@
             } else if (res === '成功') {
                 tbodyTr.hide();
                 tbodyTr.has('button').has('.' + cls + '').has('.text-success').show()
-            } else if (res === '失败') {
+            } else if (res === '错误') {
                 tbodyTr.hide();
                 tbodyTr.has('button').has('.' + cls + '').has('.text-danger').show()
-            } else if (res === '错误') {
+            } else if (res === '失败') {
                 tbodyTr.hide();
                 tbodyTr.has('button').has('.' + cls + '').has('.text-warning').show()
             } else if (res === '跳过') {

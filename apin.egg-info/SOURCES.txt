@@ -46,6 +46,4 @@ tests/run.py
 tests/settings.py
 tests/logs/__init__.py
 tests/testcases/__init__.py
-tests/testcases/test_json_demo.py
 tests/testcases/test_stream_V3.py
-tests/testcases/test_yaml_demo.py

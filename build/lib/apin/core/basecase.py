@@ -6,7 +6,7 @@ import json
 import unittest
 from functools import wraps
 from apin.core.dataParser import DataParser
-from apin.core.initEvn import BaseEnv
+from apin.core.initEvn import BaseEnv, func_tools, ENV
 
 
 class GenerateTest(type):
@@ -20,7 +20,6 @@ class GenerateTest(type):
             # -------------------生成用例---------------------
             # Case外的类属性中，是否有需要动态执行的函数
             for k, v in list(namespace.items()):
-
                 if k not in ['Cases', "extract", "verification", "setup_hook"]:
                     # 解析数据中的变量
                     v = DataParser.parser_func(namespace.get('env'), v)
@@ -30,11 +29,7 @@ class GenerateTest(type):
                     _v = BaseEnv('env')
                     _v.update(v)
                     namespace[k] = _v
-
             test_cls = super().__new__(cls, name, bases, namespace)
-            # --创建前后置方法--
-            cls.__create_fixture(test_cls)
-            # # -------------------生成用例---------------------
             func = getattr(test_cls, "perform")
             datas = cls.__handle_datas(namespace.get('Cases'))
             for index, case_data in enumerate(datas):
@@ -93,51 +88,6 @@ class GenerateTest(type):
             # 支持excel：暂未实现
         raise ValueError('测试用例数据格式有误！')
 
-    @classmethod
-    def __create_fixture(cls, test_cls):
-        """创建测试前后置方法"""
-        # 用例前置
-        setup_hook = getattr(test_cls, 'setup_hook', None)
-        if setup_hook and isinstance(setup_hook, dict):
-            # 获取方法
-            def setUp(self):
-                for k, item in setup_hook.items():
-                    v = DataParser.parser_func(test_cls.env, item)
-                    test_cls.env[k] = v
-
-            setattr(test_cls, 'setUp', setUp)
-        # 用例后置
-        teardown_hook = getattr(test_cls, 'teardown_hook', None)
-        if teardown_hook and isinstance(teardown_hook, dict):
-            # 获取方法
-            def tearDown(self):
-                for k, item in teardown_hook.items():
-                    DataParser.parser_func(test_cls.env, item)
-
-            setattr(test_cls, 'tearDown', tearDown)
-
-        # 类前置
-        setupclass_hook = getattr(test_cls, 'setup_class_hook', None)
-        if setupclass_hook and isinstance(setupclass_hook, dict):
-            # 获取方法
-            @classmethod
-            def setUpClass(cls):
-                for k, item in setupclass_hook.items():
-                    v = DataParser.parser_func(test_cls.env, item)
-                    test_cls.env[k] = v
-
-            setattr(test_cls, 'setUpClass', setUpClass)
-        # 测试类后置
-        teardown_class_hook = getattr(test_cls, 'teardown_class_hook ', None)
-        if teardown_class_hook and isinstance(teardown_class_hook, dict):
-            # 获取方法
-            @classmethod
-            def tearDownClass(cls):
-                for k, item in teardown_class_hook.items():
-                    DataParser.parser_func(test_cls.env, item)
-
-            setattr(test_cls, 'tearDownClass', tearDownClass)
-
 
 class BaseTestCase(unittest.TestCase, metaclass=GenerateTest):
 
@@ -147,6 +97,3 @@ class BaseTestCase(unittest.TestCase, metaclass=GenerateTest):
     def get(self, attr):
         """支持通过get方法获取属性"""
         return getattr(self, attr, None)
-
-    def setUp(self):
-        pass

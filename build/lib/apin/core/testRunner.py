@@ -21,7 +21,7 @@ class TestRunner():
                  tester='测试员',
                  desc="XX项目测试生成的报告",
                  templates=1,
-                 no_report=True
+                 no_report=False
                  ):
         """
         初始化用例运行程序
@@ -102,7 +102,7 @@ class TestRunner():
                  "\n失败:{}条"
                  "\n错误:{}条"
                  "\n运行时间:{}".format(
-            test_result['all'], test_result['success'], test_result['fail'], test_result['fail'], test_result['runtime']
+            test_result['all'], test_result['success'], test_result['fail'], test_result['error'], test_result['runtime']
         ))
         self.test_result = test_result
         # 判断是否要生产测试报告

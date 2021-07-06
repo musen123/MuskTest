@@ -2,49 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="304f45c0-637a-4712-8582-51ec2bc62f9c" name="Default Changelist" comment="v0.1.1">
+      <change afterPath="$PROJECT_DIR$/docs/img/report2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/doc8_fixtrue.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/doc8_fixtrue.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/casedata/cekai.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/casedata/qcd.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/casedata/test_json_qcd.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/casedata/test_json_qcd.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/casedata/test_json_qcd2.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/casedata/test_json_qcd2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/casedata/test_qcd.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/casedata/test_qcd.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/funcTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/funcTools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-04_16_43_24report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-04_16_58_39report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-04_17_03_08report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_13_50_21report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_14_17_07report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_14_25_01report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_14_29_44report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_14_54_41report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_15_01_46report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_15_09_19report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_16_16_17report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_16_37_45report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_16_44_23report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-05_16_52_40report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_03_22report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_05_49report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_05_59report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_06_24report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_06_34report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_06_40report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_07_10report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_07_31report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_07_39report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_08_53report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_09_13report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_10_04report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_11_14report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_12_05report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_13_42report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_15_09report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-08_21_15_44report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/reports/2021-06-17_17_48_18report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testcases/test_json_demo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testcases/test_stream_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/testcases/test_stream_V3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/testcases/test_yaml_demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apin.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/apin.egg-info/PKG-INFO" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apin.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/apin.egg-info/SOURCES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/basecase.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/basecase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/httptest.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/httptest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/testRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/testRunner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/apin/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/reports/templates.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/templates/reports/templates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/tests/funcTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/funcTools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/tests/testcases/test_stream_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/testcases/test_stream_V3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/doc2_start.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/doc2_start.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/doc3_cases.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/doc3_cases.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,34 +40,74 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/doc8_fixtrue.md">
+        <entry file="file://$PROJECT_DIR$/docs/doc3_cases.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="150">
-                <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <first_editor relative-caret-position="213">
+                <caret line="246" column="15" lean-forward="true" selection-start-line="246" selection-start-column="15" selection-end-line="246" selection-end-column="15" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/doc4_extract.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-687" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/doc5_assert.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-675" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/doc6_functon.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/doc7_settings.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-3112" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/funcTools.py">
+        <entry file="file://$PROJECT_DIR$/docs/doc2_start.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="598">
+                <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-              <folding>
-                <element signature="e#125#138#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="206">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -156,8 +167,6 @@
         <option value="$PROJECT_DIR$/docs/doc7_settings.md" />
         <option value="$PROJECT_DIR$/docs/doc1_index1.md" />
         <option value="$PROJECT_DIR$/readme.md" />
-        <option value="$PROJECT_DIR$/docs/doc2_start.md" />
-        <option value="$PROJECT_DIR$/docs/doc3_cases.md" />
         <option value="$PROJECT_DIR$/apin/core/expand.py" />
         <option value="$PROJECT_DIR$/apin/templates/reports/templates02.html" />
         <option value="$PROJECT_DIR$/apin/core/parserCaseFile.py" />
@@ -187,7 +196,6 @@
         <option value="$PROJECT_DIR$/tests/run.py" />
         <option value="$PROJECT_DIR$/tests/testcases/__init__.py" />
         <option value="$PROJECT_DIR$/tests/expand.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/apin/manage.py" />
         <option value="$PROJECT_DIR$/tests/testcases/test_stream_V3.py" />
         <option value="$PROJECT_DIR$/tests/testcases/test_yaml_demo.py" />
@@ -201,14 +209,17 @@
         <option value="$PROJECT_DIR$/tests/casedata/test_json_qcd.json" />
         <option value="$PROJECT_DIR$/docs/doc8_fixtrue.md" />
         <option value="$PROJECT_DIR$/tests/funcTools.py" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/docs/doc3_cases.md" />
+        <option value="$PROJECT_DIR$/docs/doc2_start.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="16" />
-    <option name="y" value="10" />
-    <option name="width" value="1732" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="192" />
+    <option name="y" value="583" />
+    <option name="width" value="1631" />
+    <option name="height" value="666" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -226,23 +237,18 @@
             <path>
               <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
               <item name="TestApi" type="462c0819:PsiDirectoryNode" />
-              <item name="apin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestApi" type="462c0819:PsiDirectoryNode" />
-              <item name="apin" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestApi" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
               <item name="TestApi" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TestApi" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="reports" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
@@ -259,7 +265,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -272,18 +278,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\project\MSUnitTestReport\TestApi\docs\img" />
       <recent name="C:\project\MSUnitTestReport\TestApi\ddtest" />
       <recent name="C:\project\MSUnitTestReport\TestApi\tests" />
       <recent name="C:\project\MSUnitTestReport\TestApi\tests\casedata" />
       <recent name="C:\project\MSUnitTestReport\TestApi\itestapi\core" />
-      <recent name="C:\project\MSUnitTestReport\TestApi\itestapi\httptest" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\project\MSUnitTestReport\TestApi\docs" />
       <recent name="C:\project\MSUnitTestReport\TestApi" />
       <recent name="C:\project\MSUnitTestReport\TestApi\tests" />
       <recent name="C:\project\MSUnitTestReport\TestApi\ddtest" />
       <recent name="C:\project\MSUnitTestReport\TestApi\tests\casedata" />
-      <recent name="C:\project\MSUnitTestReport\TestApi\apin\templates\reports" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -508,7 +514,8 @@
       <workItem from="1625133560299" duration="449000" />
       <workItem from="1625134234080" duration="601000" />
       <workItem from="1625290961362" duration="1591000" />
-      <workItem from="1625294565939" duration="9489000" />
+      <workItem from="1625294565939" duration="10876000" />
+      <workItem from="1625561733578" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="v0.0.1">
       <created>1615634630342</created>
@@ -644,18 +651,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="373944000" />
+    <option name="totallyTimeSpent" value="375749000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="16" y="10" width="1732" height="1038" extended-state="1" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19457832" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17577706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32416952" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18327606" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4616266" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5406644" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -664,7 +671,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.24284078" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.6242841" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3250283" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -779,70 +786,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/python37/Lib/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="533" selection-start-line="533" selection-end-line="533" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mkdocs.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/doc5_assert.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="511">
-            <caret line="37" selection-start-line="37" selection-end-line="37" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/databases.py" />
-    <entry file="file://$PROJECT_DIR$/requir.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="19" selection-start-line="19" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apin/core/resultPush.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="e#42#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/site-packages/certifi/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1025" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/site-packages/certifi/cacert.pem">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5775" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/site-packages/certifi/__main__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.conda/envs/apin/Lib/site-packages/requests/certs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -913,28 +856,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-04_16_43_24report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-08_21_15_44report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-04_16_43_24report.html" />
+    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-08_21_15_44report.html" />
     <entry file="file://$PROJECT_DIR$/MANIFEST.in">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apin/core/generateCase.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -950,18 +875,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/testcases/test_json_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/casedata/cekai.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-675" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/testcases/test_json_demo.py" />
+    <entry file="file://$PROJECT_DIR$/tests/casedata/cekai.json" />
     <entry file="file://$PROJECT_DIR$/apin/core/dataParser.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -982,16 +897,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/testcases/test_yaml_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-17_17_48_18report.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/testcases/test_yaml_demo.py" />
+    <entry file="file://$PROJECT_DIR$/tests/reports/2021-06-17_17_48_18report.html" />
     <entry file="file://$PROJECT_DIR$/tests/reports/2021-07-03_16_48_57report.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1073,13 +980,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/casedata/test_json_qcd.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/casedata/test_json_qcd2.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1094,13 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/casedata/test_qcd.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apin/core/httptest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -1108,23 +1001,6 @@
           <folding>
             <element signature="e#42#53#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/doc8_fixtrue.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="6" selection-start-line="6" selection-end-line="6" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1148,13 +1024,122 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/doc8_fixtrue.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="6" selection-start-line="6" selection-end-line="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/casedata/test_qcd.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="26" column="19" lean-forward="true" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/casedata/test_json_qcd.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/funcTools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="100">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
           <folding>
             <element signature="e#125#138#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/img/1616491805003.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/img/1615984513176.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/img/1615966527547.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/doc3_cases.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="213">
+            <caret line="246" column="15" lean-forward="true" selection-start-line="246" selection-start-column="15" selection-end-line="246" selection-end-column="15" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/doc4_extract.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-687" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/doc5_assert.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-675" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/doc6_functon.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/doc7_settings.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-3112" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/reports/2021-07-03_17_06_07report.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/doc2_start.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="598">
+            <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

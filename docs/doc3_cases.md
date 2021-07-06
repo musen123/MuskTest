@@ -116,7 +116,7 @@ class TestDomeV3(HttpCase):
     host = "http://api.xxxx.com/futureloan/"
     headers = {"X-Lemonban-Media-Type": "lemonban.v2"}
     # 定义测试前置方法
-    setup_hook = {"timestamp": 'F{get_timestamp()}'}
+    setup_hook = 'get_timestamp'
     # 预设变量
     env = {
         "user_mobile": 'F{rand_phone("155")}',
@@ -137,7 +137,7 @@ class TestDomeV3(HttpCase):
     host = "http://api.XXXX.com/futureloan/"
     headers = {"X-Lemonban-Media-Type": "lemonban.v2"}
     # 定义测试前置方法
-    setup_hook = {"timestamp": 'F{get_timestamp()}'}
+    setup_hook = 'get_timestamp'
     # 预设变量
     env = {
         "user_mobile": 'F{rand_phone("155")}',
@@ -184,8 +184,7 @@ host: http://api.xxxxx.com/futureloan/
 headers:
   X-Lemonban-Media-Type: lemonban.v2
 # 用例前置钩子函数
-setup_hook:
-  timestamp: F{get_timestamp()}
+setup_hook: get_timestamp
 # 预设运行变量
 env:
   user_mobile: F{rand_phone("155")}
@@ -232,7 +231,7 @@ Cases:
 {
   "host": "http://api.XXXXX.com/futureloan/",
   "headers": {"X-Lemonban-Media-Type": "lemonban.v2"},
-  "setup_hook": {"timestamp": "F{get_timestamp()}"},
+  "setup_hook": "get_timestamp",
   "env": {
     "user_mobile": "F{rand_phone('155')}",
     "admin_mobile": "F{rand_phone('133')}"

@@ -119,10 +119,7 @@ class TestStreamV3(HttpCase):
 
      运行完会在项目目录的reports目录中，自动生成详细的html测试报告。
 
-![1615966527547](./img/1615966527547.png) 
+![1615966527547](./img/report1.png) 
 
-
-
-
-​    
+![1615966527547](img/report21.png) 
 

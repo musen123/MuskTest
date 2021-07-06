@@ -6,7 +6,7 @@ import json
 import requests
 import jsonpath
 from apin.core.dataParser import DataParser
-from apin.core.initEvn import ENV, BaseEnv
+from apin.core.initEvn import ENV, func_tools
 from apin.core.basecase import BaseTestCase
 from apin.core.logger import CaseLog
 
@@ -147,6 +147,7 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
         self.__run_log()
         # 发送http请求
         response = self.http_requests(case)
+
         # 数据提取
         self.data_extraction(response, case)
         self.__run_log()
@@ -193,15 +194,11 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
         self.info_log('正在发送请求：')
         response = Request(case, self).request_api()
         self.__response_hook(case, response, self.env, ENV)
+        self.response = response
         return response
 
     def assert_result(self, response, case):
         """断言"""
-        error_info = """断言数据格式错误,verification字段为必须为如下格式:
-        verification:[
-        [断言方式,预期结果,实际结果]
-        ]
-        """
         self.assert_info = []
         # 获取断言数据
         assert_list = case.get('verification') or getattr(self, 'verification', None)
@@ -242,7 +239,7 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
 
         elif item[0] == 'contains':
             self.info_log('断言响应数据中的实际结果是否包含预期结果')
-            self.__assert(self.assertIn, expected, actual, 'contain')
+            self.__assert(self.assertIn, expected, actual, 'contains')
         else:
             raise ValueError('断言方法有误！断言方式只支持 eq 和 contains')
 
@@ -339,7 +336,44 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
             except Exception as e:
                 self.error_log('响应钩子函数执行错误:\n{}'.format(e))
 
+    @classmethod
+    def __perform_fixture(cls, hook_name):
+        if not hasattr(cls, hook_name):
+            return
+        hook = getattr(cls, hook_name)
+        # 执行setup_hook方法
+        if not isinstance(hook, str):
+            raise ValueError('{}只能传递funcTools中定义的函数名,字符串类型'.format(hook_name))
+        func = getattr(func_tools, hook)
+        if not func:
+            raise ValueError('函数引用错误：\n{}\n中的函数{}未定义！,'.format(func_tools, hook))
+        return func
 
+    def setUp(self):
+        func = self.__perform_fixture('setup_hook', )
+        if func:
+            self.info_log('执行用例前置钩子函数')
+            func(ENV, self.env)
+
+    def tearDown(self):
+        func = self.__perform_fixture('teardown_hook')
+        if func:
+            self.info_log('执行用例后置钩子函数')
+            func(ENV, self.env, self.response)
+
+    @classmethod
+    def setUpClass(cls):
+        func = cls.__perform_fixture('setup_class_hook')
+        if func:
+            cls.log.info('执行测试集前置钩子函数')
+            func(ENV, cls.env)
+
+    @classmethod
+    def tearDownClass(cls):
+        func = cls.__perform_fixture('teardown_class_hook')
+        if func:
+            cls.log.info('执行用测试集置钩子函数')
+            func(ENV, cls.env)
 
 
 class Request:

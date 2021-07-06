@@ -8,10 +8,8 @@ from shutil import copytree
 import apin
 from apin.core.testRunner import TestRunner
 from apin.core.logger import print_info
-from apin.core.initEvn import settings, log
+from apin.core.initEvn import settings, log,ENV
 from apin.core.generateCase import ParserDataToCase
-
-ENV = settings.ENV
 
 
 def create(args):
