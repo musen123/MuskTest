@@ -7,7 +7,9 @@ nav:
   - 五、用例断言: doc5_assert.md
   - 六、函数工具: doc6_functon.md
   - 七、全局配置: doc7_settings.md
-  - 八、用例前后置: doc8_fixtrue.md
+  - 八、钩子函数: doc8_fixtrue.md
+  - 九、数据库校验: db_check.md
+
 
 theme: readthedocs
 
