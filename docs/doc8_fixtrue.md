@@ -40,20 +40,21 @@ def random_phone_hook(ENV, env):
 
 在写用例数据时可以通过`setup_hook`指定用例级别的前置钩子函数，下面以yaml文件为例
 
-```python
-# 域名
-host: http://api.lemonban.com/futureloan/
-# 指定用例前置钩子函数
-setup_hook: random_phone_hook
-# 用例数据
-Cases:
-  # 用例1：普通用户注册
-  - title: 普通用户注册
-    interface: member/register
-    method: post
-    json:
-      mobile_phone: ${{user_mobile}}
-      pwd: lemonban
+```yaml
+-testSet:
+    # 域名
+    host: http://api.lemonban.com/futureloan/
+    # 指定用例前置钩子函数
+    setup_hook: random_phone_hook
+    # 用例数据
+    Cases:
+      # 用例1：普通用户注册
+      - title: 普通用户注册
+        interface: member/register
+        method: post
+        json:
+          mobile_phone: ${{user_mobile}}
+          pwd: lemonban
 ```
 
 
@@ -66,20 +67,21 @@ Cases:
 
 下面以yaml文件为例
 
-```python
-# 域名
-host: http://api.lemonban.com/futureloan/
-# 指定测试集前置钩子函数
-setup_class_hook: random_phone_hook
-# 用例数据
-Cases:
-  # 用例1：普通用户注册
-  - title: 普通用户注册
-    interface: member/register
-    method: post
-    json:
-      mobile_phone: ${{user_mobile}}
-      pwd: lemonban
+```yaml
+-testSet:
+    # 域名
+    host: http://api.lemonban.com/futureloan/
+    # 指定测试集前置钩子函数
+    setup_class_hook: random_phone_hook
+    # 用例数据
+    Cases:
+      # 用例1：普通用户注册
+      - title: 普通用户注册
+        interface: member/register
+        method: post
+        json:
+          mobile_phone: ${{user_mobile}}
+          pwd: lemonban
 ```
 
 ####  4、teardown_hook
@@ -109,19 +111,20 @@ def get_response_hook(ENV, env,response):
 **钩子函数的使用**
 
 ```yaml
-# 域名
-host: http://api.lemonban.com/futureloan/
-# 指定测试集前置钩子函数
-teardown_hook: get_response_hook
-# 用例数据
-Cases:
-  # 用例1：普通用户注册
-  - title: 普通用户注册
-    interface: member/register
-    method: post
-    json:
-      mobile_phone: ${{user_mobile}}
-      pwd: lemonban
+-testSet:
+    # 域名
+    host: http://api.lemonban.com/futureloan/
+    # 指定测试集前置钩子函数
+    teardown_hook: get_response_hook
+    # 用例数据
+    Cases:
+      # 用例1：普通用户注册
+      - title: 普通用户注册
+        interface: member/register
+        method: post
+        json:
+          mobile_phone: ${{user_mobile}}
+          pwd: lemonban
 ```
 
 
@@ -150,24 +153,21 @@ def del_phone_hook(ENV, env):
 
 下面以yaml文件为例
 
-```python
-# 域名
-host: http://api.lemonban.com/futureloan/
-# 指定测试集前置钩子函数
-teardown_class_hook: del_phone_hook
-# 用例数据
-Cases:
-  # 用例1：普通用户注册
-  - title: 普通用户注册
-    interface: member/register
-    method: post
-    json:
-      mobile_phone: ${{user_mobile}}
-      pwd: lemonban
+```yaml
+-testSet:
+    # 域名
+    host: http://api.lemonban.com/futureloan/
+    # 指定测试集前置钩子函数
+    teardown_class_hook: del_phone_hook
+    # 用例数据
+    Cases:
+      # 用例1：普通用户注册
+      - title: 普通用户注册
+        interface: member/register
+        method: post
+        json:
+          mobile_phone: ${{user_mobile}}
+          pwd: lemonban
 ```
-
-
-
-
 
 ![1615966527547](img/apin_hook_run.jpg) 

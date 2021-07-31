@@ -8,90 +8,125 @@
     
 安装好apin之后，打开命令终端输入创建命令，即可在当前路径下创建项目。
     
-cd 切换到项目之中，即可看到如下的项目结构
+cd 切换到项目之中，即可看到apin自动为你创建的项目结构
     
-![1616491805003](./img/1616491805003.png)  
 
+```python
+├─case_json
+│      test_demo1.json
+├─case_yaml
+│      test_demo2.yaml
+├─case_py
+│      test_demo3.py
+│ settings.py
+│ funcTools.py
+│ run.py
 
+```
 
-
-
-- **项目文件说明**
-
-    -  casedata: 存放yaml和json格式编写的用例文件
-
-    -  testcases:py：存放py编写的用例目录
-
-    -  func_tools.py：自定义的函数工具文件
-
-    -  setting.py：整个项目的全局配置文件
-
-    - run.py：项目运行入口文件
+- **自动生成的项目文件说明**
+    -  **case_json**：存放json格式编写的用例文件
+        - test_demo1.json :apin生成的json用例文件的demo
+    -  **case_yaml**：存放yaml格式编写的用例文件
+        - test_demo2.yaml :apin生成的yaml用例文件的 demo 
+    -  **case_py**：存放py编写的用例目录
+        - test_demo3.py :apin生成的py用例文件demo 
+    -  **setting.py**：整个项目的全局配置文件
+    -  **funcTools.py**：自定义的函数工具文件
+    -  **run.py**：项目运行入口文件
 
         
 
-apin用例编写支持yaml文件，json文件，py文件三种方式，下面来快速了解一下三种用例编写的格式,
+apin用例编写支持yaml文件，json文件，py文件三种方式,如果你是第一次使用，可以参考自动生成的用例demo,如果你的用例采用某一种文件格式来写，其他的两个用例文件目录可以自行删除。
+
+下面来快速了解一下三种用例编写的格式,
 
 ## 2、json编写用例
 
 
-在项目的casedata目录下，定义一个以test开头的json文件，按照**【apin用例编写规范-json】**编写用例即可
+在项目的case_json目录下，定义一个以test开头的json文件，按照**【apin用例编写规范-json】**编写用例即可
 
 ```json
-{
-  "host": "http://api.XXX.com/futureloan/",
-  "Cases": [
+[   
     {
-      "title": "普通用户注册",
-      "interface": "member/register",
+      "host": "http://api.XXX.com",
+      "interface": "/member/register",
       "method": "post",
-      "json":{"mobile_phone":"133010121224","pwd":"lemonban"},
-      "verification": []
-
+      "verification": [
+        ["eq", 200, "status_code"]
+      ],
+      "Cases": [
+        {
+          "title": "普通用户注册",
+          "json":{"mobile_phone":"133010121224","pwd":"lemonban"}
+        },
+         {
+          "title": "管理员注册",
+          "json":{"mobile_phone":"133010121224","pwd":"lemonban","type": 0}
+        }
+      ]
     }
-  ]
-}
+]
 ```
-
 
 
 ## 3、yaml编写用例
 
-在项目的casedata目录下，定义一个以test开头的yaml文件，按照**【apin用例编写规范-yaml】**编写用例即可
+在项目的case_yaml目录下，定义一个以test开头的yaml文件，按照**【apin用例编写规范-yaml】**编写用例即可
 
 ```yaml
-# 域名
-host: http://api.XXX.com/futureloan/
-# 用例数据
-Cases:
-  - title: 普通用户注册
-    interface: member/register
+# 定义一个测试集
+- testSet:
+    # 域名
+    host: http://api.XXX.com
+    # 接口
+    interface: /member/register
     method: post
-    json:
-      mobile_phone: ${{user_mobile}}
-      pwd: lemonban
+    # 校验http响应状态码
+    verification:
+      - ["eq", 200, 'status_code']
+    # 用例数据
+    Cases:
+      # 用例1：
+      - title: 普通用户注册
+        json:
+          mobile_phone: 13700889999
+          pwd: lemonban
+      # 用例2：
+      - title: 管理员注册
+        json:
+          mobile_phone: ${{user_mobile}}
+          pwd: lemonban
+          type: 0
 ```
 
 ​    
 
 ## 4、py文件编写用例
 
-​	在testcases目录中定义一个以test开头的py文件，定义一个以Test开头的类，并且继承于apin.core.httptest.HttpCase类，按照**【apin用例编写规范-py**】编写用例即可
+​	在case_py目录中定义一个以test开头的py文件，定义一个以Test开头的类，并且继承于apin.core.httptest.HttpCase类，按照**【apin用例编写规范-py**】编写用例即可
 
 
 ```python
 from apin.core.httptest import HttpCase
 
 class TestStreamV3(HttpCase):
-    host = "http://api.XXX.com/futureloan/"
+    host = "http://api.XXX.com"
+    interface = "/member/register"
+    method = "post"
+    verification = [
+        ["eq", 200, 'status_code']
+    ]
     Cases = [
         # 用例1：普通用户注册
         {
             'title': "普通用户注册",
-            'interface': "member/register",
-            "method": "post",
             'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
         },
+        {
+          "title": "管理员注册",
+          "json":{"mobile_phone":"133010121224","pwd":"lemonban","type":0},
+        }
     ]
 ```
 

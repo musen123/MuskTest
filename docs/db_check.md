@@ -160,21 +160,22 @@ e_res = db.qcd.execute(sql)
 
 在编写用例时可以通过`db_check_hook`指定用例数据库校验的钩子函数，下面以yaml文件为例
 
-```python
-# 域名
-host: http://api.lemonban.com/futureloan/
-# 指定用例前置钩子函数
-setup_hook: random_phone_hook
-# 用例数据
-Cases:
-  - title: 普通用户注册
-    interface: member/register
-    # 指定数据库校验的钩子函数
-    db_check_hook: register_db_check
-    method: post
-    json:
-      mobile_phone: ${{user_mobile}}
-      pwd: lemonban
+```yaml
+-testSet:
+    # 域名
+    host: http://api.lemonban.com/futureloan/
+    # 指定用例前置钩子函数
+    setup_hook: random_phone_hook
+    # 用例数据
+    Cases:
+      - title: 普通用户注册
+        interface: member/register
+        # 指定数据库校验的钩子函数
+        db_check_hook: register_db_check
+        method: post
+        json:
+          mobile_phone: ${{user_mobile}}
+          pwd: lemonban
 ```
 
 
