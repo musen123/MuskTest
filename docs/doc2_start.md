@@ -13,11 +13,15 @@ cd 切换到项目之中，即可看到apin自动为你创建的项目结构
 
 ```python
 ├─case_json
-│      test_demo1.json
+│    test_demo1.json
 ├─case_yaml
-│      test_demo2.yaml
+│    test_demo2.yaml
 ├─case_py
-│      test_demo3.py
+│    test_demo3.py
+├─reports
+│    xxx.html 
+├─logs
+│    xxxx.log
 │ settings.py
 │ funcTools.py
 │ run.py
@@ -31,6 +35,10 @@ cd 切换到项目之中，即可看到apin自动为你创建的项目结构
         - test_demo2.yaml :apin生成的yaml用例文件的 demo 
     -  **case_py**：存放py编写的用例目录
         - test_demo3.py :apin生成的py用例文件demo 
+    -  **reports**:报告存放目录
+        - xxx.html :生成的测试报告
+    -  **logs**：运行日志存放目录
+        - xxx.log:运行的测试日志
     -  **setting.py**：整个项目的全局配置文件
     -  **funcTools.py**：自定义的函数工具文件
     -  **run.py**：项目运行入口文件
