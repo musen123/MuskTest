@@ -2,45 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="304f45c0-637a-4712-8582-51ec2bc62f9c" name="Default Changelist" comment="v1.0">
-      <change afterPath="$PROJECT_DIR$/build/lib/apin/core/DBClient.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/case_json/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/case_json/test_json_demo.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/case_py/test_case_demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/case_yaml/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/case_yaml/test_case_demo.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/reports/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/apin/templates/logs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/apin/templates/reports/templates1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/apin/templates/reports/templates2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_16_11_53report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_16_26_18report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_16_43_52report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_16_53_45report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_16_54_19report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_16_58_19report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_16_59_06report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_16_59_33report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_16_59_38report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_17_03_46report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_17_08_52report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_17_21_20report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_17_21_57report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/2021-08-09_17_22_22report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/case_json/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/case_json/test_json_qcd.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/case_yaml/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/case_yaml/test_qcd.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/history.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/hooks/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/hooks/db_check_hook.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/lib/tests/hooks/fixture_hook.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/apin-1.1.10-py3-none-any.whl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/apin-1.1.10.tar.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/apin-1.1.9-py3-none-any.whl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/apin-1.1.9.tar.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/apin-1.2.0-py3-none-any.whl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/apin-1.2.0.tar.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/file_upload.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/case_json/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/case_json/test_json_qcd.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/case_yaml/__init__.py" afterDir="false" />
@@ -59,50 +20,6 @@
       <change afterPath="$PROJECT_DIR$/tests/reports/2021-09-02_15_30_14report.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/reports/history.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/tests/reports/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TestApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TestApi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apin.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/apin.egg-info/PKG-INFO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apin.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/apin.egg-info/SOURCES.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apin.egg-info/requires.txt" beforeDir="false" afterPath="$PROJECT_DIR$/apin.egg-info/requires.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/basecase.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/basecase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/generateCase.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/generateCase.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/httptest.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/httptest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/initEvn.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/initEvn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/testResult.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/testResult.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/testRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/testRunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/core/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/core/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/casedata/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/logs/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/casedata/test_json_demo.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/casedata/test_yaml_demo.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/funcTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/funcTools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/testcases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/case_py/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/http_demo/testcases/test_demo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/reports/templates.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/apin/templates/reports/templates02.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/apin/templates/reports/templates3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/expand.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/expand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/funcTools.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/funcTools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/musenTools.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/readme.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/reports.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/testcases/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/case_py/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/testcases/test_json_demo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/testcases/test_stream_V3.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/tests/case_py/test_stream_V3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/tests/testcases/test_yaml_demo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/apin-0.3.0-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/apin-0.3.0.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/apin-0.3.1-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/apin-0.3.1.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/doc3_cases.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/doc3_cases.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requir.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requir.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/casedata/test_json_qcd.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/casedata/test_json_qcd2.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/casedata/test_qcd.yaml" beforeDir="false" />
@@ -322,17 +239,6 @@
             </path>
             <path>
               <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestApi" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TestApi" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="reports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Apin" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -360,7 +266,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -672,7 +578,7 @@
       <workItem from="1640843965890" duration="2780000" />
       <workItem from="1640847968616" duration="100000" />
       <workItem from="1641469112647" duration="306000" />
-      <workItem from="1641538717358" duration="11811000" />
+      <workItem from="1641538717358" duration="12301000" />
     </task>
     <task id="LOCAL-00001" summary="v0.0.1">
       <created>1615634630342</created>
@@ -814,7 +720,21 @@
       <option name="project" value="LOCAL" />
       <updated>1628517353342</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="v1.0">
+      <created>1641558189774</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1641558189774</updated>
+    </task>
+    <task id="LOCAL-00022" summary="v1.2.0">
+      <created>1641558223326</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1641558223326</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -850,12 +770,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="561191000" />
+    <option name="totallyTimeSpent" value="561681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2391" y="-9" width="2418" height="1318" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23913044" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23913044" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -869,7 +789,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.53859496" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.4501301" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.2050401" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -891,7 +811,8 @@
     <MESSAGE value="v0.1.1" />
     <MESSAGE value="v1.1.0" />
     <MESSAGE value="v1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.0" />
+    <MESSAGE value="v1.2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.2.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

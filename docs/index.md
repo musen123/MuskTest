@@ -8,6 +8,15 @@ apin是一个无需写代码，就可以完成接口自动化测试的框架，�
 
 - 开发者：柠檬班-木森
 - email：musen_nmb@qq.com
+
+ps:觉着好用的小伙伴们可以点亮小星星
+
+GitHub地址：https://github.com/musen123
+
+Gitee地址：https://gitee.com/lemon-test-official
+
+PYPI地址：https://pypi.org/project/apin/
+
 ## 2、安装apin
 
 apin是基于python3.6开发的，安装前请确认你的python版本>3.6
