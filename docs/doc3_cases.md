@@ -13,6 +13,11 @@
 
 
 ## 2、用例集的主要字段介绍
+**name：** 用例集的名字
+
+```python
+name = "登录场景用例"
+```
 
 **host：**用例接口的host地址(接口的域名) 
 
@@ -51,8 +56,6 @@ interface = '/user/login'
 
 **verification：**指定用例的断言（详细介绍见：**【五、用例断言】**）
 
-
-
 **Cases:**设置该测试集下的用例（详细介绍见：下一节【**用例字段介绍】**）
 
 ## 3、用例字段介绍
@@ -70,15 +73,31 @@ interface = '/user/login'
 
 ​	**4、params:** 用来查询字符串参数，请求参数，以？key=value的形式 拼接在url后面的参数
 
+​	**5、files: **参数类型为：content-type:application/from-data，使用该字段来传递请求参数,常用于文件上传
+
+```python
+# 文件上传的参数格式支持如下两种传递形式
+"files": {
+	"fieldname": ["19.png", r"./image/19.png", "image/png"]
+ }
+#或
+"files": [
+    ("fieldname",["18.png", r"./image/18.png", "image/png"]),
+    ("fieldname",["18.png", r"./image/18.png", "image/png"])
+]
+
+# 说明：
+fieldname：为接口上传文件的参数名,后面列表中的参数值为,[文件类名，文件路径，文件类型]
+    
+```
+
+​	
 
 
 ### 3.2、其他字段
 
 除了上述主要字段之外，python中的requests库中的requests.request方法所有的请求参数，均支持在用例中定义字段，这些字段在大多数情况下都用不到，如果有用到
 
-- **files:** 接口用于文件上传
-
-    请求参数类型为：content-type:application/from-data，使用该字段来传递请求参数,常用语文件上传
 
 - **cookies：**请求的cookie信息（apin中同一个用例集会自动化传递cookie,一遍情况下，不需要使用该字段来传递cookie）
 
