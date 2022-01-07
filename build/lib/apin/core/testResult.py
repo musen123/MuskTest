@@ -5,6 +5,7 @@ import traceback
 import unittest
 import time
 
+
 class TestResult(unittest.TestResult):
     """ 测试结果记录"""
 
@@ -42,7 +43,7 @@ class TestResult(unittest.TestResult):
         test.method_name = test.__dict__['_testMethodName']
         test.method_doc = test.shortDescription()
         self.fields['results'].append(test)
-        self.fields["testClass"].add(test.class_name)
+        self.fields["testClass"].add(test.name)
 
     def stopTestRun(self, title=None):
         """
@@ -61,7 +62,7 @@ class TestResult(unittest.TestResult):
         """用例执行通过，成功数量+1"""
         self.fields["success"] += 1
         test.state = '成功'
-        getattr(test, 'info_log')("{}执行——>【通过】\n".format( test))
+        getattr(test, 'info_log')("{}执行——>【通过】\n".format(test))
         test.run_info = getattr(test, 'base_info', None)
 
     def addFailure(self, test, err):
@@ -138,15 +139,15 @@ class ReRunResult(TestResult):
             test.count = 0
         if test.count < self.count:
             test.count += 1
-            getattr(test, 'error_log')("{}执行——>【失败Failure】\n".format(test))
-            getattr(test, 'exception_Log')(err)
-            getattr(test, 'error_log')("================{}重运行第{}次================\n".format(test, test.count))
+            getattr(test, 'warning_log')("{}执行——>【失败Failure】\n".format(test))
+            getattr(test, 'warning_log')(err[1])
+            getattr(test, 'warning_log')("开始第{}次重运行\n".format(test.count))
             time.sleep(self.interval)
             test.run(self)
         else:
             super().addFailure(test, err)
             if test.count != 0:
-                getattr(test, 'debug_log')("================重运行{}次完毕================\n".format(test.count))
+                getattr(test, 'warning_log')("重运行{}次完毕\n".format(test.count))
 
     def addError(self, test, err):
         """
@@ -160,7 +161,7 @@ class ReRunResult(TestResult):
         if test.count < self.count:
             test.count += 1
             getattr(test, 'error_log')("{}执行——>【错误Error】\n".format(test))
-            getattr(test, 'exception_Log')(err)
+            getattr(test, 'exception_log')(err[1])
             getattr(test, 'error_log')("================{}重运行第{}次================\n".format(test, test.count))
             time.sleep(self.interval)
             test.run(self)

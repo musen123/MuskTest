@@ -1,0 +1,36 @@
+[
+  {
+    "host": "http://httpbin.org",
+    "headers": {
+      "UserAgent": "python/apin"
+    },
+    "method": "post",
+    "interface": "/post",
+    "setup_hook": "setup_hook_demo",
+    "teardown_hook": "teardown_hook_demo",
+    "extract": {
+    },
+    "Cases": [
+      {
+        "title": "json文件-用例1",
+        "json": {
+          "mobile_phone": "17788907899",
+          "pwd": "lemonban"
+        },
+        "verification": [
+          ["eq", 200, "status_code"]
+        ]
+      },
+      {
+        "title": "json文件-用例2",
+        "json": {
+          "mobile_phone": "17788907899",
+          "pwd": "lemonban"
+        },
+        "verification": [
+          ["eq", 200, "status_code"]
+        ]
+      }
+    ]
+  }
+]

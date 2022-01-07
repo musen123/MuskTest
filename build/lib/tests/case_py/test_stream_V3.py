@@ -10,6 +10,7 @@ from apin.core.httptest import HttpCase
 
 
 class Testbaidu(HttpCase):
+    name ='百度测试'
     host = "http://www.baidu.com"
 
     Cases = [
@@ -18,12 +19,12 @@ class Testbaidu(HttpCase):
             'title': "百度",
             'interface': "/",
             "method": "get",
-
         },
     ]
 
 
 class TestDomeV3(HttpCase):
+    name = "前程贷主流程测试"
     host = "http://api.lemonban.com/futureloan/"
     headers = {"X-Lemonban-Media-Type": "lemonban.v2"}
     # 用例级别前置
@@ -38,16 +39,17 @@ class TestDomeV3(HttpCase):
     # 结果校验
     verification = [
         ["eq", 200, 'status_code'],
-        ["eq", {'code': 0, "msg": "OK"}, {'data': 'V{{$.data}}'}]
+        ["eq", {'code': 0, "msg": "OK"}, {'code': 'V{{$.code}}', 'msg': 'V{{$.msg}}'}]
     ]
 
     Cases = [
         # 用例1：普通用户注册
         {
-            'title': "普通用户注册",
+            'title': "普通用户注册数据库校验",
             'interface': "member/register",
             "method": "post",
             'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
+            "db_check_hook": "register_db_check",
             "verification": [
                 ["contains", 'O', "V{{$..msg}}"],
             ]

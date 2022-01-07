@@ -9,12 +9,27 @@ BASEDIR = os.path.dirname(os.path.abspath(__file__))
 LOG_FILE_PATH = os.path.join(BASEDIR, "./logs")
 
 # 是否为debug模式
-DEBUG = True
+DEBUG = False
 
 # 数据库配置
-DB = {
-
-}
+DB = [
+    {"name": "aliyun",
+     "type": "mysql",
+     "config": {
+         "user": "future",
+         "password": "123456",
+         "host": "api.lemonban.com",
+         "port": 3306}
+     },
+    {"name": "qcd",
+     "type": "mysql",
+     "config": {
+         'user': "future",
+         "password": "123456",
+         "host": "api.lemonban.com",
+         "port": 3306}
+     }
+]
 
 # 测试环境配置
 ENV = {
@@ -22,9 +37,13 @@ ENV = {
 
 }
 THREAD_COUNT = 1
-
+# 失败重运行次数
+RERUN = 0
+# 重运行间隔时间(秒)
+INTERVAL = 2
 # 测试结果配置
 TEST_RESULT = {
+    "report_dir": './reports',
     # 测试报告名称
     "filename": "report.html",
     # 测试人员
@@ -34,7 +53,7 @@ TEST_RESULT = {
     # 报告样式
     "templates": 1,
     # 报告描述信息
-    "desc": "XX项目测试生成的报告"
+    "desc": "XX项目测试生成的报告",
 }
 
 # # # 邮箱通知配置

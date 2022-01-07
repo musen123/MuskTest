@@ -5,24 +5,37 @@
 import os
 
 BASEDIR = os.path.dirname(os.path.abspath(__file__))
+
 # 日志文件路径
 LOG_FILE_PATH = os.path.join(BASEDIR, "./logs")
 
 # 是否为debug模式
-DEBUG = True
+DEBUG = False
 
-# 数据库配置
-DB = {
+# # 数据库配置
+DB = [
+    # {"name": "aliyun",
+    #  "type": "mysql",
+    #  "config": {
+    #      'user': "root",
+    #      "password": "123456",
+    #      "host": "127.0.0.1",
+    #      "port": 3306}
+    #  }
+]
 
-}
-
-# 测试环境配置
+# 全局变量
 ENV = {
-    "host":"http://httpbin.org/",
+    "host": "http://httpbin.org",
 
 }
 
-
+# 并发运行的线程数
+THREAD = 1
+# 失败用例重运行次数
+RERUN = 0
+# 重运行间隔时间(秒)
+INTERVAL = 2
 
 # 测试结果配置
 TEST_RESULT = {
@@ -38,7 +51,7 @@ TEST_RESULT = {
     "desc": "XX项目测试生成的报告"
 }
 
-# # 邮箱通知配置
+# # # 邮箱通知配置
 # EMAIL = {
 #     # smtp服务器地址
 #     "host": '',

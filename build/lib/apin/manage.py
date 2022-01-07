@@ -6,9 +6,9 @@ import time
 import unittest
 from shutil import copytree
 import apin
+from apin.core.initEvn import settings, log, ENV
 from apin.core.testRunner import TestRunner
 from apin.core.logger import print_info
-from apin.core.initEvn import settings, log,ENV
 from apin.core.generateCase import ParserDataToCase
 
 
@@ -29,34 +29,61 @@ def create(args):
 
 def run(args=None):
     """run test"""
-    args = args if isinstance(args, argparse.Namespace) else create_parser().parse_args(args)
-
-    if hasattr(args, "test_dir"):
-        dir = os.path.abspath(args.test_dir)
+    log.info('开始执行测试，加载用例....')
+    if isinstance(args, argparse.Namespace):
+        args = args
+    else:
+        if args is None:
+            args = create_parser().parse_args(['run'])
+        elif args[0] != 'run':
+            args = create_parser().parse_args(['run'] + args)
+        else:
+            args = create_parser().parse_args(args)
+    if hasattr(args, "file"):
+        dir = os.path.abspath(getattr(args, 'file'))
     else:
         # help info
         dir = os.path.abspath('.')
-
-    # load TestCase
-    # load yaml TestCase
-    data_dir = os.path.join(dir, 'casedata')
-    suite1 = ParserDataToCase.parser_yaml_create_cases(data_dir) or unittest.TestSuite()
-    # load json TestCase
-    suite2 = ParserDataToCase.parser_json_create_cases(data_dir) or unittest.TestSuite()
-    # load py TestCase
-    case_dir = os.path.join(dir, 'testcases')
-    suite = unittest.defaultTestLoader.discover(case_dir)
-    suite.addTest(suite1)
-    suite.addTest(suite2)
+    if os.path.isfile(dir):
+        if dir.endswith('.yaml'):
+            suite = ParserDataToCase.parser_yaml_create_cases(dir)
+        elif dir.endswith('.json'):
+            suite = ParserDataToCase.parser_json_create_cases(dir)
+        elif dir.endswith('.py'):
+            suite = unittest.defaultTestLoader.discover(os.path.dirname(dir), pattern=os.path.split(dir)[1])
+        else:
+            suite = unittest.TestSuite()
+    elif os.path.isdir(dir):
+        # load TestCase
+        # load yaml TestCase
+        yaml_dir = os.path.join(dir, 'case_yaml')
+        suite1 = ParserDataToCase.parser_yaml_create_cases(yaml_dir)
+        # load json TestCase
+        json_dir = os.path.join(dir, 'case_json')
+        suite2 = ParserDataToCase.parser_json_create_cases(json_dir)
+        # load py TestCase
+        case_dir = os.path.join(dir, 'case_py')
+        suite3 = unittest.defaultTestLoader.discover(case_dir)
+        suite = unittest.TestSuite()
+        suite.addTest(suite1)
+        suite.addTest(suite2)
+        suite.addTest(suite3)
+    else:
+        suite = unittest.TestSuite()
+    if suite == unittest.TestSuite():
+        log.error('未加载到用例,请确认指定的用例路径或者目录是否正确！')
+        log.error('执行路径为：{}'.format(dir))
+        return
     # Test Result
     result = getattr(settings, 'TEST_RESULT', {})
     report_name = result.get('filename') if result.get('filename') else "report.html"
-    result['filename'] = time.strftime('%Y-%m-%d_%H_%M_%S') + report_name
+    result['filename'] = report_name
 
-    runner = TestRunner(suite=suite,
-                        report_dir=os.path.join(dir, 'reports'),
-                        **result)
-    runner.run(thread_count=getattr(settings, 'THREAD_COUNT', 1))
+    runner = TestRunner(suite=suite, **result)
+    res = runner.run(thread_count=getattr(args, "thread") or getattr(settings, 'THREAD', 1),
+                     rerun=getattr(args, "rerun") or getattr(settings, 'RERUN', 0),
+                     interval=getattr(args, "interval") or getattr(settings, 'INTERVAL', 2)
+                     )
 
     if hasattr(settings, 'EMAIL'):
         try:
@@ -92,11 +119,13 @@ def run(args=None):
             else:
                 log.error("测试结果推送到企业微信失败！错误信息： {}".format(res["errmsg"]))
 
+    return res
+
 
 def create_parser():
     parser = argparse.ArgumentParser(prog='apin', description='ApiTest使用命令介绍')
     # 添加版本号
-    parser.add_argument('-V', '--version', action='version', version='%(prog)s 0.2')
+    parser.add_argument('-V', '--version', action='version', version='%(prog)s 1.1.3')
     subparsers = parser.add_subparsers(title='Command', metavar="命令")
     # 创建项目命令
     create_cmd = subparsers.add_parser('create', help='create test project ', aliases=['C'])
@@ -104,7 +133,10 @@ def create_parser():
     create_cmd.set_defaults(func=create)
     # 运行项目命令
     parser_run = subparsers.add_parser('run', help='run test project', aliases=['R'])
-    parser_run.add_argument('-test_dir', metavar='test_dir', help='case file path', default='.')
+    parser_run.add_argument('--file', type=str, metavar='file', help='case file path', default='.')
+    parser_run.add_argument('--thread', type=int, metavar='thread', help='Concurrent running thread', default=None)
+    parser_run.add_argument('--rerun', type=int, metavar='rerun', help='Number of failed case reruns', default=None)
+    parser_run.add_argument('--interval', type=int, metavar='interval', help='Rerun interval', default=None)
     parser_run.set_defaults(func=run)
     return parser
 
@@ -155,7 +187,7 @@ def run_test(env_config, case_data,
         with open(func_tools_path, 'rb') as f1, open('funcTools.py', 'wb') as f2:
             f2.write(f1.read())
     ENV.update(env_config)
-    suite = ParserDataToCase.parser_data_create_cases([case_data])
+    suite = ParserDataToCase.parser_data_create_cases(case_data)
     runner = TestRunner(suite=suite,
                         filename=filename,
                         report_dir=report_dir,

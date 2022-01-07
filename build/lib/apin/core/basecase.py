@@ -1,12 +1,56 @@
 # Author:柠檬班-木森
 # E-mail:musen_nmb@qq.com
+import datetime
 import os
 import yaml
 import json
 import unittest
 from functools import wraps
 from apin.core.dataParser import DataParser
-from apin.core.initEvn import BaseEnv, func_tools, ENV
+from apin.core.initEvn import BaseEnv, log, settings
+
+
+class CaseLog:
+    log = log
+
+    def save_log(self, message, level):
+        if not hasattr(self, 'log_data'):
+            setattr(self, 'log_data', [])
+        info = "【{}】| {} |: {}".format(level, datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f'), message)
+        getattr(self, 'log_data').append((level, info))
+
+    def save_error(self, message):
+        if not hasattr(self, 'error_info'):
+            setattr(self, 'error_info', [])
+        getattr(self, 'error_info').append("【ERROR】:{} ".format(message))
+
+    def debug_log(self, message):
+        if settings.DEBUG:
+            self.save_log(message, 'DEBUG')
+            self.log.debug(message)
+
+    def info_log(self, message):
+        self.save_log(message, 'INFO')
+        self.log.info(message)
+
+    def warning_log(self, message):
+        self.save_log(message, 'WARNING')
+        self.log.warning(message)
+
+    def error_log(self, message):
+        self.save_log(message, 'ERROR')
+        self.save_error(message)
+        self.log.error(message)
+
+    def exception_log(self, message):
+        self.save_log(message, 'ERROR')
+        self.save_error(message)
+        self.log.exception(message)
+
+    def critical_log(self, message):
+        self.save_log(message, 'CRITICAL')
+        self.save_error(message)
+        self.log.critical(message)
 
 
 class GenerateTest(type):
@@ -20,7 +64,7 @@ class GenerateTest(type):
             # -------------------生成用例---------------------
             # Case外的类属性中，是否有需要动态执行的函数
             for k, v in list(namespace.items()):
-                if k not in ['Cases', "extract", "verification", "setup_hook"]:
+                if k not in ['Cases', "extract", "verification"]:
                     # 解析数据中的变量
                     v = DataParser.parser_func(namespace.get('env'), v)
                     v = DataParser.parser_variable(namespace.get('env'), v)
@@ -73,10 +117,10 @@ class GenerateTest(type):
         if isinstance(datas, list):
             return datas
         if isinstance(datas, str) and datas.endswith('.json') or datas.endswith('.yaml'):
-            if os.getcwd().split() == "testcases":
-                filepath = os.path.join('..', 'casedata', datas)
+            if os.getcwd().split() == "case_py":
+                filepath = os.path.join('..', 'case_yaml', datas)
             else:
-                filepath = os.path.join('.', 'casedata', datas)
+                filepath = os.path.join('.', 'case_yaml', datas)
             # 支持json
             if filepath.endswith('.json'):
                 with open(filepath, 'rb') as f:
@@ -89,7 +133,8 @@ class GenerateTest(type):
         raise ValueError('测试用例数据格式有误！')
 
 
-class BaseTestCase(unittest.TestCase, metaclass=GenerateTest):
+class BaseTestCase(unittest.TestCase, CaseLog, metaclass=GenerateTest):
+    name = ''
 
     def perform(self, item):
         pass

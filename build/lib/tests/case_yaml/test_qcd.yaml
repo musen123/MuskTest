@@ -1,0 +1,65 @@
+- testSet:
+    name: yaml测试集01
+    # 域名
+    host: http://api.lemonban.com/futureloan/
+    # 请求头
+    headers:
+      X-Lemonban-Media-Type: lemonban.v2
+    # 用例前置钩子函数
+    setup_hook: setup_hook1
+    teardown_hook": teardown_hook1
+    # 预设运行变量
+    env:
+      timestamp: F{get_timestamp()}
+      user_mobile: F{rand_phone("155")}
+      admin_mobile: F{rand_phone("133")}
+    # 结果校验字段
+    verification:
+      - ["eq", 0, 'V{{$..code}}']
+      - ["eq", "OK", "V{{$..msg}}"]
+
+    # 用例数据
+    Cases:
+      # 用例1：普通用户注册
+      - title: 普通用户注册
+        interface: member/register
+        db_check_hook: register_db_check
+        method: post
+        json:
+          mobile_phone: ${{user_mobile}}
+          pwd: lemonban
+
+      # 用例2：管理员注册
+      - title: 管理员注册
+        interface: member/register
+        method: post
+        json:
+          mobile_phone: ${{admin_mobile}}
+          pwd: lemonban
+          type: 0
+
+      # 用例3：普通用户登录
+      - title: 普通用户登录
+        interface: member/login
+        method: post
+        json:
+          mobile_phone: ${{user_mobile}}
+          pwd: lemonban
+        extract:
+          token: ["env", "jsonpath", "$..token"]
+          member_id: ["env", "jsonpath", "$..id"]
+
+      # 用例4：充值
+      - title: 充值
+        interface: member/recharge
+        method: post
+        headers:
+          X-Lemonban-Media-Type: lemonban.v2
+          Authorization: Bearer ${{token}}
+        json:
+          member_id: ${{member_id}}
+          amount: 20000
+          timestamp: ${{timestamp}}
+          sign: F{get_sign(${{timestamp}},${{token}})}
+
+

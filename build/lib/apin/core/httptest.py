@@ -3,12 +3,15 @@
 import copy
 import re
 import json
+import os
+from numbers import Number
 import requests
 import jsonpath
 from apin.core.dataParser import DataParser
-from apin.core.initEvn import ENV, func_tools
+from apin.core.initEvn import ENV, func_tools, DB
 from apin.core.basecase import BaseTestCase
-from apin.core.logger import CaseLog
+from apin.core.basecase import CaseLog
+from requests_toolbelt.multipart import MultipartEncoder
 
 
 class CaseData:
@@ -108,6 +111,29 @@ class CaseData:
             if headers:
                 setattr(self, 'headers', headers)
 
+        # =======处理文件上传===============
+        files = self.datas.get('files')
+        if self.files:
+            if isinstance(self.files, dict):
+                file_data = self.files.items()
+            else:
+                file_data = self.files
+            field = []
+            for name, file_info in file_data:
+                # 判断是否时文件上传
+                if len(file_info) == 3 and os.path.isfile(file_info[1]):
+                    field.append([name, (file_info[0], open(file_info[1], 'rb'), file_info[2])])
+                else:
+                    field.append([name, file_info])
+
+            form_data = MultipartEncoder(fields=field)
+            self.headers["Content-Type"] = form_data.content_type
+            self.data = form_data
+            self.files = None
+        else:
+            if self.headers.get("Content-Type"):
+                del self.headers["Content-Type"]
+
         for k, v in self.__dict__.items():
             if k in self.__attrs:
                 self.datas[k] = v
@@ -145,14 +171,24 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
 
     def perform(self, case):
         self.__run_log()
+        # 前置数据库查询
+        db_func = self.__get_db_check(case)
+        if db_func:
+            self.DBCheck = db_func(self, DB, ENV, self.env)
+            try:
+                self.debug_log('执行前置sql语句')
+                next(self.DBCheck)
+            except StopIteration:
+                del self.DBCheck
         # 发送http请求
         response = self.http_requests(case)
-
         # 数据提取
         self.data_extraction(response, case)
         self.__run_log()
         # 响应断言
         self.assert_result(response, case)
+        # 前置数据库后置查询和校验
+        self.__assert_db()
 
     def data_extraction(self, response, case):
         """
@@ -189,11 +225,11 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
     def http_requests(self, case):
         # 发送请求
         # 处理请求数据
-        self.__request_hook(case, self.env, ENV)
+        self.__request_hook(case, self.env, ENV, DB)
         case = self.__handle_data(case)
         self.info_log('正在发送请求：')
         response = Request(case, self).request_api()
-        self.__response_hook(case, response, self.env, ENV)
+        self.__response_hook(case, response, self.env, ENV, DB)
         self.response = response
         return response
 
@@ -218,6 +254,7 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
             ]""".format(assert_list))
 
     def __verification(self, response, item: list):
+
         self.info_log('断言表达式:{}'.format(item))
         # 判断断言的方法
         if item[2] == "status_code":
@@ -234,11 +271,8 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
         expected = item[1]
         expected = DataParser.parser_variable(self.env, expected) if expected else expected
         if item[0] == 'eq':
-            self.info_log('断言响应数据中的实际结果是否和预期相等')
             self.__assert(self.assertEqual, expected, actual, 'eq')
-
         elif item[0] == 'contains':
-            self.info_log('断言响应数据中的实际结果是否包含预期结果')
             self.__assert(self.assertIn, expected, actual, 'contains')
         else:
             raise ValueError('断言方法有误！断言方式只支持 eq 和 contains')
@@ -273,6 +307,8 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
 
     def __actualDataHandle(self, response, act):
         """处理实际结果"""
+        if isinstance(act, Number):
+            return act
         actual_pattern = r"V{{(.+?)}}"
         actual = DataParser.parser_variable(self.env, act) if act else act
         if isinstance(actual, dict):
@@ -317,30 +353,63 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
             self.assert_info.append((repr(expected), repr(actual), 'pass', method))
             self.info_log('断言通过！')
 
-    def __request_hook(self, case, env, ENV):
+    def __assert_db(self):
+        if hasattr(self, 'DBCheck'):
+            try:
+                self.debug_log('执行后置sql语句')
+                next(self.DBCheck)
+            except StopIteration as e:
+                assert_list = e.value
+                if assert_list and isinstance(assert_list, list):
+                    self.info_log('开始数据库校验')
+                    # 遍历断言的字段
+                    for item in assert_list:
+                        # 判断断言数据的类型
+                        if isinstance(item, list) and len(item) == 3:
+                            self.__verification(self.response, item)
+                        else:
+                            raise ValueError("断言表达式 {} 格式错误:,\n断言表达式必须为如下格式：[断言方式,预期结果,实际结果]".format(item))
+                else:
+                    raise TypeError("""db_check_hook中返回的数据库校验规则,必须为如下格式：[[断言方式,预期结果,实际结果]]""")
+
+    def __request_hook(self, case, env, ENV, db):
         """请求钩子函数"""
-
-        if case.get('request_hook'):
-            self.info_log('执行请求钩子函数')
+        test = self
+        request_shell = case.get('request_hook') or self.get('request_hook')
+        if request_shell:
+            self.info_log('执行请求前置脚本')
             try:
-                exec(case.get('request_hook'))
+                exec(request_shell)
             except Exception as e:
-                self.error_log('请求钩子函数执行错误:\n{}'.format(e))
+                self.error_log('请求前置脚本执行错误:\n{}'.format(e))
 
-    def __response_hook(self, case, response, env, ENV):
+    def __response_hook(self, case, response, env, ENV, db):
+        test = self
         """响应钩子函数"""
-        if case.get('response_hook'):
-            self.info_log('执行响应钩子函数')
+        response_shell = case.get('response_hook') or self.get('response_hook')
+        if response_shell:
+            self.info_log('执行请求后置脚本')
             try:
-                exec(case.get('request_hook'))
+                exec(response_shell)
             except Exception as e:
-                self.error_log('响应钩子函数执行错误:\n{}'.format(e))
+                self.error_log('执行请求后置脚本执行错误:\n{}'.format(e))
 
-    @classmethod
-    def __perform_fixture(cls, hook_name):
-        if not hasattr(cls, hook_name):
+    def __get_db_check(self, case):
+        hook = self.get('db_check_hook') or case.get('db_check_hook')
+        if not hook: return
+        # 执行setup_hook方法
+        if not isinstance(hook, str):
+            raise ValueError('db_check_hook只能传递funcTools中定义的函数名')
+        func = getattr(func_tools, hook)
+        if not func:
+            raise ValueError('函数引用错误：\n{}\n中的函数{}未定义！,'.format(func_tools, hook))
+        return func
+
+    @staticmethod
+    def __perform_fixture(test, hook_name):
+        if not hasattr(test, hook_name):
             return
-        hook = getattr(cls, hook_name)
+        hook = getattr(test, hook_name)
         # 执行setup_hook方法
         if not isinstance(hook, str):
             raise ValueError('{}只能传递funcTools中定义的函数名,字符串类型'.format(hook_name))
@@ -350,30 +419,30 @@ class HttpCase(BaseTestCase, Extract, CaseLog):
         return func
 
     def setUp(self):
-        func = self.__perform_fixture('setup_hook', )
+        func = self.__perform_fixture(self, 'setup_hook')
         if func:
             self.info_log('执行用例前置钩子函数')
-            func(ENV, self.env)
+            func(self, ENV, self.env, DB)
 
     def tearDown(self):
-        func = self.__perform_fixture('teardown_hook')
+        func = self.__perform_fixture(self, 'teardown_hook')
         if func:
             self.info_log('执行用例后置钩子函数')
-            func(ENV, self.env, self.response)
+            func(self, ENV, self.env, DB, self.response)
 
     @classmethod
     def setUpClass(cls):
-        func = cls.__perform_fixture('setup_class_hook')
+        func = cls.__perform_fixture(cls, 'setup_class_hook')
         if func:
             cls.log.info('执行测试集前置钩子函数')
-            func(ENV, cls.env)
+            func(ENV, cls.env, DB)
 
     @classmethod
     def tearDownClass(cls):
-        func = cls.__perform_fixture('teardown_class_hook')
+        func = cls.__perform_fixture(cls, 'teardown_class_hook')
         if func:
             cls.log.info('执行用测试集置钩子函数')
-            func(ENV, cls.env)
+            func(ENV, cls.env, DB)
 
 
 class Request:

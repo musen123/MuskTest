@@ -5,6 +5,7 @@ import importlib
 import os
 import sys
 from apin.core.logger import Logger
+from apin.core.DBClient import DBClient
 
 sys.path.append(os.getcwd())
 sys.path.append(os.path.abspath('..'))
@@ -17,7 +18,7 @@ except ModuleNotFoundError:
 class Settings:
     LOG_FILE_PATH = None
     DEBUG = True
-    DB = {}
+    DB = []
     ENV = {}
     THREAD_COUNT = 1
 
@@ -27,8 +28,12 @@ try:
 except:
     settings = Settings
 
-log = Logger(path=getattr(settings, 'LOG_FILE_PATH', None),
-             level=getattr(settings, 'LOG_FILE_PATH', 'DEBUG'))
+if settings.DEBUG:
+    log = Logger(path=getattr(settings, 'LOG_FILE_PATH', None),
+                 level='DEBUG')
+else:
+    log = Logger(path=getattr(settings, 'LOG_FILE_PATH', None),
+                 level='INFO')
 
 
 class BaseEnv(dict):
@@ -49,6 +54,18 @@ class BaseEnv(dict):
         if key != '__name' and key != '_BaseEnv__name':
             self.__setitem__(key, value)
 
+    def __getattr__(self, item):
+        if item != '__name' and item != '_BaseEnv__name':
+            return super().__getitem__(item)
+        return super().__getattribute__(item)
+
+    def __delattr__(self, item):
+        if item != '__name' and item != '_BaseEnv__name':
+            super().__delitem__(item)
+        else:
+            super().__delattr__()
+
 
 ENV = BaseEnv('ENV')
 ENV.update(getattr(settings, 'ENV', {}))
+DB = DBClient(getattr(settings, 'DB', []))

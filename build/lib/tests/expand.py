@@ -61,16 +61,12 @@ def run_test(env_config, case_data,
 if __name__ == '__main__':
     from apin import run_test
 
-    case_data = {
+    case_data =[{
         "host": "http://httpbin.org",
         "headers": {
             "X-Lemonban-Media-Type": "lemonban.v2"
         },
-        "setup_hook": {
-            "timestamp": "F{get_timestamp()}"
-        },
-        "setup_class_hook": {
-        },
+
         "env": {
             "user_mobile": "F{rand_phone()}",
             "admin_mobile": "F{rand_phone()}"
@@ -108,10 +104,10 @@ if __name__ == '__main__':
 
             }
         ]
-    }
+    }]
     ENV = {}
     res = run_test(env_config=ENV,
                    case_data=case_data,
-                   func_tools_path=r'C:\project\MSUnitTestReport\TestApi\tests\musenTools.py',
+                   func_tools_path=r'C:\project\MSUnitTestReport\TestApi\tests\funcTools.py',
                    no_report=True)
     print(res)
