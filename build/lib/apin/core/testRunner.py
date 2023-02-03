@@ -10,6 +10,8 @@ import unittest
 import time
 import json
 
+from apin.core.resultPush import SendEmail, DingTalk, WeiXin
+
 
 class TestResult(unittest.TestResult):
     """ 测试结果记录"""
@@ -390,3 +392,93 @@ class TestRunner():
             ts.shutdown(wait=True)
         result = self.__get_reports(thread_count)
         return result
+
+    def send_email(self, host: str, port: int, user: str, password: str, to_addrs, is_file=True):
+        """
+        The occurrence report is attached to the mailbox
+        :param host: SMTP server address
+        :param port: SMTP server port
+        :param user: Email account number
+        :param password: SMTP service authorization code of mailbox
+        :param to_addrs: Addressee's address str or list
+        :return:
+        """
+        sm = SendEmail(host=host, port=port, user=user, password=password)
+        if is_file:
+            filename = self.email_conent["file"]
+        else:
+            filename = None
+        content = self.email_conent["content"]
+
+        sm.send_email(subject=self.title, content=content, filename=filename, to_addrs=to_addrs)
+
+    def get_except_info(self):
+        """Get error reporting information for error cases and failure cases"""
+        except_info = []
+        num = 0
+        for i in self.result:
+            for texts in i.failures:
+                t, content = texts
+                num += 1
+                except_info.append("*{}、用例【{}】执行失败*，\n失败信息如下：".format(num, t._testMethodDoc))
+                except_info.append(content)
+            for texts in i.errors:
+                num += 1
+                t, content = texts
+                except_info.append("*{}、用例【{}】执行错误*，\n错误信息如下：".format(num, t._testMethodDoc))
+                except_info.append(content)
+        except_str = "\n".join(except_info)
+        return except_str
+
+    def dingtalk_notice(self, url, key=None, secret=None, atMobiles=None, isatall=False, except_info=False):
+        """
+        :param url: 钉钉机器人的Webhook地址
+        :param key: （非必传：str类型）如果钉钉机器人安全设置了关键字，则需要传入对应的关键字
+        :param secret:（非必传:str类型）如果钉钉机器人安全设置了签名，则需要传入对应的密钥
+        :param atMobiles: （非必传，list类型）发送通知钉钉中要@人的手机号列表，如：[137xxx,188xxx]
+        :param isatall: 是否@所有人，默认为False,设为True则会@所有人
+        :param except_info:是否发送未通过用例的详细信息，默认为False，设为True则会发送失败用例的详细信息
+        :return:  发送成功返回 {"errcode":0,"errmsg":"ok"}  发送失败返回 {"errcode":错误码,"errmsg":"失败原因"}
+        """
+
+        res_text = self.__get_notice_content()
+        if except_info:
+            res_text += '\n ### 未通过用例详情：\n'
+            res_text += self.get_except_info()
+        data = {
+            "msgtype": "markdown",
+            "markdown": {
+                "title": '{}({})'.format(self.title, key),
+                "text": res_text
+            },
+            "at": {
+                "atMobiles": atMobiles,
+                "isAtAll": isatall
+            }
+        }
+        ding = DingTalk(url=url, data=data, secret=secret)
+        response = ding.send_info()
+        return response.json()
+
+    def weixin_notice(self, chatid, access_token=None, corpid=None, corpsecret=None):
+        """
+        测试结果推送到企业微信群，【access_token】和【corpid，corpsecret】至少要传一种
+        可以传入access_token ,也可以传入（corpid，corpsecret）来代替access_token
+        :param chatid: 企业微信群ID
+        :param access_token: 调用企业微信API接口的凭证
+        :param corpid: 企业ID
+        :param corpsecret:应用的凭证密钥
+        :return:
+        """
+        # 获取通知结果
+        res_text = self.__get_notice_content()
+        data = {
+            "chatid": chatid,
+            "msgtype": "markdown",
+            "markdown": {
+                "content": res_text
+            }
+        }
+        wx = WeiXin(access_token=access_token, corpid=corpid, corpsecret=corpsecret)
+        response = wx.send_info(data=data)
+        return response

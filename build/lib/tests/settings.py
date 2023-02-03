@@ -57,20 +57,20 @@ TEST_RESULT = {
 }
 
 # # # 邮箱通知配置
-# EMAIL = {
-#     # smtp服务器地址
-#     "host": '',
-#     # smtp服务器端口
-#     "port": "",
-#     # 邮箱账号
-#     "user": "",
-#     # smtps授权码
-#     "password": "",
-#     # 收件人列表
-#     "to_addrs": [],
-#     # 是否发送附件
-#     "is_file": True
-# }
+EMAIL = {
+    # smtp服务器地址
+    "host": 'smtp.qq.com',
+    # smtp服务器端口
+    "port": 465,
+    # 邮箱账号
+    "user": "1605118090@qq.com",
+    # smtps授权码
+    "password": "oyukpnrnjirebahb",
+    # 收件人列表 "204893985@qq.com"
+    "to_addrs": ["2501768591@qq.com"],
+    # 是否发送附件
+    "is_file": True
+}
 #
 # # 钉钉通知
 # DINGTALK = {

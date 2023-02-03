@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>测试报告</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"
-          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src=" https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/5.1.2/echarts.min.js"></script>
+
     <!--    页面样式-->
     <style type="text/css">
         /*标题样式*/
@@ -144,28 +146,23 @@
 
 <!--汇总信息-->
 <div class="summary">
-    <p class="text-left text-primary
-">测试结果汇总</p>
+    <p class="text-left text-primary">测试结果汇总</p>
     <div class="left">
         <ul class="list-group">
             <li class="list-group-item">
-                <button type="button" class="btn btn-primary
-">测试人员</button>
+                <button type="button" class="btn btn-primary">测试人员</button>
                 <span class="text-dark">{{ tester }}</span>
             </li>
             <li class="list-group-item">
-                <button type="button" class="btn btn-primary
-">开始时间</button>
+                <button type="button" class="btn btn-primary">开始时间</button>
                 <span class="text-dark">{{ begin_time }}</span>
             </li>
             <li class="list-group-item">
-                <button type="button" class="btn btn-primary
-">执行时间</button>
+                <button type="button" class="btn btn-primary">执行时间</button>
                 <span class="text-dark">{{ runtime }}</span>
             </li>
             <li class="list-group-item">
-                <button type="button" class="btn btn-primary
-">用例总数</button>
+                <button type="button" class="btn btn-primary">用例总数</button>
                 <span class="text-dark">{{ all }}</span>
             </li>
         </ul>
@@ -174,10 +171,8 @@
         <ul class="list-group">
 
             <li class="list-group-item">
-                <button type="button" class="btn btn-primary
-">成功用例</button>
-                <span class="text-primary
-">{{ success }}</span>
+                <button type="button" class="btn btn-primary">成功用例</button>
+                <span class="text-primary">{{ success }}</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-danger">失败用例</button>
@@ -196,8 +191,7 @@
     <div class="desc">
         <ul class="list-group">
             <li class="list-group-item">
-                <button type="button" class="btn btn-primary
-">描述信息</button>
+                <button type="button" class="btn btn-primary">描述信息</button>
                 <span class="text-secondary">{{ desc }}</span>
             </li>
         </ul>
@@ -208,8 +202,7 @@
 
 <!--测试图表-->
 <div class="char">
-    <p class="text-left text-primary
-">图表展示</p>
+    <p class="text-left text-primary">图表展示</p>
     <div id="char2" style="width: 49%;height: 400px;float: left"></div>
     <div id="char" style="width: 49%;height: 400px ;float: left"></div>
 </div>
@@ -217,13 +210,11 @@
 <!--详细信息-->
 <div class="test_info">
 
-    <p class="text-left text-primary
-">详细信息</p>
+    <p class="text-left text-primary">详细信息</p>
     <div class="table_data">
 
         <table class="table">
-            <thead class="bg-primary
- text-light">
+            <thead class="bg-primary text-light">
             <tr>
                 <th scope="col" style="width: 5%;padding: 0">编号</th>
                 <th scope="col" style="width: 20%;padding: 0">
@@ -245,8 +236,7 @@
                     <span>执行结果</span>
                     <select id="testResult">
                         <option>所有</option>
-                        <option class="text-primary
-">成功</option>
+                        <option class="text-primary">成功</option>
                         <option class="text-danger">失败</option>
                         <option class="text-warning">错误</option>
                         <option class="text-info">跳过</option>
@@ -265,8 +255,7 @@
                 <td>{{ foo.method_doc }}</td>
                 <td>{{ foo.run_time }}</td>
                 {% if foo.state == '成功' %}
-                <td class="text-primary
-">{{ foo.state }}</td>
+                <td class="text-primary">{{ foo.state }}</td>
                 {% elif foo.state == '失败' %}
                 <td class="text-danger">{{ foo.state }}</td>
                 {% elif foo.state == '错误' %}
@@ -275,8 +264,7 @@
                 <td class="text-info">{{ foo.state }}</td>
                 {% endif %}
                 <td>
-                    <button type="button" class="btn btn-primary
- btn_info">查看详情</button>
+                    <button type="button" class="btn btn-primary btn_info">查看详情</button>
                 </td>
             </tr>
 
@@ -416,10 +404,7 @@
     <div style="height: 200px"></div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+
 
 <script>
     var tbodyTr = $('tbody .case_');

@@ -4,16 +4,24 @@
 apin是一个无需写代码，就可以完成接口自动化测试的框架，只需要通过json或yaml文件编写非常简洁的用例数据，即可完成接口自动化测试，并生成自动化测试报告。旨在帮助更多不会写代码的小伙伴掌握接口自动化测试的能力。框架使用起来非常简单，易上手，只需要几个小时就能掌握！
 
 
-- 目前只是第一个版本，还存在一些问题和功能，后续会继续完善，在使用的过程中发现问题，可以通过邮箱反馈
 
-- 开发者：柠檬班-木森
-- email：musen_nmb@qq.com
+### 使用问题及维护：
+- 大家在使用的过程中有问题，可以联系我解决
+- ##### 开发者：木森
+- ##### E-mail:musen_nmb@qq.com
+- ##### WeChat:musen9111
+    <img src="img/wx.jpg" alt="wx" style="zoom:25%;" /> 
+    
+  
+
+
+
 
 ps:觉着好用的小伙伴们可以点亮小星星
 
 GitHub地址：https://github.com/musen123
 
-Gitee地址：https://gitee.com/lemon-test-official
+Gitee地址：https://gitee.com/musen123
 
 PYPI地址：https://pypi.org/project/apin/
 

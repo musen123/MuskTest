@@ -6,11 +6,11 @@ apin为了支持自定义用例前后置执行的一些用例数据准备和清�
 
 **`setup_hook`：用例级别前置钩子** （每条用例执行之前会执行）
 
-**`setup_class_hook`:用例级别后置钩子**
+**`setup_class_hook`:用例级别前置钩子**
 
-**`teardown_hook`:测试集级别前置钩子**
+**`teardown_hook`:测试集级别后置钩子**
 
-**`teardown_class_hook`:测试集级别前置钩子**
+**`teardown_class_hook`:测试集级别后置钩子**
 
 如何你在测试的过程中定义的钩子函数特别多的情况下，全部写在functools中会很臃肿，不好管理，建议在项目目录下创建一个hooks目录，
 在hooks目录中可以创建多个py文件来分类管理你的钩子函数。但是最后一定要把你写的钩子函数导入到funcTools中。

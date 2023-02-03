@@ -14,7 +14,7 @@ from hooks.db_check_hook import *
 from hooks.fixture_hook import *
 
 
-def rand_phone(st1):
+def rand_phone():
     return random_mobile()
 
 

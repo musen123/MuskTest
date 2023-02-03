@@ -64,7 +64,7 @@ class GenerateTest(type):
             # -------------------生成用例---------------------
             # Case外的类属性中，是否有需要动态执行的函数
             for k, v in list(namespace.items()):
-                if k not in ['Cases', "extract", "verification"]:
+                if k not in ['Cases', "extract", "verification",'headers']:
                     # 解析数据中的变量
                     v = DataParser.parser_func(namespace.get('env'), v)
                     v = DataParser.parser_variable(namespace.get('env'), v)
@@ -89,6 +89,7 @@ class GenerateTest(type):
                 else:
                     test_desc = func.__doc__
                 func2 = cls.__update_func(new_test_name, case_data, test_desc, func)
+                
                 setattr(test_cls, new_test_name, func2)
             return test_cls
 

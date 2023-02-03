@@ -80,9 +80,9 @@ def md5_encrypt(data: str):
     new_md5.update(data.encode('utf-8'))
     return new_md5.hexdigest()
 
-
 def rsa_encrypt(msg, server_pub):
     """
+    
     rsa加密
     :param msg: 待加密文本
     :param server_pub: 密钥
