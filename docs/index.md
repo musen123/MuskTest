@@ -8,9 +8,8 @@ apin是一个无需写代码，就可以完成接口自动化测试的框架，�
 ### 使用问题及维护：
 - 大家在使用的过程中有问题，可以联系我解决
 - ##### 开发者：木森
-- ##### E-mail:musen_nmb@qq.com
 - ##### WeChat:musen9111
-    <img src="img/wx.jpg" alt="wx" style="zoom:25%;" /> 
+  ![1615966527541](.\img\wx.jpg)  
     
   
 
