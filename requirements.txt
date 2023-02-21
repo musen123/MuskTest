@@ -3,7 +3,7 @@ jsonpath==0.82
 pyasn1==0.4.8
 PyYAML==6.0
 requests==2.24.0
-requests_toolbelt==
+requests_toolbelt==0.10.1
 rsa==4.7.2
 PyMySQL==1.0.2
 colorama==0.4.6
