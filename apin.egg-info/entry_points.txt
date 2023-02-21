@@ -1,3 +1,0 @@
-[console_scripts]
-apin = apin.manage:main
-
