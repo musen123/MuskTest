@@ -1,7 +1,7 @@
 # 
 ## 1、概念介绍：
 
-- **用例文件**：apin中创建的每一个test开头的(py,json,yaml)文件，就是一个用例文件
+- **用例文件**：MuskTest中创建的每一个test开头的(py,json,yaml)文件，就是一个用例文件
 
 - **用例集**：每个用例文件下可以创建多个用例集。一个用例集下面可以定义多条测试用例。
     - py用例文件中，一个测试类就是一个用例集
@@ -99,7 +99,7 @@ fieldname：为接口上传文件的参数名,后面列表中的参数值为,[�
 除了上述主要字段之外，python中的requests库中的requests.request方法所有的请求参数，均支持在用例中定义字段，这些字段在大多数情况下都用不到，如果有用到
 
 
-- **cookies：**请求的cookie信息（apin中同一个用例集会自动化传递cookie,一遍情况下，不需要使用该字段来传递cookie）
+- **cookies：**请求的cookie信息（MuskTest中同一个用例集会自动化传递cookie,一遍情况下，不需要使用该字段来传递cookie）
 
 - **auth:** 用于Basic/Digest/Custom HTTP认证
 
@@ -121,7 +121,7 @@ fieldname：为接口上传文件的参数名,后面列表中的参数值为,[�
 
 **步骤一、**在case_py目录中定义一个以test开头的py文件，
 
-**步骤二、**在文件中定义一个以Test开头的类，并且继承于apin.core.httptest.HttpCase类
+**步骤二、**在文件中定义一个以Test开头的类，并且继承于MuskTest.core.httptest.HttpCase类
 
 **步骤三、**在类中，编写测试集的字段值
 

@@ -4,11 +4,11 @@
 
 - **创建命令**
 
-``` apin create 项目名```
+``` mst create 项目名```
     
-安装好apin之后，打开命令终端输入创建命令，即可在当前路径下创建项目。
+安装好MuskTest之后，打开命令终端输入创建命令，即可在当前路径下创建项目。
     
-cd 切换到项目之中，即可看到apin自动为你创建的项目结构
+cd 切换到项目之中，即可看到MuskTest自动为你创建的项目结构
     
 
 ```python
@@ -30,11 +30,11 @@ cd 切换到项目之中，即可看到apin自动为你创建的项目结构
 
 - **自动生成的项目文件说明**
     -  **case_json**：存放json格式编写的用例文件
-        - test_demo1.json :apin生成的json用例文件的demo
+        - test_demo1.json :MuskTest生成的json用例文件的demo
     -  **case_yaml**：存放yaml格式编写的用例文件
-        - test_demo2.yaml :apin生成的yaml用例文件的 demo 
+        - test_demo2.yaml :MuskTest生成的yaml用例文件的 demo 
     -  **case_py**：存放py编写的用例目录
-        - test_demo3.py :apin生成的py用例文件demo 
+        - test_demo3.py :MuskTest生成的py用例文件demo 
     -  **reports**:报告存放目录
         - xxx.html :生成的测试报告
     -  **logs**：运行日志存放目录
@@ -45,14 +45,14 @@ cd 切换到项目之中，即可看到apin自动为你创建的项目结构
 
         
 
-apin用例编写支持yaml文件，json文件，py文件三种方式,如果你是第一次使用，可以参考自动生成的用例demo,如果你的用例采用某一种文件格式来写，其他的两个用例文件目录可以自行删除。
+MuskTest用例编写支持yaml文件，json文件，py文件三种方式,如果你是第一次使用，可以参考自动生成的用例demo,如果你的用例采用某一种文件格式来写，其他的两个用例文件目录可以自行删除。
 
 下面来快速了解一下三种用例编写的格式,
 
 ## 2、json编写用例
 
 
-在项目的case_json目录下，定义一个以test开头的json文件，按照**【apin用例编写规范-json】**编写用例即可
+在项目的case_json目录下，定义一个以test开头的json文件，按照**【MuskTest用例编写规范-json】**编写用例即可
 
 ```json
 [   
@@ -80,7 +80,7 @@ apin用例编写支持yaml文件，json文件，py文件三种方式,如果你�
 
 ## 3、yaml编写用例
 
-在项目的case_yaml目录下，定义一个以test开头的yaml文件，按照**【apin用例编写规范-yaml】**编写用例即可
+在项目的case_yaml目录下，定义一个以test开头的yaml文件，按照**【MuskTest用例编写规范-yaml】**编写用例即可
 
 ```yaml
 # 定义一个测试集
@@ -112,7 +112,7 @@ apin用例编写支持yaml文件，json文件，py文件三种方式,如果你�
 
 ## 4、py文件编写用例
 
-​	在case_py目录中定义一个以test开头的py文件，定义一个以Test开头的类，并且继承于apin.core.httptest.HttpCase类，按照**【apin用例编写规范-py**】编写用例即可
+​	在case_py目录中定义一个以test开头的py文件，定义一个以Test开头的类，并且继承于MuskTest.core.httptest.HttpCase类，按照**【MuskTest用例编写规范-py**】编写用例即可
 
 ```python
 from musktest.core.httptest import HttpCase
@@ -141,7 +141,7 @@ class TestStreamV3(HttpCase):
 
 - **方式1：**
 
-     终端项目路径下输入命令: ```apin run```
+     终端项目路径下输入命令: ```MuskTest run```
      
      
 
@@ -157,7 +157,7 @@ class TestStreamV3(HttpCase):
 
     ![1615984513176](./img/1615984513176.png)
 
--  **测试报告：**apin的测试报告是基第三方库unittestreport生成的
+-  **测试报告：**MuskTest的测试报告是基第三方库unittestreport生成的
 
      运行完会在项目目录的reports目录中，自动生成详细的html测试报告。
 

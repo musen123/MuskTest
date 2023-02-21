@@ -2,7 +2,7 @@
 
 ####
 
-apin为了支持自定义用例前后置执行的一些用例数据准备和清理,支持在`funcTools`中自定义钩子函数，并提供了四个字段来指定用例前后置执行的钩子函数。分别为
+MuskTest为了支持自定义用例前后置执行的一些用例数据准备和清理,支持在`funcTools`中自定义钩子函数，并提供了四个字段来指定用例前后置执行的钩子函数。分别为
 
 **`setup_hook`：用例级别前置钩子** （每条用例执行之前会执行）
 
@@ -17,7 +17,7 @@ apin为了支持自定义用例前后置执行的一些用例数据准备和清�
 
 #### 1、setup_hook 
 
-为了方便在用来前置钩子函数中添加和修改环境变量，`setup_hook`的钩子必须定义两个参数，ENV和env，apin在执行钩子函数时会自动化传入。
+为了方便在用来前置钩子函数中添加和修改环境变量，`setup_hook`的钩子必须定义两个参数，ENV和env，MuskTest在执行钩子函数时会自动化传入。
 
 **钩子函数定义示例**
 
@@ -36,7 +36,7 @@ def random_phone_hook(ENV, env):
     ENV.user_phone = env  
 ```
 
-提示：env和ENV是apin种定义的一种增强型的字典，支持字典键值对的形式往里面添加变量，也支持以添加属性的形式来添加变量
+提示：env和ENV是MuskTest种定义的一种增强型的字典，支持字典键值对的形式往里面添加变量，也支持以添加属性的形式来添加变量
 
 **钩子函数的使用**
 
@@ -156,20 +156,28 @@ def del_phone_hook(ENV, env):
 下面以yaml文件为例
 
 ```yaml
--testSet:
+- testSet:
     # 域名
-    host: http://api.lemonban.com/futureloan/
-    # 指定测试集前置钩子函数
-    teardown_class_hook: del_phone_hook
+    host: http://httpbin.org
+    # 请求头
+    headers:
+      UserAgent: python/musktest
+    # 请求接口
+    interface: /post
+    # 请求方法
+    method: post
+    # 用例前置钩子函数
+    setup_hook: setup_hook_demo
+    teardown_hook": teardown_hook_demo
+    # 结果校验字段
+    verification:
+      - ["eq", 200, "status_code"]
     # 用例数据
     Cases:
-      # 用例1：普通用户注册
-      - title: 普通用户注册
-        interface: member/register
-        method: post
+      # 用例1：
+      - title: 用例1-使用工具函数生成手机号码
         json:
-          mobile_phone: ${{user_mobile}}
+          mobile_phone: F{random_mobile()}
           pwd: lemonban
 ```
 
-![1615966527547](img/apin_hook_run.jpg) 
