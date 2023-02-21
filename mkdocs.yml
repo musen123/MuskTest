@@ -1,0 +1,15 @@
+site_name: MuskTest 使用文档
+nav:
+  - 一、MuskTest安装和介绍: index.md
+  - 二、入门使用: doc2_start.md
+  - 三、用例编写: doc3_cases.md
+  - 四、变量提取和引用规则: doc4_extract.md
+  - 五、用例断言方法: doc5_assert.md
+  - 六、函数工具的使用: doc6_functon.md
+  - 七、全局配置: doc7_settings.md
+  - 八、钩子函数: doc8_fixtrue.md
+  - 九、数据库校验: db_check.md
+
+
+theme: readthedocs
+

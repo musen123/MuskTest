@@ -1,0 +1,11 @@
+
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist/
+build/
+tests/
+.in
+setup.py
+.idea/
