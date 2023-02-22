@@ -45,7 +45,7 @@ def random_phone_hook(ENV, env):
 ```yaml
 -testSet:
     # 域名
-    host: http://api.lemonban.com/futureloan/
+    host: http://api.musk.com/app/
     # 指定用例前置钩子函数
     setup_hook: random_phone_hook
     # 用例数据
@@ -56,7 +56,7 @@ def random_phone_hook(ENV, env):
         method: post
         json:
           mobile_phone: ${{user_mobile}}
-          pwd: lemonban
+          pwd: musk
 ```
 
 
@@ -72,7 +72,7 @@ def random_phone_hook(ENV, env):
 ```yaml
 -testSet:
     # 域名
-    host: http://api.lemonban.com/futureloan/
+    host: http://api.musk.com/app/
     # 指定测试集前置钩子函数
     setup_class_hook: random_phone_hook
     # 用例数据
@@ -83,7 +83,7 @@ def random_phone_hook(ENV, env):
         method: post
         json:
           mobile_phone: ${{user_mobile}}
-          pwd: lemonban
+          pwd: musk
 ```
 
 ####  4、teardown_hook
@@ -115,7 +115,7 @@ def get_response_hook(ENV, env,response):
 ```yaml
 -testSet:
     # 域名
-    host: http://api.lemonban.com/futureloan/
+    host: http://api.musk.com/app/
     # 指定测试集前置钩子函数
     teardown_hook: get_response_hook
     # 用例数据
@@ -126,7 +126,7 @@ def get_response_hook(ENV, env,response):
         method: post
         json:
           mobile_phone: ${{user_mobile}}
-          pwd: lemonban
+          pwd: musk
 ```
 
 
@@ -178,6 +178,6 @@ def del_phone_hook(ENV, env):
       - title: 用例1-使用工具函数生成手机号码
         json:
           mobile_phone: F{random_mobile()}
-          pwd: lemonban
+          pwd: musk
 ```
 

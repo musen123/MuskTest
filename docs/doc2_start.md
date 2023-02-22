@@ -66,11 +66,11 @@ MuskTest用例编写支持yaml文件，json文件，py文件三种方式,如果�
       "Cases": [
         {
           "title": "普通用户注册",
-          "json":{"mobile_phone":"133010121224","pwd":"lemonban"}
+          "json":{"mobile_phone":"133010121224","pwd":"musk"}
         },
          {
           "title": "管理员注册",
-          "json":{"mobile_phone":"133010121224","pwd":"lemonban","type": 0}
+          "json":{"mobile_phone":"133010121224","pwd":"musk","type": 0}
         }
       ]
     }
@@ -99,12 +99,12 @@ MuskTest用例编写支持yaml文件，json文件，py文件三种方式,如果�
       - title: 普通用户注册
         json:
           mobile_phone: 13700889999
-          pwd: lemonban
+          pwd: musk
       # 用例2：
       - title: 管理员注册
         json:
           mobile_phone: ${{user_mobile}}
-          pwd: lemonban
+          pwd: musk
           type: 0
 ```
 
@@ -128,11 +128,11 @@ class TestStreamV3(HttpCase):
         # 用例1：普通用户注册
         {
             'title': "普通用户注册",
-            'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
+            'json': {"mobile_phone": "${{user_mobile}}", "pwd": "musk"},
         },
         {
           "title": "管理员注册",
-          "json":{"mobile_phone":"133010121224","pwd":"lemonban","type":0},
+          "json":{"mobile_phone":"133010121224","pwd":"musk","type":0},
         }
     ]
 ```

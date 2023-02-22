@@ -164,7 +164,7 @@ e_res = db.qcd.execute(sql)
 ```yaml
 -testSet:
     # 域名
-    host: http://api.lemonban.com/futureloan/
+    host: http://api.musk.com/app/
     # 指定用例前置钩子函数
     setup_hook: random_phone_hook
     # 用例数据
@@ -176,7 +176,7 @@ e_res = db.qcd.execute(sql)
         method: post
         json:
           mobile_phone: ${{user_mobile}}
-          pwd: lemonban
+          pwd: musk
 ```
 
 

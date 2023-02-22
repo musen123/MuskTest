@@ -48,7 +48,7 @@ interface = '/user/login'
 ```python
  env = {
         "user_mobile": '13109099878',
-        "pwd": 'lemonban'
+        "pwd": 'musk'
     }
 ```
 
@@ -128,8 +128,8 @@ fieldname：为接口上传文件的参数名,后面列表中的参数值为,[�
 ```python
 from musktest.core.httptest import HttpCase
 class TestDomeV3(HttpCase):
-    host = "http://api.xxxx.com/futureloan/"
-    headers = {"X-Lemonban-Media-Type": "lemonban.v2"}
+    host = "http://api.xxxx.com/app/"
+    headers = {"X-musk-Media-Type": "musk.v2"}
     # 定义测试前置方法
     setup_hook = 'get_timestamp'
     # 预设变量
@@ -149,8 +149,8 @@ class TestDomeV3(HttpCase):
 ```python
 from musktest.core.httptest import HttpCase
 class TestDomeV3(HttpCase):
-    host = "http://api.XXXX.com/futureloan/"
-    headers = {"X-Lemonban-Media-Type": "lemonban.v2"}
+    host = "http://api.XXXX.com/app/"
+    headers = {"X-musk-Media-Type": "musk.v2"}
     # 定义测试前置方法
     setup_hook = 'get_timestamp'
     # 预设变量
@@ -169,7 +169,7 @@ class TestDomeV3(HttpCase):
             'title': "普通用户注册",
             'interface': "member/register",
             "method": "post",
-            'json': {"mobile_phone": "${{user_mobile}}", "pwd": "lemonban"},
+            'json': {"mobile_phone": "${{user_mobile}}", "pwd": "musk"},
 
         },
         # 用例2：管理员注册
@@ -177,7 +177,7 @@ class TestDomeV3(HttpCase):
             'title': "管理员注册",
             'interface': "member/register",
             "method": "post",
-            'json': {"mobile_phone": "${{admin_mobile}}", "pwd": "lemonban", "type":0}
+            'json': {"mobile_phone": "${{admin_mobile}}", "pwd": "musk", "type":0}
         },
    ]
 ```
@@ -196,10 +196,10 @@ class TestDomeV3(HttpCase):
 # 定义一个用例集
 - testSet:
     # 域名
-    host: http://api.xxxxx.com/futureloan/
+    host: http://api.xxxxx.com/app/
     # 请求头
     headers:
-      X-Lemonban-Media-Type: lemonban.v2
+      X-musk-Media-Type: musk.v2
     # 用例前置钩子函数
     setup_hook: get_timestamp
     # 预设运行变量
@@ -217,10 +217,10 @@ class TestDomeV3(HttpCase):
 ```yaml
 - testSet:
     # 域名
-    host: http://api.xxxxx.com/futureloan/
+    host: http://api.xxxxx.com/app/
     # 请求头
     headers:
-      X-Lemonban-Media-Type: lemonban.v2
+      X-musk-Media-Type: musk.v2
     # 用例前置钩子函数
     setup_hook: get_timestamp
     # 预设运行变量
@@ -238,13 +238,13 @@ class TestDomeV3(HttpCase):
         method: post
         json:
           mobile_phone: ${{user_mobile}}
-          pwd: lemonban
+          pwd: musk
       - title: 管理员注册
         interface: member/register
         method: post
         json:
           mobile_phone: ${{admin_mobile}}
-          pwd: lemonban
+          pwd: musk
           type: 0
 ```
 如果一个用例文件中有多个用例集，则按照如下规范编写
@@ -252,7 +252,7 @@ class TestDomeV3(HttpCase):
 # 用例集1
 - testSet:
     # 域名
-    host: http://api.xxxxx.com/futureloan/
+    host: http://api.xxxxx.com/app/
     # 用例数据
     Cases:
       - title: 普通用户注册
@@ -260,11 +260,11 @@ class TestDomeV3(HttpCase):
         method: post
         json:
           mobile_phone: ${{user_mobile}}
-          pwd: lemonban
+          pwd: musk
 # 用例集2
 - testSet:
     # 域名
-    host: http://api.xxxxx.com/futureloan/
+    host: http://api.xxxxx.com/app/
     # 用例数据
     Cases:
       - title: 普通用户注册
@@ -272,11 +272,11 @@ class TestDomeV3(HttpCase):
         method: post
         json:
           mobile_phone: ${{user_mobile}}
-          pwd: lemonban
+          pwd: musk
 # 用例集3
 - testSet:
     # 域名
-    host: http://api.xxxxx.com/futureloan/
+    host: http://api.xxxxx.com/app/
     # 用例数据
     Cases:
       - title: 普通用户注册
@@ -284,7 +284,7 @@ class TestDomeV3(HttpCase):
         method: post
         json:
           mobile_phone: ${{user_mobile}}
-          pwd: lemonban
+          pwd: musk
 
 ```
 
@@ -302,8 +302,8 @@ class TestDomeV3(HttpCase):
 ```json
 [
     {
-      "host": "http://api.XXXXX.com/futureloan/",
-      "headers": {"X-Lemonban-Media-Type": "lemonban.v2"},
+      "host": "http://api.XXXXX.com/app/",
+      "headers": {"X-musk-Media-Type": "musk.v2"},
       "setup_hook": "get_timestamp",
       "env": {
         "user_mobile": "F{rand_phone('155')}",
@@ -319,7 +319,7 @@ class TestDomeV3(HttpCase):
           "method": "post",
           "json": {
             "mobile_phone": "${{user_mobile}}",
-            "pwd": "lemonban"
+            "pwd": "musk"
           }
         },
         {
@@ -328,7 +328,7 @@ class TestDomeV3(HttpCase):
           "method": "post",
           "json": {
             "mobile_phone": "${{admin_mobile}}",
-            "pwd": "lemonban",
+            "pwd": "musk",
             "type": 0
           }
         }
