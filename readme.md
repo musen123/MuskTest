@@ -10,7 +10,7 @@ MuskTest是一个无需写代码，就可以完成接口自动化测试的轻量
 - ##### 大家在使用过程中发现bug,以及使用过程中有什么问题，可以联系我
 ## 2、安装MuskTest
 
-apin是基于python3.6开发的，安装前请确认你的python版本>3.6
+MuskTest兼容python3.6所有的python版本，安装前请确认你的python版本>3.6
 
 - **安装命令**
 
