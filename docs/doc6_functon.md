@@ -44,7 +44,7 @@ def get_timestamp():
 	'title': "普通用户注册",
 	'interface': "member/register",
 	"method": "post",
-	'json': {"user": "F{rand_phone()}", "pwd": "lemon123"},
+	'json': {"user": "F{rand_phone()}", "pwd": "musk123"},
 }
 ```
 
@@ -57,7 +57,7 @@ def get_timestamp():
 	'title': "普通用户登录",
 	'interface': "member/login",
 	"method": "post",
-	'json': {"user": "13109877890", "pwd": "F{md5_encrypt('lemon123')}"},
+	'json': {"user": "13109877890", "pwd": "F{md5_encrypt('musk123')}"},
 }
 
 # 引用函数，变量作为参数传递
