@@ -10,4 +10,9 @@ mkdocs:
 
 python:
   install:
-    - requirements: requirements.txt
+    - method: pip
+      path: .
+    - requirements:
+      - mkdocs==1.4.2
+      - mkdocs-material==9.0.6
+
