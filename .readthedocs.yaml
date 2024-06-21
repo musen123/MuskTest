@@ -1,9 +1,13 @@
 version: 2
 
 build:
+  os: ubuntu-22.04
   tools:
-    mkdocs: latest  # 或者指定特定版本，如 "1.7.0"
-  os: ubuntu-20.04
+    python: "3.11"
 
 mkdocs:
-  config_file: mkdocs.yml
+  configuration: mkdocs.yml
+
+python:
+  install:
+    - requirements: requirements.txt
