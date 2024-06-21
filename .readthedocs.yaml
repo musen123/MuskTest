@@ -1,6 +1,9 @@
 version: 2
-mkdocs:
-  config_file: mkdocs.yml
 
 build:
+  tools:
+    mkdocs: latest  # 或者指定特定版本，如 "1.7.0"
   os: ubuntu-20.04
+
+mkdocs:
+  config_file: mkdocs.yml
