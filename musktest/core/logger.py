@@ -1,5 +1,5 @@
-# Author:码思客-木森
-# WeChart:musen9111
+# Author: -木森
+# WeChart: python771
 import os
 import logging
 from logging.handlers import TimedRotatingFileHandler, BaseRotatingHandler
