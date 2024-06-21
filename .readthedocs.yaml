@@ -1,3 +1,3 @@
-version: 1
+version: 2
 mkdocs:
   config_file: mkdocs.yml
